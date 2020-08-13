@@ -7,7 +7,7 @@ session_start();
 //inherits all from functions.php where all my functions lies
 require_once 'functions.php';
 
-$devUrl = prodArena('test');
+$devUrl = prodArena('live');
 
 //error_reporting(0); // errors are logged so hide from view! there aren't any btw :D
 

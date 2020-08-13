@@ -12,6 +12,8 @@ self.addEventListener('install', function(event) {
           'assets/js/jQuery/jquery-3.4.1.js',
           'assets/css/custom.css',
           'assets/css/main.css',
+          'assets/bootstrap/css/bootstrap.css',
+          'https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js'
           ]).finally(function(){
           return cache.put(indexPage, response);
         })        
@@ -55,9 +57,10 @@ self.addEventListener('fetch', function(event) {
       console.log( ' Network request Failed. Serving content from cache: ' + error );
 
       return caches.open('konstructapp').then(function (cache) {
-        if (event.request.mode === 'navigate') {
-          return cache.match('offline.html');
-        }        
+        console.log(event.request)
+        // if (event.request.mode === 'navigate') {
+        //   return cache.match('offline.html');
+        // }        
       });
     })
   );

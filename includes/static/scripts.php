@@ -127,16 +127,16 @@
 <script src="assets/js/libs/material.min.js"></script>
 <script src="assets/js/libs/bootstrap-select.js"></script>
 <script src="assets/js/libs/smooth-scroll.js"></script>
-<script src="assets/js/libs/selectize.js"></script>
 <script src="assets/js/libs/isotope.pkgd.js"></script>
 <script src="assets/js/libs/loader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 
 <script src="assets/js/libs/swiper.jquery.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/app.js"></script>
+<!-- <script src='assets/js/index.js'></script> -->
 <script src="assets/js/libs-init/libs-init.js"></script>
 <script defer src="assets/fonts/fontawesome-all.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
 
 <script src="assets/Bootstrap/dist/js/bootstrap.bundle.js"></script>

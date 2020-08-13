@@ -189,8 +189,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.min.js" integrity="sha256-EuV9YMxdV2Es4m9Q11L6t42ajVDj1x+6NZH4U1F+Jvw=" crossorigin="anonymous"></script>
 
 
-<?php include('components/bids.php') ?>
-<?php include('components/likes.php') ?>
+<?php include('models/bids.php') ?>
+<?php include('models/likes.php') ?>
 <?php include('includes/app/bids.php') ?>
 
 </body>

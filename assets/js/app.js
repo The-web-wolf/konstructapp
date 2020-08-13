@@ -3,7 +3,7 @@ $(window).ready(function(){
 	perfectScrollbarInit()
 });
 
-let devUrl = 'https://konstructapps.herokuapp.com';
+let devUrl = 'https://api.konstructapp.com';
 
 triggerBtns();
 
@@ -224,8 +224,15 @@ let hideModals = () => {
 
 /*Function for each call*/
 function userFx (response){
-	let userToken = response.token;
-  	let userId = response.data._id;
+	let userToken 	= response.token;
+	let userId 		= response.data._id;
+	let userData 	= response.data;
+	
+	localStorage.setItem('firstName', userData.firstName);
+	localStorage.setItem('lastName', userData.lastName);
+	localStorage.setItem('email', userData.email);
+	localStorage.setItem('userPic', userData.userpic);
+
   	$.ajax({
     	type : "POST",
     	url : "controllers/createssid",

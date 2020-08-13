@@ -261,8 +261,8 @@
 <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
 <script src="assets/js/freewall.js"></script>
 
-<?php include('components/likes.php') ?>
-<?php include('components/status.php') ?>
+<?php include('models/likes.php') ?>
+<?php include('models/status.php') ?>
 
 <?php include('includes/app/profile.php') ?>
 

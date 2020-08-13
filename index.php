@@ -164,10 +164,10 @@
 	<script src="assets/js/freewall.js"></script>
 
 
-	<?php include('components/bids.php') ?>
-	<?php include('components/portfolio.php') ?>
-	<?php include('components/status.php') ?>
-	<?php include('components/likes.php') ?>
+	<?php include('models/bids.php') ?>
+	<?php include('models/portfolio.php') ?>
+	<?php include('models/status.php') ?>
+	<?php include('models/likes.php') ?>
 	<?php include('includes/app/feeds.php') ?>
 
 	<script type="text/javascript">		

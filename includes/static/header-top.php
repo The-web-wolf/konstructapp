@@ -381,7 +381,7 @@
 
 							<ul>
 								<li>
-									<a href="https://konstructapp.com/about">
+									<a href="./about">
 										<span>About KonstructApp</span>
 									</a>
 								</li>

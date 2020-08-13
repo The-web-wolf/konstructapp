@@ -48,7 +48,7 @@ function prodArena($environment){
 		$devUrl = 'https://konstructapps.herokuapp.com';
 	}
 	else if ($environment == 'live'){
-		$devUrl = 'https://api.app.konstructapp.com';
+		$devUrl = 'https://api.konstructapp.com';
 	}
 
 	return $devUrl;

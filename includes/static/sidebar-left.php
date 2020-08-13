@@ -207,7 +207,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="konstructapp.com">
+					<a href="./about">
 						<svg class="olymp-info-icon left-menu-icon"><use xlink:href="#olymp-info-icon"></use></svg>
 
 						<span>About KonstructApp</span>

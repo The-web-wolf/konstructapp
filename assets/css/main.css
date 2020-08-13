@@ -1635,8 +1635,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     width: 100%; } }
 
 @media (max-width: 768px) {
-  .footer {
-    text-align: center; }
+
   .footer .w-about .logo {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -1856,14 +1855,12 @@ section {
 
 /*------------- #STUNNING-HEADER --------------*/
 .stunning-header {
-  padding-bottom: 120px;
+  padding-bottom: 200px;
   position: relative;
   color: #fff; }
   .stunning-header .stunning-header-title {
     color: inherit;
     font-size: 40px; }
-  .stunning-header + * {
-    margin-top: 40px; }
   .stunning-header .content-bg-wrap {
     z-index: -1; }
 
@@ -1874,13 +1871,16 @@ section {
   padding: 0 10px; }
 
 .bg-primary-opacity {
-  background-color: rgba(248, 172, 9, 0.95); }
+  background-color: rgba(248, 172, 9, 0.85); }
 
 .bg-purple-dark-opacity {
   background-color: rgba(98, 54, 178, 0.95); }
 
 .stunning-header-bg1 {
-  background-image: url("../img/landing-users.png"); }
+  background-image: url("../img/bg.jpg");
+  background-position:top;
+  background-attachment: fixed;
+}
 
 .breadcrumbs-item {
   display: inline-block;
@@ -10110,7 +10110,8 @@ ol ol li {
   background-color: #f74881; }
 
 .bg-google {
-  background-color: #ea4235; }
+  background-color: #ea4235;   
+}
 
 .bg-red {
   background-color: #ea4235; }

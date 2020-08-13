@@ -6,6 +6,25 @@
 
 <body class="landing-page darkmode">
 
+<style>
+	.social-login{
+		border-radius:15px;
+		background-color:transparent;
+		border:1px solid #f8ac09;
+		color:#f8ac09
+		
+	}
+	.social-login svg{
+		position:absolute;
+		right:10px;
+	}
+
+	.social-login:active,.social-login:hover{
+		border:1px double #f8ac09
+	}
+
+</style>
+
 <div class="content-bg-wrap"></div>
 
 <!-- ... end Header Standard Landing  -->
@@ -48,11 +67,11 @@
 								<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>
 							</a>
 						</li>
-						<li class="menu-search-item">
+						<!-- <li class="menu-search-item">
 							<a href="#" class="nav-link" data-toggle="modal" data-target="#main-popup-search">
 								<svg class="olymp-magnifying-glass-icon"><use xlink:href="#olymp-magnifying-glass-icon"></use></svg>
 							</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -65,15 +84,6 @@
 
 <div class="container">
 	<div class="row display-flex">
-		<!-- <div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-			<div class="landing-content web-only">
-				<h1>CONSTRUCTION NETWORKING</h1>
-				<p style="font-size: 16px">Quick, low-cost access to construction jobs and services.
-				</p>
-				<a href="#" class="btn btn-md btn-border c-white">Create A Corporate Account!</a>
-			</div>
-		</div> -->
-
 		<div class="col col-xl-5 col-lg-6 col-md-12 col-sm-12 col-12">
 			
 			<!-- Login-Registration Form  -->
@@ -117,18 +127,17 @@
 									<p class="web-only">Forgotten your password? <a href="#" data-toggle="modal" data-target="#restore-password-1" >Click here!</a> to set a new one</p>
 			
 									<div class="or"></div>
-									<span>Sign in with</span>
 	
-									<a href="#null" class="btn btn-xs bg-google "><i class="fab fa-google" aria-hidden="true"></i></a>
-									<br>
-									<p class="web-only">Don't have an account? <a href="#" class="custom-register-trigger">Click here!</a> to set up a new new account! and experience Konstructapp</p>
+									<a href="#null" class="btn btn-block btn-md social-login"><svg class="pass-SocialButton-icon pass-SocialButton-icon--google" width="16" height="16" viewBox="0 0 16 16"><defs><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-8a"></path><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-10c"></path><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-12e"></path><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-14g"></path></defs><g fill="none" fill-rule="evenodd"><g transform="translate(.08 .07)"><mask id="id-9b" fill="#fff"><use xlink:href="#id-8a"></use></mask><path fill="#FBBC05" fill-rule="nonzero" mask="url(#id-9b)" d="M-.72 12.616V3.244L5.406 7.93z"></path></g><g transform="translate(.08 .07)"><mask id="id-11d" fill="#fff"><use xlink:href="#id-10c"></use></mask><path fill="#EA4335" fill-rule="nonzero" mask="url(#id-11d)" d="M-.72 3.244L5.406 7.93 7.93 5.731l8.651-1.405V-.721H-.72z"></path></g><g transform="translate(.08 .07)"><mask id="id-13f" fill="#fff"><use xlink:href="#id-12e"></use></mask><path fill="#34A853" fill-rule="nonzero" mask="url(#id-13f)" d="M-.72 12.616l10.813-8.29 2.848.36 3.64-5.407v17.302H-.72z"></path></g><g transform="translate(.08 .07)"><mask id="id-15h" fill="#fff"><use xlink:href="#id-14g"></use></mask><path fill="#4285F4" fill-rule="nonzero" mask="url(#id-15h)" d="M16.581 16.581L5.407 7.931 3.965 6.848l12.616-3.605z"></path></g></g></svg> Continue with  google</a>
+
+									<p class="web-only">Don't have an account? <a href="#" class="custom-register-trigger">Click here!</a> to set up a new account! and experience Konstructapp</p>
 		
 								</div>
 							</div>
 						</form>
 						<br>
 						<div class="reset_password_btn">
-							<a href="#" class="forgot mobile-only"  data-toggle="modal" data-target="#restore-password-1">Forgot my Password</a>
+							<a href="#" class="forgot mobile-only c-white"  data-toggle="modal" data-target="#restore-password-1">Forgot my Password</a>
 							
 						</div>						
 					</div>
@@ -166,7 +175,7 @@
 										<div class="checkbox">
 											<label>
 												<input name="optionsCheckboxes" type="checkbox" required="">
-												I accept the <a href="#" style="display: inline;">Terms and Conditions</a>
+												I accept the <a href="terms" style="display: inline;">Terms and Conditions</a>
 											</label>
 										</div>
 									</div>
@@ -255,11 +264,11 @@
 <script src="assets/js/libs/material.min.js"></script>
 <script src="assets/js/libs/bootstrap-select.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/libs-init/libs-init.js"></script>
 <script defer src="assets/fonts/fontawesome-all.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 
 <script src="assets/Bootstrap/dist/js/bootstrap.bundle.js"></script>
 
@@ -284,6 +293,7 @@ $(function(){
 
 	$(registerForm).submit(function(ev){
 		ev.preventDefault()
+		
 		submitForm('registerationForm', 'userFx')
 	})
 
