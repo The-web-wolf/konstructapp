@@ -1,4 +1,4 @@
-<?php $authpage = 'about'; require 'includes/dynamic/header.php'; ?>
+<?php $openpage = 'contact'; require 'includes/dynamic/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +35,7 @@
 
 <!-- Stunning header -->
 
-<div class="stunning-header bg-purple-dark-opacity">
+<div class="stunning-header bg-primary-opacity">
 
 	
 	<!-- Header Standard Landing  -->
@@ -46,7 +46,7 @@
 
 				<a href="#" class="logo">
 					<div class="img-wrap">
-						<img src="assets/img/logo/transparent.png" alt="logo" class="web-only">
+						<img src="assets/img/logo/white.png" alt="logo" class="web-only">
 						<img src="assets/img/logo/transparent.png" alt="logo" class="logo-colored">
 					</div>
 				</a>
@@ -105,7 +105,7 @@
 				<span class="icon breadcrumbs-custom">/</span>
 			</li>
 			<li class="breadcrumbs-item active">
-				<span>CONTACT</span>
+				<span>Contact</span>
 			</li>
 		</ul>
 	</div>
@@ -130,7 +130,7 @@
 					</div>
 					<div class="contact-item">
 						<h6 class="sub-title">General Inquiries:</h6>
-						<a href="mailto:">hqinquiries@olympus.com</a>
+						<a href="mailto:info@konstructapp.com">info@konstructapp.com</a>
 					</div>
 				</div>
 				
@@ -145,12 +145,8 @@
 				<div class="contact-item-wrap">
 					<h3 class="contact-title">Press and Media</h3>
 					<div class="contact-item">
-						<h6 class="sub-title">Jenny Stevens:</h6>
-						<a href="mailto:">jennymedia@olympus.com</a>
-					</div>
-					<div class="contact-item">
-						<h6 class="sub-title">Skype:</h6>
-						<a href="#">Stevens Press</a>
+						<h6 class="sub-title">Send a mail to:</h6>
+						<a href="mailto:media@konstructapp.com">media@konstructapp.com</a>
 					</div>
 				</div>
 				
@@ -165,12 +161,8 @@
 				<div class="contact-item-wrap">
 					<h3 class="contact-title">Business Chat</h3>
 					<div class="contact-item">
-						<h6 class="sub-title">Marc Jackson:</h6>
-						<a href="mailto:">jacksonbusiness@olympus.com</a>
-					</div>
-					<div class="contact-item">
-						<h6 class="sub-title">Skype:</h6>
-						<a href="#">Jackson Business</a>
+						<h6 class="sub-title">Send a mail to:</h6>
+						<a href="mailto:business@konstructapp.com">business@konstructapp.com</a>
 					</div>
 				</div>
 				
@@ -185,12 +177,8 @@
 				<div class="contact-item-wrap">
 					<h3 class="contact-title">Human Resources</h3>
 					<div class="contact-item">
-						<h6 class="sub-title">Stella Karenson:</h6>
-						<a href="mailto:">stellahhrr@olympus.com</a>
-					</div>
-					<div class="contact-item">
-						<h6 class="sub-title">Skype:</h6>
-						<a href="#">Karenson HHRR</a>
+						<h6 class="sub-title">Send a mail to:</h6>
+						<a href="mailto:hr@konstructapp.com">hr@konstructapp.com</a>
 					</div>
 				</div>
 				

@@ -90,7 +90,7 @@
 					</div>
 					<div class="top-header-author">
 						<a href="#" class="author-thumb">
-							<img src="<?php echo $req_user_data['userPic'] ?>" alt="avatar">
+							<img src="<?php echo $req_user_data['userPic'] ?>" class='custom-bg' alt="avatar">
 						</a>
 						<div class="author-content">
 							<a href="#" class="h4 author-name"><?php echo $req_user_data['firstName'] ?> <?php echo $req_user_data['lastName'] ?></a>

@@ -50,13 +50,13 @@
 				<div class="mCustomScrollbar">
 					<ul>
 						<li class="nav-item">
-							<a href="#" class="nav-link">About Us</a>
+							<a href="./about" class="nav-link">About Us</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">Terms & Conditions</a>
+							<a href="./terms" class="nav-link">Terms & Conditions</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">Privacy Policy</a>
+							<a href="./policy" class="nav-link">Privacy Policy</a>
 						</li>
 						<li class="close-responsive-menu js-close-responsive-menu">
 							<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>

@@ -1,4 +1,4 @@
-<?php $authpage = 'policy'; require 'includes/dynamic/header.php'; ?>
+<?php $openpage = 'terms'; require 'includes/dynamic/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +65,7 @@
 							<a href="https://konstructapp.com/business" class="nav-link">Business</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">Privacy Policy</a>
+							<a href="policy" class="nav-link">Privacy Policy</a>
 						</li>
 						<li class="close-responsive-menu js-close-responsive-menu">
 							<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>

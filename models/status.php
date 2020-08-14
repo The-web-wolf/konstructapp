@@ -173,8 +173,8 @@
 			status = status.data;
 			let modal_content = 
 			`<div class="form-group label-floating">
-					<label class="control-label">Give a status title</label>
-					<textarea class='form-control'>${status.statusText}</textarea>
+					<label class="control-label">Edit Status Text</label>
+					<textarea class='form-control' name='statusText' minlength="10">${status.statusText}</textarea>
 				</div>
 				`;
 				$(edit_body).html(modal_content)
@@ -209,6 +209,7 @@
 		.then( response => response.json())
 		.then( response  => {
 			let status 	= response.data;
+			console.log(status);
 			
 			let relative_date	= moment(status.createdAt).fromNow();
 			
@@ -217,7 +218,7 @@
 			var $isText 	 	= status.statusText.length ? true : false;
 			var $isPicture 	 	= status.pictures.length === 1 && status.pictures[0].length ? true : false;
 			var $isPictures 	= status.pictures.length > 1 ? true : false;
-			var $isPortfolio 	= 'project' in status && status.project ? true : false;
+			var $isPortfolio 	= 'portfolio' in status && status.portfolio ? true : false;
 
 			let poster = '' ;
 			let portfolioContent = '';
@@ -233,12 +234,12 @@
 			if($isPortfolio){
 				poster = 'tagged a portfolio';
 
-				let portfolio_details = status.project.details.match(/(.{0,150}\w)\s/)[1]+` <a href='#' class='readmore' data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${status.project._id}"}'> <b> ... </b> </a>`;
+				let portfolio_details = status.portfolio.details.match(/(.{0,150}\w)\s/)[1]+` <a href='#' class='readmore' data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${status.portfolio._id}"}'> <b> ... </b> </a>`;
 
 				portfolioContent = `					
 					<div class="post-video">
 						<div class="video-thumb">
-							<img src="${status.project.pictures[0]}" alt="photo" style='height:194px;width:197px;display:inline'>
+							<img src="${status.portfolio.pictures[0]}" alt="photo" style='height:194px;width:197px;display:inline'>
 							<a href="#" class="play-video">
 								<svg class="olymp-magnifying-glass-icon">
 									<use xlink:href="#olymp-magnifying-glass-icon"></use>
@@ -247,7 +248,7 @@
 						</div>
 			
 						<div class="video-content">
-							<a href="#" class="h4 title">${status.project.title}</a>
+							<a href="#" class="h4 title">${status.portfolio.title}</a>
 							<p>${portfolio_details}</p>
 						</div>
 					</div>`				

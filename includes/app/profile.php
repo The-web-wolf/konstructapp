@@ -157,7 +157,7 @@
 									</svg>
 								</a>
 					
-								<a href="#" class="btn btn-control">
+								<a href="#" class="btn btn-control" href="#expand" data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${current_status._id}"}'>
 									<svg class="olymp-comments-post-icon">
 										<use xlink:href="#olymp-comments-post-icon"></use>
 									</svg>
@@ -198,7 +198,7 @@
 		})		
 	}
 
-	function loadStatus(page,callType){
+	function loadStatus(callType){
 
 		let root = document.getElementById('newsfeed-items-grid');
 
@@ -220,7 +220,7 @@
 
 		//let page = 1;
 
-		let targetUrl = `${devUrl}/api/user/${_id}/status?limit=10&page=${page}`;
+		let targetUrl = `${devUrl}/api/user/${_id}/status`;
 
 		$.ajax({
 			url : targetUrl,	  

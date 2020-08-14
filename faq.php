@@ -1,4 +1,4 @@
-<?php $authpage = 'about'; require 'includes/dynamic/header.php'; ?>
+<?php $openpage = 'faq'; require 'includes/dynamic/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,26 +13,7 @@
     .heading-title,.title {
         color:#fff
     }
-    .teammembers-thumb{
-        border-radius:5px
-    }
-    .teammembers-thumb img{
-        width:370px;
-        height:466px;
-        object-fit:cover;
-    }
-    .teammembers-item-prof{
-        text-transform:uppercase
-    }
 
-    .crumina-teammembers-item .teammember-content .socials li a{
-        color:white !important;
-    }
-    .socials--round .social-item{
-        width: 36px;
-        height:36px;
-        font-size:15px;
-    }
 
     .darkmode #footer{
         background-color:#2a2c48
@@ -92,7 +73,7 @@
 								<a href="https://konstructapp.com/business" class="nav-link">Business</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Privacy Policy</a>
+								<a href="policy" class="nav-link">Privacy Policy</a>
 							</li>
 							<li class="close-responsive-menu js-close-responsive-menu">
 								<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>

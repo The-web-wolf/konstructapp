@@ -1,4 +1,4 @@
-<?php $authpage = 'about'; require 'includes/dynamic/header.php'; ?>
+<?php $openpage = 'about'; require 'includes/dynamic/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
