@@ -1880,6 +1880,8 @@ section {
   background-image: url("../img/bg.jpg");
   background-position:top;
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .breadcrumbs-item {
@@ -9221,7 +9223,7 @@ ol ol li {
   position: relative;
   padding: 50px 40px;
   color: #fff;
-  background-image: url("../img/contact-bg.png");
+  background-image: url("../img/sendMail.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 40%; }

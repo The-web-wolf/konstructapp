@@ -209,8 +209,6 @@
 		.then( response => response.json())
 		.then( response  => {
 			let status 	= response.data;
-			console.log(status);
-			
 			let relative_date	= moment(status.createdAt).fromNow();
 			
 			let self_user = status.user._id === Cookies.get('_id')	? true : false;

@@ -91,7 +91,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col col-xl-8 order-xl-2 col-lg-8 order-lg-2 col-md-12 order-md-1 col-sm-12 col-12">
+		<div class="col order-2 col-xl-8 order-xl-2 col-lg-8 order-lg-2 col-md-12 order-md-1 col-sm-12 col-12">
 
 			<div class="ui-block">
 				<div class="ui-block-title">
@@ -115,7 +115,7 @@
 			</div>
 		</div>
 
-		<div class="col col-xl-4 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12">
+		<div class="col col-xl-4 order-1 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12">
 			<div class="ui-block">
 				<div class="ui-block-title">
 					<h6 class="title">Personal Info</h6>
@@ -144,7 +144,7 @@
 						</li>
 						<li>
 							<span class="title">Joined:</span>
-							<span class="text"><?php echo $req_user_data['createdAt'] ?></span>
+							<span class="text date-to-format"><?php echo $req_user_data['createdAt'] ?></span>
 						</li>
 						<li>
 							<span class="title">Gender:</span>
@@ -155,7 +155,7 @@
 					<!-- ... end W-Personal-Info -->
 				</div>
 			</div>
-			<div class="ui-block">
+			<div class="ui-block web-only">
 				<div class="ui-block-title">
 					<h6 class="title">Share profile</h6>
 					<a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="#olymp-three-dots-icon"></use></svg></a>
@@ -212,9 +212,20 @@
 
 <?php include('includes/static/scripts.php') ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.min.js" integrity="sha256-EuV9YMxdV2Es4m9Q11L6t42ajVDj1x+6NZH4U1F+Jvw=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment-with-locales.min.js" integrity="sha256-4HOrwHz9ACPZBxAav7mYYlbeMiAL0h6+lZ36cLNpR+E=" crossorigin="anonymous"></script>
 
 <?php include('includes/app/profile_about.php') ?>
+
+<script>
+	$(document).ready(function(){
+		let newnode = $('.date-to-format');
+		let nodetext = $(newnode).text()
+		let relative_date	= moment(nodetext).fromNow();
+		$(newnode).text(relative_date)
+	})
+</script>
 
 </body>
 </html>

@@ -93,7 +93,7 @@
 
 		<!-- Left Sidebar -->
 
-		<div class="col col-xl-3 order-2 col-lg-6 order-lg-1 col-md-6 col-sm-6 col-12 web-only" >
+		<div class="col col-xl-3 order-1 col-lg-6 order-lg-1 col-md-6 col-sm-6 col-12 web-only" >
 			<div class="crumina-sticky-sidebar">
 				<div class="sidebar__inner" style="padding-top: 10px">					
 					<div class="ui-block web-only">
@@ -132,7 +132,7 @@
 							<!-- Widget About -->
 							
 							<div class="widget w-about">
-								<p>Share <?php echo $req_user_data['firstName'] ?>'s profile on on one of the following social platforms to promote them </p>
+								<p>Share <?php echo $req_user_data['firstName'] ?>'s profile on one of the following social platforms to promote them </p>
 								<ul class="socials">
 									<li>
 										<a href="#facebook" class="no-ajaxy" data-sharer='facebook' data-hashtag='KonstructApp' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
@@ -197,7 +197,7 @@
 
 		<!-- Right Sidebar -->
 
-		<div class="col col-xl-3 order-1 col-lg-6 order-lg-3 col-md-6 col-sm-6 col-12" >
+		<div class="col col-xl-3 order-2 col-lg-6 order-lg-3 col-md-6 col-sm-6 col-12" >
 			<div class="crumina-sticky-sidebar">
 
 				<div class="ui-block web-only">

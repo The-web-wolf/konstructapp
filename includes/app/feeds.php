@@ -247,7 +247,7 @@
 	    responsiveClass:true,
 	    dots : false,
 	    nav	: false,
-	    loop : true,
+	    loop : false,
 	    responsive:{
 	        0:{
 	          items:2,	

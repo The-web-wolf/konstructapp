@@ -126,7 +126,7 @@
 				<div class="contact-item-wrap">
 					<h3 class="contact-title">KonstructApp HQ</h3>
 					<div class="contact-item">
-						<a href="#">254 W58th St, New York NY 10001, USA</a>
+						<a href="https://goo.gl/maps/REHvqWETfej5Agzv9">Konstruct Place, 14 ziguinchor street, Zone 4 Wuse Abuja</a>
 					</div>
 					<div class="contact-item">
 						<h6 class="sub-title">General Inquiries:</h6>
@@ -191,18 +191,15 @@
 
 
 
-<section class="medium-padding120 bg-body contact-form-animation scrollme">
+<!-- <section class="medium-padding120 bg-body contact-form-animation scrollme">
 	<div class="container">
 		<div class="row">
 			<div class="col col-xl-10 col-lg-10 col-md-12 col-sm-12  m-auto">
 
-				
-				<!-- Contacts Form -->
+			
 				
 				<div class="contact-form-wrap" style="background-color: #212529;border-color:#212529">
 					<div class="contact-form-thumb">
-						<h2 class="title">SEND US <span>A RAVEN</span></h2>
-						<p>Do you have general questions about KonstructApp? Send us a raven and we’ll answer you as fast as we can!</p>
 						<img src="assets/img/crew.png" alt="crew" class="crew">
 					</div>
 					<form class="contact-form">
@@ -237,20 +234,19 @@
 									<textarea class="form-control" placeholder="Your Message"></textarea>
 								</div>
 				
-								<button class="btn btn-purple btn-lg full-width">Send Message</button>
+								<button class="btn btn-primary btn-lg full-width">Send Message</button>
 							</div>
 						</div>
 					</form>
 				</div>
 				
-				<!-- ... end Contacts Form -->
 
 			</div>
 		</div>
 	</div>
 
 	<div class="half-height-bg bg-white"></div>
-</section>
+</section> -->
 
 
 <!-- Footer Full Width -->
@@ -267,10 +263,9 @@
 				
 					<a href="https://konstructapp.com" class="logo">
 						<div class="img-wrap">
-							<img src="assets/img/logo/white.png" style='width:100px' alt="KonstructApp">
+							<img src="assets/img/logo/transparent.png" style='width:100px' alt="KonstructApp">
 						</div>
 					</a>
-					<p>Quick, low-cost access to Construction Services & Project Financing anytime, anywhere.</p>
 				</div>
 				
 				<!-- ... end Widget About -->
@@ -285,9 +280,6 @@
 				<div class="widget w-list">
 					<h6 class="title">Company.</h6>
 					<ul>
-						<li>
-							<a href="https://konstructapp.com">Landing</a>
-						</li>
 						<li>
 							<a href="./about">About</a>
 						</li>
@@ -313,10 +305,7 @@
 							<a href="./policy">Privacy Policy</a>
 						</li>
 						<li>
-							<a href="#">Help and Support</a>
-						</li>
-						<li>
-							<a href="terms">Terms Of Use</a>
+							<a href="terms">User Agreement</a>
 						</li>
 						<li>
 							<a href="faq">Frequently asked question</a>
@@ -327,26 +316,26 @@
 			</div>
 
             <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
-					<h6 class="title">Contact Us.</h6>
-                    <p>Write us a line at <a href="mailto:info@konstructapp.com">info@konstructapp.com</a>
-                    or reach out to us on our social handles</p>
-                    <ul class="socials">
-						<li>
-							<a href="https://twitter.com/KonstructApp" target='_blank'>
-								<i class="fab fa-facebook-square" aria-hidden="true"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://web.facebook.com/KonstructApp/" target='_blank'>
-								<i class="fab fa-twitter" aria-hidden="true"></i>
-							</a>
-						</li>
-						<li>
-							<a href="https://www.linkedin.com/company/konstructapp" target="_blank">
-								<i class="fab fa-linkedin" aria-hidden="true"></i>
-							</a>
-						</li>
-					</ul>
+							<h6 class="title">Contact Us.</h6>
+		                    <p>Write us a line at <a href="mailto:info@konstructapp.com">info@konstructapp.com</a>
+		                    or reach out to us on our social handles</p>
+		                    <ul class="socials">
+								<li>
+									<a href="https://twitter.com/KonstructApp" target='_blank'>
+										<i class="fab fa-facebook-square" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://web.facebook.com/KonstructApp/" target='_blank'>
+										<i class="fab fa-twitter" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/company/konstructapp" target="_blank">
+										<i class="fab fa-linkedin" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
             </div>
 
 			<div class="col col-lg-12 col-md-12 col-sm-12 col-12">

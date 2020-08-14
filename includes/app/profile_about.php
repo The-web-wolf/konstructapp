@@ -107,8 +107,8 @@
 									<span class="text">${current_cert.location}</span>
 								</li>
 								<li>
-									<span class="title">Date :</span>
-									<span class="text">${current_cert.startYear} - ${endYear}</span>
+									<span class="title">Date Obtained :</span>
+									<span class="text">${current_cert.dateObtained}</span>
 								</li>
 							</ul>
 						</div>

@@ -485,12 +485,11 @@
 				
 				<div class="widget w-about">
 				
-					<a href="./" class="logo">
+					<a href="https://konstructapp.com" class="logo">
 						<div class="img-wrap">
-							<img src="assets/img/logo/white.png" style='width:100px' alt="KonstructApp">
+							<img src="assets/img/logo/transparent.png" style='width:100px' alt="KonstructApp">
 						</div>
 					</a>
-					<p>Quick, low-cost access to Construction Services & Project Financing anytime, anywhere.</p>
 				</div>
 				
 				<!-- ... end Widget About -->
@@ -506,16 +505,13 @@
 					<h6 class="title">Company.</h6>
 					<ul>
 						<li>
-							<a href="#">Landing</a>
+							<a href="./about">About</a>
 						</li>
 						<li>
-							<a href="#">About</a>
+							<a href="./about#team">Team</a>
 						</li>
 						<li>
-							<a href="#">Team</a>
-						</li>
-						<li>
-							<a href="#">How it works</a>
+							<a href="https://konstructapp.com/how-it-works">How it works</a>
 						</li>
 					</ul>
 				</div>
@@ -530,16 +526,13 @@
 					<h6 class="title">KonstructApp</h6>
 					<ul>
 						<li>
-							<a href="#">Privacy</a>
+							<a href="./policy">Privacy Policy</a>
 						</li>
 						<li>
-							<a href="#">Help and Support</a>
+							<a href="terms">User Agreement</a>
 						</li>
 						<li>
-							<a href="#">Terms Of Use</a>
-						</li>
-						<li>
-							<a href="#">Frequently asked question</a>
+							<a href="faq">Frequently asked question</a>
 						</li>
 					</ul>
 				</div>
@@ -548,21 +541,21 @@
 
             <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
 					<h6 class="title">Contact Us.</h6>
-                    <p>Write us a line at info@konstructapp.com
+                    <p>Write us a line at <a href="mailto:info@konstructapp.com">info@konstructapp.com</a>
                     or reach out to us on our social handles</p>
                     <ul class="socials">
 						<li>
-							<a href="#">
+							<a href="https://twitter.com/KonstructApp" target='_blank'>
 								<i class="fab fa-facebook-square" aria-hidden="true"></i>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://web.facebook.com/KonstructApp/" target='_blank'>
 								<i class="fab fa-twitter" aria-hidden="true"></i>
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="https://www.linkedin.com/company/konstructapp" target="_blank">
 								<i class="fab fa-linkedin" aria-hidden="true"></i>
 							</a>
 						</li>
@@ -576,7 +569,7 @@
 				
 				<div class="sub-footer-copyright">
 					<span>
-						Copyright <a href="./">KonstructApp</a> All Rights Reserved <?php echo date('Y')?>
+						Copyright <a href="https://konstructapp.com">KonstructApp</a> All Rights Reserved <?php echo date('Y')?>
 					</span>
 				</div>
 				

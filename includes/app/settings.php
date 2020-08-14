@@ -202,22 +202,15 @@
 									</div>
 									<div class="col col-lg-6 col-md-6 col-sm-12 col-12">
 										<div class="form-group label-floating">
-											<label class="control-label">certificate obtained</label>
+											<label class="control-label">Certificate obtained</label>
 											<input class="form-control" placeholder="" type="text" name="degree" required="" value='${current_cert.degree}'>
 										</div>
 									</div>
 							
 									<div class="col col-lg-6 col-md-6 col-sm-12 col-12">
 										<div class="form-group date-time-picker label-floating">
-											<label class="control-label">Start Date</label>
-											<input class="form-control" placeholder="" type="month" name="startYear" required="" value='${current_cert.startYear}'>
-										</div>
-									</div>
-							
-									<div class="col col-lg-6 col-md-6 col-sm-12 col-12">
-										<div class="form-group date-time-picker label-floating">
-											<label class="control-label">End Date<small><i>(leave blank if still ongoing)</i></small></label>
-											<input class="form-control" placeholder="" type="month" name="endYear" value='${current_cert.endYear}'>
+											<label class="control-label">Date Obtained</label>
+											<input class="form-control" placeholder="" type="month" name="dateObtained" value='${current_cert.dateObtained}'>
 										</div>
 									</div>
 								</div>										

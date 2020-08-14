@@ -540,10 +540,9 @@
 				
 					<a href="https://konstructapp.com" class="logo">
 						<div class="img-wrap">
-							<img src="assets/img/logo/white.png" style='width:100px' alt="KonstructApp">
+							<img src="assets/img/logo/transparent.png" style='width:100px' alt="KonstructApp">
 						</div>
 					</a>
-					<p>Quick, low-cost access to Construction Services & Project Financing anytime, anywhere.</p>
 				</div>
 				
 				<!-- ... end Widget About -->
@@ -558,9 +557,6 @@
 				<div class="widget w-list">
 					<h6 class="title">Company.</h6>
 					<ul>
-						<li>
-							<a href="https://konstructapp.com">Landing</a>
-						</li>
 						<li>
 							<a href="./about">About</a>
 						</li>
@@ -586,10 +582,7 @@
 							<a href="./policy">Privacy Policy</a>
 						</li>
 						<li>
-							<a href="#">Help and Support</a>
-						</li>
-						<li>
-							<a href="terms">Terms Of Use</a>
+							<a href="terms">User Agreement</a>
 						</li>
 						<li>
 							<a href="faq">Frequently asked question</a>
