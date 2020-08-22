@@ -92,7 +92,7 @@ Description: "HTML-template"
 	2.25 Widget playlist
 	2.26 Widget friend pages added
 	2.27 Widget create fav page
-	2.28 Widget birthday alert
+	2.28 Widget  alert
 	2.29 Widget action
 	2.30 Widget activity feed
 	2.31 Widget weather
@@ -141,7 +141,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
 
 .header {
   height: 70px;
-  background-color: #34374B;
+  background-color: #2c304a;
   position: fixed;
   top: 0;
   left: 0;
@@ -227,7 +227,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     .search-bar .selectize-input.has-items > * {
       padding: 3px 10px;
       border-radius: 3px;
-      background-color: #34374B;
+      background-color: #2c304a;
       color: #fff;
       display: inline-block;
       margin-right: 3px; }
@@ -244,7 +244,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
   .search-bar .form-group.with-button input {
     height: 100%;
     border: none;
-    color: #34374B; }
+    color: #2c304a; }
   .search-bar .notification-list {
     position: absolute;
     top: -100%;
@@ -286,7 +286,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
   .control-block .author-subtitle {
     display: block;
     font-weight: 700;
-    color: #34374B;
+    color: #2c304a;
     font-size: 8px; }
 
 .link-find-friend {
@@ -298,7 +298,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
 
 .control-icon {
   margin-right: 29px;
-  fill: #34374B;
+  fill: #2c304a;
   margin-top: 8px; }
   .control-icon > svg {
     height: 20px; }
@@ -455,7 +455,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
 
 .account-settings svg {
   margin-right: 15px;
-  fill: #34374B;
+  fill: #2c304a;
   width: 20px;
   height: 20px; }
 
@@ -510,7 +510,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
   .profile-menu li > div, .profile-menu li a {
     font-size: 14px;
     font-weight: 700;
-    color: #34374B;
+    color: #2c304a;
     display: block; }
     .profile-menu li > div:hover, .profile-menu li a:hover {
       color: #515365; }
@@ -685,7 +685,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     transition: all .3s ease;
     margin: 0;
     padding: 0;
-    background-color: #34374B;
+    background-color: #2c304a;
     border-color: #e6ecf5;
     box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1); }
   .header-menu .dropdown-item:focus, .header-menu .dropdown-item:hover {
@@ -759,7 +759,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     background-color: #fff; }
 
 .header--standard-dark {
-  background-color: #34374B; }
+  background-color: #2c304a; }
   .header--standard-dark .logo {
     color: #fff; }
     .header--standard-dark .logo .logo-title {
@@ -769,19 +769,19 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
   .header--standard-dark .column-tittle {
     color: #fff; }
   .header--standard-dark .header-menu {
-    background-color: #34374B; }
+    background-color: #2c304a; }
     .header--standard-dark .header-menu a {
       color: #fff; }
     .header--standard-dark .header-menu .dropdown-item:hover {
       background-color: #545875; }
   .header--standard-dark .dropdown-menu {
-    background-color: #34374B;
+    background-color: #2c304a;
     border-color: #4a4d66; }
 
 .open-responsive-menu {
   margin-left: auto;
   display: none;
-  fill: #34374B; }
+  fill: #2c304a; }
   .open-responsive-menu:hover {
     fill: #F8AC09; }
 
@@ -789,7 +789,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
   position: absolute;
   top: 20px;
   left: 25px;
-  fill: #34374B;
+  fill: #2c304a;
   display: none;
   cursor: pointer;
   transition: all .3s ease; }
@@ -921,7 +921,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     .header--standard-landing.headroom--not-top .logo {
       color: #515365; }
     .header--standard-landing.headroom--not-top .open-responsive-menu {
-      fill: #34374B; }
+      fill: #2c304a; }
       .header--standard-landing.headroom--not-top .open-responsive-menu:hover {
         fill: #F8AC09; }
     .header--standard-landing.headroom--not-top .logo .logo-colored {
@@ -931,15 +931,15 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     .header--standard-landing.headroom--not-top .header-menu .nav-item a,
     .header--standard-landing.headroom--not-top .header-menu li .nav-link {
       color: #515365;
-      fill: #34374B; }
+      fill: #2c304a; }
       .header--standard-landing.headroom--not-top .header-menu .nav-item a:hover,
       .header--standard-landing.headroom--not-top .header-menu li .nav-link:hover {
         color: #515365;
-        fill: #34374B; }
+        fill: #2c304a; }
     .header--standard-landing.headroom--not-top .header-menu li .dropdown-item {
       color: #888da8; }
     .header--standard-landing.headroom--not-top .shoping-cart .count-product {
-      color: #34374B; }
+      color: #2c304a; }
 
 .landing-page {
   position: relative;
@@ -1598,7 +1598,7 @@ if the page has a “right panel”, add a class for BODY -- ".page-has-right-pa
     padding: 70px 55px; }
 
 .footer--dark {
-  background-color: #34374B; }
+  background-color: #2c304a; }
   .footer--dark .w-about .logo {
     color: #fff; }
     .footer--dark .w-about .logo .logo-title {
@@ -1800,7 +1800,7 @@ section {
   overflow: hidden; }
 
 /*------------- #Styles for preloader --------------*/
-#hellopreloader {
+.fullpageloader {
   display: block;
   position: fixed;
   text-align: center;
@@ -1813,6 +1813,16 @@ section {
   background: #ffffff;
   background-size: 41px;
   opacity: 1; }
+
+#hellopreloader{
+  background: #ffffff
+}
+#requestpreloader{
+  background:rgba(255, 255, 255, .8);
+  /*hide by default*/
+  display: none
+
+}
 
 .preloader {
   position: absolute;
@@ -2115,7 +2125,7 @@ section {
       color: #F8AC09; }
 
 .mobile-app-tabs {
-  background-color: #34374B;
+  background-color: #2c304a;
   border-bottom-color: transparent;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -2364,7 +2374,7 @@ section {
 .cart-main .product-del svg {
   width: 18px;
   height: 18px;
-  fill: #34374B; }
+  fill: #2c304a; }
   .cart-main .product-del svg:hover {
     fill: #F8AC09; }
 
@@ -2709,7 +2719,7 @@ img {
   content: "\2b"; }
 
 .number-spinner.input-group.number-spinner--secondary .input-group-btn > .btn {
-  background-color: #34374B; }
+  background-color: #2c304a; }
 
 .number-spinner.input-group.number-spinner--breez .input-group-btn > .btn {
   background-color: #08ddc1; }
@@ -2782,7 +2792,7 @@ img {
     .ui-block-title.ui-block-title-small .title {
       font-size: 9px;
       text-transform: uppercase;
-      color: #34374B; }
+      color: #2c304a; }
   .ui-block-title:first-child {
     border-top: none; }
   .ui-block-title .btn {
@@ -2913,8 +2923,8 @@ img {
     .btn.c-grey:hover {
       color: inherit; }
   .btn.disabled, .btn:disabled {
-    background-color: #34374B;
-    border-color: #34374B; }
+    background-color: #2c304a;
+    border-color: #2c304a; }
 
 .btn-transparent {
   background-color: transparent; }
@@ -3058,7 +3068,7 @@ button:hover {
   background-color: #888da8; }
 
 .btn-grey-lighter {
-  background-color: #34374B; }
+  background-color: #2c304a; }
 
 .btn-breez-light {
   background-color: #2aebcb; }
@@ -3070,7 +3080,7 @@ button:hover {
   background-color: #e6ecf5; }
 
 .btn-bg-secondary {
-  background-color: #34374B; }
+  background-color: #2c304a; }
 
 .btn-light-bg {
   color: #515365; }
@@ -3195,7 +3205,7 @@ button:hover {
     height: 20px; }
 
 .request-del {
-  background-color: #34374B; }
+  background-color: #2c304a; }
 
 .fav-pages {
   background-color: #F8AC09; }
@@ -3386,7 +3396,7 @@ select.form-control {
       -ms-flex-align: center;
           align-items: center; }
   .input-group-addon svg {
-    fill: #34374B;
+    fill: #2c304a;
     width: 22px; }
 
 .custom-control-description {
@@ -3398,10 +3408,10 @@ select.form-control {
   font-size: 9px;
   text-transform: uppercase;
   font-weight: 500;
-  border: 1px solid #34374B !important; }
+  border: 1px solid #2c304a !important; }
 
 .tooltip-secondary .tooltip-inner {
-  background-color: #34374B; }
+  background-color: #2c304a; }
 
 .tooltip-primary .tooltip-inner {
   background-color: #F8AC09; }
@@ -4140,7 +4150,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     transition: all .3s ease;
     font-weight: 700; }
   .left-menu .left-menu-icon {
-    fill: #34374B;
+    fill: #2c304a;
     transition: all .3s ease;
     margin-right: 25px; }
   .left-menu .olymp-weather-icon {
@@ -4157,7 +4167,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    color: #34374B; }
+    color: #2c304a; }
     .left-menu a:hover {
       color: #515365; }
       .left-menu a:hover svg {
@@ -4208,7 +4218,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     fill: #c2c5d9;
     padding: 0; }
     .more-icons li:hover {
-      fill: #34374B; }
+      fill: #2c304a; }
     .more-icons li + li {
       margin-left: 20px; }
   .more-icons svg {
@@ -4250,7 +4260,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     margin: 15px 20px;
     max-width: 150px; }
   .search-friend a {
-    fill: #34374B; }
+    fill: #2c304a; }
   .search-friend a + a {
     margin-left: 13px; }
 
@@ -4633,7 +4643,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   .single-post-slider .slider-slides {
     bottom: 0; }
   .single-post-slider .btn-next, .single-post-slider .btn-prev {
-    fill: #34374B; }
+    fill: #2c304a; }
     .single-post-slider .btn-next:hover, .single-post-slider .btn-prev:hover {
       fill: #F8AC09; }
   .single-post-slider .btn-next {
@@ -4900,7 +4910,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   .form--login-logout .form-control {
     background-color: #494c62;
     border: 0;
-    color: #34374B; }
+    color: #2c304a; }
   .form--login-logout .login-btn-responsive {
     display: none; }
   .form--login-logout button.btn {
@@ -4956,7 +4966,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 .bg-account {
   background-image: url("../img/top-header3.png"); }
 
-.bg-birthday {
+.bg- {
   background-image: url("../img/top-header6.png"); }
 
 .bg-badges {
@@ -5004,7 +5014,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     font-size: 18px;
     text-align: center;
     color: #fff;
-    background-color: #34374B;
+    background-color: #2c304a;
     margin: 0 auto 65px; 
     padding-top: 10px;
   }
@@ -5246,7 +5256,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 .chat-message li.message-unread {
   background-color: #f7f9fc; }
   .chat-message li.message-unread .notification-icon {
-    fill: #34374B; }
+    fill: #2c304a; }
 
 .chat-field {
   border-left: 1px solid #e6ecf5; }
@@ -5379,35 +5389,35 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 .friend-requests .chat-message-item {
   font-size: 12px; }
 
-.birthday-item {
+.rate-item {
   padding: 25px; }
-  .birthday-item .author-thumb {
+  .rate-item .author-thumb {
     width: 40px;
     height: 40px;
     margin-right: 12px; }
-  .birthday-item .birthday-date {
+  .rate-item .-date {
     font-size: 12px; }
-  .birthday-item .btn {
+  .rate-item .btn {
     margin-bottom: 0;
     float: right;
     margin-top: 5px;
     max-width: 35%; }
-  .birthday-item.badges .author-thumb {
+  .rate-item.badges .author-thumb {
     width: 38px;
     height: 38px;
     margin-right: 25px; }
-  .birthday-item.badges .birthday-date {
+  .rate-item.badges .-date {
     font-size: 13px; }
-  .birthday-item.badges .skills-item {
+  .rate-item.badges .skills-item {
     min-width: 220px;
     display: block;
     float: right;
     margin-bottom: 0;
     margin-top: 18px; }
     @media (max-width: 999px) {
-      .birthday-item.badges .skills-item {
+      .rate-item.badges .skills-item {
         float: none; } }
-  .birthday-item.badges .skills-item-meter-active {
+  .rate-item.badges .skills-item-meter-active {
     background: linear-gradient(to right, #ff613a, #ff9432); }
 
 .label-avatar {
@@ -5426,11 +5436,11 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 
 /*------------- Responsive mode styles --------------*/
 @media (max-width: 1400px) {
-  .birthday-item {
+  .rate-item {
     padding: 25px 10px; } }
 
 @media (max-width: 1200px) {
-  .birthday-item {
+  .rate-item {
     padding: 15px; } }
 
 @media (max-width: 980px) {
@@ -5451,13 +5461,13 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     margin-right: 0; }
   .notification-list .notification-event {
     max-width: 75%; }
-  .birthday-item {
+  .rate-item {
     padding: 10px; }
-  .birthday-item .author-thumb {
+  .rate-item .author-thumb {
     margin-right: 5px; } }
 
 @media (max-width: 420px) {
-  .birthday-item.badges .author-thumb {
+  .rate-item.badges .author-thumb {
     margin-right: 0;
     margin-bottom: 15px;
     display: block; } }
@@ -5853,7 +5863,7 @@ figure {
     min-height: 200px; }
   .create-photo-album .more {
     padding: 10px 13px;
-    fill: #34374B; }
+    fill: #2c304a; }
     .create-photo-album .more a {
       font-size: 12px;
       display: inline-block;
@@ -5863,7 +5873,7 @@ figure {
   .create-photo-album .olymp-happy-face-icon {
     width: 20px;
     height: 20px;
-    fill: #34374B;
+    fill: #2c304a;
     position: absolute;
     top: 10px;
     left: 15px; }
@@ -5950,7 +5960,7 @@ figure {
   .create-friend-group .olymp-happy-face-icon {
     width: 20px;
     height: 20px;
-    fill: #34374B;
+    fill: #2c304a;
     position: absolute;
     top: 19px;
     right: 15px; }
@@ -6058,7 +6068,7 @@ figure {
   .create-event .olymp-happy-face-icon {
     width: 20px;
     height: 20px;
-    fill: #34374B;
+    fill: #2c304a;
     position: absolute;
     top: 19px;
     right: 15px; }
@@ -6546,7 +6556,7 @@ ol ol li {
   display: block;
   margin-bottom: 6px;
   margin-right: 0;
-  background-color: #34374B;
+  background-color: #2c304a;
   width: 34px;
   height: 34px;
   line-height: 36px; }
@@ -6784,7 +6794,7 @@ ol ol li {
       font-size: 13px; }
     .post-video .video-content .link-site {
       font-size: 10px;
-      color: #34374B; }
+      color: #2c304a; }
       .post-video .video-content .link-site:hover {
         color: #F8AC09; }
 
@@ -6891,7 +6901,7 @@ ol ol li {
       width: 22px;
       height: 22px; }
     .news-feed-form .options-message:hover {
-      fill: #34374B; }
+      fill: #2c304a; }
   .news-feed-form form {
     position: relative; }
   .news-feed-form .author-thumb {
@@ -6995,13 +7005,10 @@ ol ol li {
 
 .photo-item {
   display: inline-block;
-  padding: 0 12px 12px 0;
   margin-right: -3px;
   position: relative;
   overflow: hidden; }
   .photo-item .overlay {
-    bottom: 12px;
-    right: 12px;
     border-radius: 5px; }
   .photo-item img {
     border-radius: 5px;
@@ -7556,7 +7563,7 @@ ol ol li {
   margin-bottom: 2px; }
 
 .event-status.uncompleted {
-  background-color: #34374B; }
+  background-color: #2c304a; }
 
 .event-status.completed {
   background-color: #08ddc1; }
@@ -8274,7 +8281,7 @@ ol ol li {
   position: relative; }
 
 .blog-post.format-slider .swiper-pagination {
-  background-color: #34374B;
+  background-color: #2c304a;
   padding: 0 5px;
   border-radius: 30px;
   bottom: -10px; }
@@ -8548,7 +8555,7 @@ ol ol li {
 
 .post-date-wrap svg {
   height: 22px;
-  fill: #34374B;
+  fill: #2c304a;
   margin-right: 12px; }
 
 .post-date-wrap .post-date {
@@ -8565,7 +8572,7 @@ ol ol li {
 
 .post-comments-wrap svg {
   width: 22px;
-  fill: #34374B;
+  fill: #2c304a;
   margin-right: 12px; }
 
 .post-comments-wrap .post-comments {
@@ -9048,7 +9055,7 @@ ol ol li {
 .socials li {
   display: inline-block; }
   .socials li a {
-    color: #34374B; }
+    color: #2c304a; }
     .socials li a:hover {
       color: #F8AC09; }
   .socials li + li {
@@ -9418,7 +9425,7 @@ ol ol li {
     min-height: 14px;
     max-width: 14px;
     max-height: 14px;
-    fill: #34374B;
+    fill: #2c304a;
     position: relative;
     top: 3px; }
   .help-support-list li a {
@@ -9826,7 +9833,7 @@ ol ol li {
       width: 19px;
       height: 19px;
       line-height: 19px;
-      background-color: #34374B;
+      background-color: #2c304a;
       display: inline-block;
       color: #fff;
       margin-left: 10px; }
@@ -10061,7 +10068,7 @@ ol ol li {
   background-color: #F8AC09; }
 
 .bg-secondary {
-  background-color: #34374B; }
+  background-color: #2c304a; }
 
 .bg-purple {
   background-color: #7c5ac2; }
@@ -10085,7 +10092,7 @@ ol ol li {
   background-color: #888da8; }
 
 .bg-grey-lighter {
-  background-color: #34374B; }
+  background-color: #2c304a; }
 
 .bg-orange {
   background-color: #f7a308; }
@@ -10136,7 +10143,7 @@ ol ol li {
   color: #f7a308; }
 
 .c-secondary {
-  color: #34374B; }
+  color: #2c304a; }
 
 .c-yellow {
   color: #F8AC09; }
@@ -10563,7 +10570,7 @@ ol ol li {
     font-weight: 700;
     color: #515365; }
     .social-menu-tabs.nav-tabs .nav-link svg {
-      fill: #34374B;
+      fill: #2c304a;
       margin-right: 10px; }
   .social-menu-tabs.nav-tabs .nav-item:first-child .nav-link {
     border-left: 1px solid #e6ecf5; }
@@ -10836,7 +10843,7 @@ ol ol li {
   .page-description .icon {
     padding: 15px 18px;
     fill: #fff;
-    background-color: #34374B;
+    background-color: #2c304a;
     border-right: 1px solid #e6ecf5;
     display: inline-block;
     vertical-align: middle;
@@ -10859,43 +10866,43 @@ ol ol li {
             align-items: center; } }
 
 /*------------- #W-BIRTHDAY-ALERT --------------*/
-.w-birthday-alert {
-  background-image: url("../img/bg-birthdays.jpg");
+.w--alert {
+  background-image: url("../img/bg-s.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px;
   padding: 25px;
   padding-bottom:20px; }
-  .w-birthday-alert .more {
+  .w--alert .more {
     float: right;
     opacity: .7;
     color: #fff;
     fill: #fff; }
-  .w-birthday-alert .icons-block {
+  .w--alert .icons-block {
     margin-bottom: 35px;
     fill: #fff;
     color: #fff; }
-  .w-birthday-alert .olymp-cupcake-icon {
+  .w--alert .olymp-cupcake-icon {
     width: 24px;
     height: 20px; }
-  .w-birthday-alert .author-thumb img {
+  .w--alert .author-thumb img {
     width: 34px;
     height: 34px;
     margin-bottom: 10px; }
-  .w-birthday-alert .content {
+  .w--alert .content {
     color: #fff; }
-    .w-birthday-alert .content span {
+    .w--alert .content span {
       font-size: 10px;
       margin-bottom: 4px;
       display: block; }
-    .w-birthday-alert .content .title {
+    .w--alert .content .title {
       line-height: 1.3;
       font-weight: 400;
       color: inherit;
       margin-bottom: 5px;
       font-size: 24px;
       display: block; }
-    .w-birthday-alert .content p {
+    .w--alert .content p {
       font-size: 12px; }
 
 .author-thumb {
@@ -10911,7 +10918,7 @@ ol ol li {
     margin-right: 0;
     top: 0;
     left: 0;
-    border: 1px solid #34374B;
+    border: 1px solid #2c304a;
     width: 8px;
     height: 8px; }
 
@@ -11154,7 +11161,7 @@ ol ol li {
   padding: 25px;
   color: #fff;
   position: relative;
-  background: url(../img/bg-birthdays.jpg) no-repeat;
+  background: url(../img/bg-s.jpg) no-repeat;
   background-size: cover;
   border-radius: 5px; }
   .w-build-fav .more {

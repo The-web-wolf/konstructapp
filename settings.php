@@ -157,7 +157,7 @@
 								
 											<div class="form-group label-floating">
 												<label class="control-label">Profession/Expertise</label>
-												<select class="selectpicker form-control" data-live-search="true"  name="occupation" id="occupation" required>
+												<select class="selectpicker form-control" data-live-search="true"  name="occupation" id="occupation">
 													<option value="" disabled="" selected="" > Profession/expertise</option>
 													<option value='Architect'>Architect</option>
 													<option value='Civil Engineer'>Civil Engineer</option>

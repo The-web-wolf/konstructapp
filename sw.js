@@ -13,7 +13,10 @@ self.addEventListener('install', function(event) {
           'assets/css/custom.css',
           'assets/css/main.css',
           'assets/bootstrap/css/bootstrap.css',
-          'https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js'
+          'https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js',
+          'android/android-launchericon-96-96.png',
+          'chrome/chrome-favicon-16-16.png',
+          'android/android-launchericon-192-192.png '
           ]).finally(function(){
           return cache.put(indexPage, response);
         })        
@@ -42,10 +45,7 @@ self.addEventListener('fetch', function(event) {
         //console.log(' add page to offline'+response.url)
         if(request.destination === 'style' || request.destination === 'font' || request.destination === 'script'){
           return cache.put(request, response);
-        }
-        else{
-          return;
-        }        
+        }     
       });
     });
   };
@@ -58,9 +58,9 @@ self.addEventListener('fetch', function(event) {
 
       return caches.open('konstructapp').then(function (cache) {
         console.log(event.request)
-        // if (event.request.mode === 'navigate') {
-        //   return cache.match('offline.html');
-        // }        
+        if (event.request.mode === 'navigate') {
+          return cache.match('offline.html');
+        }        
       });
     })
   );

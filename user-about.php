@@ -118,7 +118,7 @@
 		<div class="col col-xl-4 order-1 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12">
 			<div class="ui-block">
 				<div class="ui-block-title">
-					<h6 class="title">Personal Info</h6>
+					<h6 class="title" style="display: block;">Bio: <span class="text" style="color:#888da8;font-weight: normal;font-size: 12px;text-align: right;float:right;"> <?php echo $req_user_data['bio'] ?> </span></h6>
 				</div>
 				<div class="ui-block-content">
 
@@ -126,20 +126,13 @@
 					<!-- W-Personal-Info -->
 					
 					<ul class="widget w-personal-info item-block">
+
 						<li>
-							<span class="title">About Me:</span>
-							<span class="text"> <?php echo $req_user_data['bio'] ?> </span>
-						</li>
-						<li>
-							<span class="title">Birthday:</span>
-							<span class="text"><?php echo $req_user_data['dob'] ?></span>
-						</li>
-						<li>
-							<span class="title">Lives in:</span>
+							<span class="title">Location:</span>
 							<span class="text"><?php echo $req_user_data['city'] ?> <?php echo $req_user_data['state'] ?>, <?php echo $req_user_data['country'] ?></span>
 						</li>
 						<li>
-							<span class="title">Occupation:</span>
+							<span class="title">Profession:</span>
 							<span class="text"><?php echo $req_user_data['occupation'] ?></span>
 						</li>
 						<li>

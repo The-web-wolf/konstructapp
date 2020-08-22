@@ -61,4 +61,12 @@ php_value post_max_size 500M
   mod_gzip_item_include handler ^cgi-script$
 </ifModule>
 
+
+<ifmodule mod_headers.c="">
+   SetEnvIf Origin "^(.*\.konstructapp\.com)$" ORIGIN_SUB_DOMAIN=$1
+   Header set Access-Control-Allow-Origin "%{ORIGIN_SUB_DOMAIN}e" env=ORIGIN_SUB_DOMAIN
+   Header set Access-Control-Allow-Methods: "*"
+   Header set Access-Control-Allow-Headers: "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+</ifmodule>
+
 ErrorDocument 404 http://localhost/konstructapp/404

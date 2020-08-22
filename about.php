@@ -77,14 +77,35 @@
 			color : #2a2c48;
 		}
 		.our-values h2{
-			font-weight:400;
-			color:#2a2c48
+			font-weight:500;
+			color:#2a2c48;
+			margin-bottom:10px;
 		}
 		.our-values p{
-			font-weight : 700;
+			font-size:17px;
 			color:#2a2c48;
-			font-family:cursive
 		}
+
+		.our-values .box{
+			padding:10px;
+			margin-top:10px;
+			height:150px;
+			border-radius:10px;
+		}
+		@media(max-width: 997px){
+			.our-values .box{
+				height: auto
+			}
+		}
+
+		.w-list a,.footer p{
+			font-size: 16px;
+			color: #ffffff
+		}
+		.footer .title{
+			font-size: 24px;
+		}
+
 
 </style>
 
@@ -163,50 +184,50 @@
 
 <section class='medium-padding80 our-values' style='background-color:#F8AC09'>
 	<div class='container' >
-		<div class='row' style='height:150px'>
+		<div class='row' >
 			<div class='col-xs-12 col-md-4'>
-				<div>
-					<h1 class='text-center'>Vision</h1>
+				<div class='box'>
+					<h2 class='text-center'>Vision</h1>
 					<p class='text-center'>Making professionalism accessible to all.</p>
 				</div>
 			</div>
 			<div class='col-xs-12 col-md-4'>
-				<div>
-					<h1 class='text-center'>Goal</h1>
+				<div class='box'>
+					<h2 class='text-center'>Goal</h1>
 					<p class='text-center'>To create a scalable, profitable business while stimulating significant positive impact in Africa and emerging global markets.</p>
 				</div>
-			</div>
+			</div class='box'>
 			<div class='col-xs-12 col-md-4'>
-				<div>
-					<h1 class='text-center'>Vision</h1>
-					<p class='text-center'>Making professionalism accessible to all.</p>
+				<div class='box'>
+					<h2 class='text-center'>Mission</h1>
+					<p class='text-center'>Promoting smart engagement in the construction sector. </p>
 				</div>
 			</div>
 		</div>
 		<div class='row'>
 			<div class='col-xs-12 col-md-12'>
-				<div style='margin-top:80px'>
+				<div style='margin-top:50px'>
 					<h1 class='text-center'> Our Values</h1>
 				</div>
 			</div>
 		</div>
 		<div class='row' style='margin-top:50px'>
 			<div class='col-xs-12 col-md-4'>
-				<div>
+				<div class='box'>
 					<h2 class='text-center'>Curiosity</h1>
-					<p class='text-center'>Making professionalism accessible to all.</p>
+					<p class='text-center'>We take chances to explore new approaches.</p>
 				</div>
 			</div>
 			<div class='col-xs-12 col-md-4'>
-				<div>
+				<div class='box'>
 					<h2 class='text-center'>Team Work</h1>
-					<p class='text-center'>To create a scalable, profitable business while stimulating significant positive impact in Africa and emerging global markets.</p>
+					<p class='text-center'>We value and leverage collaborations.</p>
 				</div>
 			</div>
 			<div class='col-xs-12 col-md-4'>
-				<div>
+				<div class='box'>
 					<h2 class='text-center'>Growth</h1>
-					<p class='text-center'>Making professionalism accessible to all.</p>
+					<p class='text-center'>We continually test, learn and adapt while having fun..</p>
 				</div>
 			</div>
 		</div>		
@@ -243,17 +264,10 @@
 						<a href="#" class="h5 teammembers-item-name">Taye Olajide</a>
 				
 						<div class="teammembers-item-prof">CEO</div>
-				
 						<ul class="socials socials--round">
 							<li>
-								<a href="" class="social-item facebook">
-									<span class='fab fa-facebook'></span>
-								</a>
-							</li>
-				
-							<li>
-								<a href="" class="social-item twitter">
-                                    <span class='fab fa-twitter'></span>									
+								<a href="https://twitter.com/tyolajide" target='_blank' class="social-item twitter">
+                  <span class='fab fa-twitter'></span>									
 								</a>
 							</li>
 						</ul>
@@ -340,8 +354,8 @@
 				<div class="crumina-module crumina-teammembers-item">
 				
 					<div class="teammembers-thumb">
-						<img class="main" src="assets/img/team/Odu.jpg" alt="Odu Udo">
-						<img class="hover" src="assets/img/team/Odu.jpg" alt="Odu Udo">
+						<img class="main" src="assets/img/team/odu.jpg" alt="Odu Udo">
+						<img class="hover" src="assets/img/team/odu.jpg" alt="Odu Udo">
 					</div>
 				
 					<div class="teammember-content">
@@ -350,14 +364,9 @@
 				
 						<div class="teammembers-item-prof">OPERATIONS</div>
 						<ul class="socials socials--round">
-							<li>
-								<a href="" class="social-item facebook">
-									<span class='fab fa-facebook'></span>
-								</a>
-							</li>
 				
 							<li>
-								<a href="" class="social-item twitter">
+								<a href="https://twitter.com/odu_udo" target='_blank' class="social-item twitter">
                                     <span class='fab fa-twitter'></span>									
 								</a>
 							</li>
@@ -488,7 +497,7 @@
 					<h6 class="title">Company.</h6>
 					<ul>
 						<li>
-							<a href="./about">About</a>
+							<a href="./contact">Contact</a>
 						</li>
 						<li>
 							<a href="./about#team">Team</a>
@@ -523,7 +532,7 @@
 			</div>
 
             <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
-					<h6 class="title">Contact Us.</h6>
+					<h6 class="title">Quick Line.</h6>
                     <p>Write us a line at <a href="mailto:info@konstructapp.com">info@konstructapp.com</a>
                     or reach out to us on our social handles</p>
                     <ul class="socials">

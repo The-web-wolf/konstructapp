@@ -48,14 +48,14 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge1.png" alt="author">
 						<div class="label-avatar bg-primary">2</div>
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Olympian User</a>
-						<div class="birthday-date">Congratulations! You have been in the Olympus community for 2 years.</div>
+						<div class="ratee">Congratulations! You have been in the Olympus community for 2 years.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -71,13 +71,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge2.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Favourite Creator</a>
-						<div class="birthday-date">You created a favourite page.</div>
+						<div class="ratee">You created a favourite page.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -93,14 +93,14 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge3.png" alt="author">
 						<div class="label-avatar bg-blue">4</div>
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Friendly User</a>
-						<div class="birthday-date">You have more than 80 friends. Next Tier: 150 Friends. </div>
+						<div class="ratee">You have more than 80 friends. Next Tier: 150 Friends. </div>
 					</div>
 				
 					<div class="skills-item">
@@ -116,13 +116,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge4.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Professional Photographer</a>
-						<div class="birthday-date">You have uploaded more than 500 images to your profile.</div>
+						<div class="ratee">You have uploaded more than 500 images to your profile.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -138,13 +138,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge5.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Expert Filmaker</a>
-						<div class="birthday-date">You have uploaded more than 80 videos to your profile.</div>
+						<div class="ratee">You have uploaded more than 80 videos to your profile.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -160,13 +160,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge6.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Mightier Than The Sword</a>
-						<div class="birthday-date">You have written more than 50 blog post entries.</div>
+						<div class="ratee">You have written more than 50 blog post entries.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -182,13 +182,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge7.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Universe Explorer</a>
-						<div class="birthday-date">You have visited more than 1000 different user profiles.</div>
+						<div class="ratee">You have visited more than 1000 different user profiles.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -204,13 +204,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge8.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Nothing to Hide</a>
-						<div class="birthday-date">You have completed all your profile fields.</div>
+						<div class="ratee">You have completed all your profile fields.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -226,13 +226,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge9.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Messaging Master</a>
-						<div class="birthday-date">You have messaged with at least 20 different people.</div>
+						<div class="ratee">You have messaged with at least 20 different people.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -248,13 +248,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge10.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Musical Sharer</a>
-						<div class="birthday-date">You have linked your Spotify account to share your playlist.</div>
+						<div class="ratee">You have linked your Spotify account to share your playlist.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -270,13 +270,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge11.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Superliked Hero</a>
-						<div class="birthday-date">You have collected more than 100 likes in one post.</div>
+						<div class="ratee">You have collected more than 100 likes in one post.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -292,13 +292,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge12.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Strongly Caffeinated </a>
-						<div class="birthday-date">You have written more than 1000 posts.</div>
+						<div class="ratee">You have written more than 1000 posts.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -314,14 +314,14 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge13.png" alt="author">
 						<div class="label-avatar bg-breez">2</div>
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Events Promoter</a>
-						<div class="birthday-date">You have created more than 25 public or private events. Next Tier: 50.</div>
+						<div class="ratee">You have created more than 25 public or private events. Next Tier: 50.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -337,13 +337,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge14.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Friendship Cultivator</a>
-						<div class="birthday-date">You have tagged friends on 200 different posts.</div>
+						<div class="ratee">You have tagged friends on 200 different posts.</div>
 					</div>
 				
 					<div class="skills-item">
@@ -359,13 +359,13 @@
 			<div class="ui-block">
 
 				
-				<div class="birthday-item inline-items badges">
+				<div class="ratem inline-items badges">
 					<div class="author-thumb">
 						<img src="assets/img/badge15.png" alt="author">
 					</div>
-					<div class="birthday-author-name">
+					<div class="ratehor-name">
 						<a href="#" class="h6 author-name">Phantom Profile</a>
-						<div class="birthday-date">You haven’t posted anything on your profile for more than 1 month.</div>
+						<div class="ratee">You haven’t posted anything on your profile for more than 1 month.</div>
 					</div>
 				
 					<div class="skills-item">

@@ -8,6 +8,12 @@
 
 <body class="page-has-left-panels darkmode">
 
+	<style type="text/css">
+		html{
+			overflow-x: hidden;
+		}
+	</style>
+
 	<?php include('includes/static/sidebar-left.php') ?>
 
 	<?php include('includes/static/header-top.php') ?>
@@ -49,7 +55,7 @@
 				<div id="status-container" >
 					<form class="status-form" id="new-status" data-method='POST' data-action="<?=$devUrl?>/api/status">
 						<div class="form-group label-floating is-empty">
-							<label class="control-label">Share what you are thinking here...</label>
+							<label class="control-label">Share your status...</label>
 							<textarea class="form-control " placeholder="" name="statusText" minlength="10" style="border-left: none;border-right: none"></textarea>
 							<input type="hidden" name="portfolio">
 							<span id="imageUploadStatus"></span>
@@ -63,7 +69,7 @@
 										<svg class="olymp-multimedia-icon" data-toggle="modal" data-target="#status-image-upload"><use xlink:href="#olymp-multimedia-icon"></use></svg>
 									</a>								
 									<a href="#s" class="options-message choose-portfolio-tag no-ajaxy" data-toggle="tooltip" data-placement="top"   data-original-title="TAG PORTFOLIO" id="status_tag_portfolio">									
-										<svg class="olymp-computer-icon"><use xlink:href="#olymp-computer-icon"></use></svg>
+										<svg class="olymp-trophy-icon"><use xlink:href="#olymp-trophy-icon"></use></svg>
 									</a>
 								
 								</div>
@@ -78,7 +84,15 @@
 			</div>
 			
 			<!-- ... end News Feed Form  -->			
-		</div>		
+		</div>
+		<?php if (!$complete_profile): ?>
+			<div class="page-description" id="incomplete-profile">
+				<div class="icon">
+					<svg class="olymp-info-icon left-menu-icon" data-toggle="tooltip" data-placement="bottom" data-original-title="PROFILE INFO"><use xlink:href="#olymp-info-icon"></use></svg>
+				</div>
+				<span>Complete your <a href="settings"> profile information </a> to get the best of Konstructapp</span>
+			</div>
+		<?php endif ?>			
 	</div>
 
 	<div class="sections container">

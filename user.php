@@ -176,12 +176,15 @@
 		<!-- Main Content -->
 
 		<div class="col col-xl-6 order-3 col-lg-12 order-lg-2 col-md-12 col-sm-12 col-12">
-			<div class="page-description" id="incomplete-profile">
-				<div class="icon">
-					<svg class="olymp-info-icon left-menu-icon" data-toggle="tooltip" data-placement="bottom" data-original-title="PROFILE INFO"><use xlink:href="#olymp-info-icon"></use></svg>
+
+			<?php if (!$complete_profile): ?>
+				<div class="page-description" id="incomplete-profile">
+					<div class="icon">
+						<svg class="olymp-info-icon left-menu-icon" data-toggle="tooltip" data-placement="bottom" data-original-title="PROFILE INFO"><use xlink:href="#olymp-info-icon"></use></svg>
+					</div>
+					<span>Complete your <a href="settings"> profile information </a> to get the best of Konstructapp</span>
 				</div>
-				<span>Complete your <a href="settings"> profile information </a> to get the best of Konstructapp</span>
-			</div>
+			<?php endif ?>
 
 			<div id="newsfeed-items-grid">
 				<div class="loader-activity">
@@ -249,7 +252,7 @@
 <!-- Load Status files -->
 
 <?php include('includes/static/components/modals/status.php') ?>
-
+<?php include('includes/static/components/modals/portfolio.php') ?>
 <!-- End Load status files -->
 
 <?php include('includes/static/scripts.php') ?>
@@ -263,6 +266,7 @@
 
 <?php include('models/likes.php') ?>
 <?php include('models/status.php') ?>
+	<?php include('models/portfolio.php') ?>
 
 <?php include('includes/app/profile.php') ?>
 

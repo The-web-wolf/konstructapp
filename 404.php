@@ -5,7 +5,7 @@
 	.svg-error-icon{
 		width: 400px !important;
 		height: auto;
-		fill:#34374B !important
+		fill:#2c304a !important
 	}
 	.heading-text{
 		font-size: 18px;

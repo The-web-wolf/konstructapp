@@ -1652,7 +1652,6 @@ $(function(){
 				</div>
 			</div>
 		</div>`
-		console.log(content)
 	})
 	.fail(function(jqXHR){
 		if (jqXHR.status == 500) {

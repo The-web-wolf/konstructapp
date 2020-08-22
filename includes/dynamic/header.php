@@ -13,6 +13,8 @@ date_default_timezone_set("Africa/Lagos");
 
 $page = isset($page_name) ? $page_name : "anonymous";
 
+$complete_profile = true;
+
 if(!isset($authpage) && !isset($openpage) && !isset($_COOKIE['_id'])){
 	header('location:signin'); // redirects to signin page if cookie for user does not exist
 }
@@ -24,29 +26,36 @@ if (isset($_COOKIE['_id']) && isset($authpage)) {
 if (isset($_COOKIE['_id']) && !isset($openpage)) { // avoid checking for user if in an open
 	save('_id', $_COOKIE['_id']); // refreshes cookie
 	$user_prf  	= $devUrl ."/api/user/" . $_COOKIE['_id'];
-    try{
-        $get_user = requestUser($user_prf);
-		if($get_user){
-            $user_data = json_decode($get_user, true);
-		    $user_data = $user_data['data'];		    
+		try{
+			$get_user = requestUser($user_prf);
+			if($get_user){
+				$user_data = json_decode($get_user, true);
+				$user_data = $user_data['data'];		
+				
+				foreach ($user_data as $key => $value) {
+					if (strlen($value) < 2) {
+						$complete_profile = false;
+					}
+				}
+				//TODO :  map cookie to check user decision concerning showing complete profile alert
+			}
+		} 
+		
+		catch(Exception $e){
+				$http_status = $e->getMessage();
+				if ($http_status == 400){
+						// user not found(self user does not exist);
+						// ID in cookie does not match record, log out user
+					 killSession();
+					 exit();
+				}
+				else{
+						// server error
+						http_response_code(500);
+						header('location:500');
+				}
 		}
-    } 
-    
-    catch(Exception $e){
-        $http_status = $e->getMessage();
-        if ($http_status == 400){
-            // user not found(self user does not exist);
-            // ID in cookie does not match record, log out user
-           killSession();
-           exit();
-        }
-        else{
-            // server error
-            http_response_code(500);
-            header('location:500');
-        }
-    }
-    
+		
 
 }
 
@@ -54,34 +63,34 @@ if (isset($page_mode) && $page_mode == 'user') {
 	if (isset($_GET['id'])) {
 		$requested_user = sanitizeString($_GET['id']);
 		$req_user_url 	= $devUrl ."/api/user/" . $requested_user;
-        try{
-            $req_user_data = requestUser($req_user_url);
-           if($req_user_data){
-                save('req_id', $requested_user); // saves the reqested_user id in cookie
-    			$req_user_data = json_decode($req_user_data, true);
-    			$req_user_data = $req_user_data	['data'];
-    
-        		// Check if I'm the user
-        
-        		$self_user = $requested_user == $_COOKIE['_id'] ? true : false;               
-           }	
-        } 
-        
-        catch(Exception $e){
-            $http_status = $e->getMessage();
-            if ($http_status == 404){
-                // user not found(wrong ID in url);
-                http_response_code(404);
-                header('location:404');
-               exit();
-            }
-            else{
-                // server error
-                http_response_code(500);
-                header('location:500');
-                exit();
-            }
-        }		
+				try{
+						$req_user_data = requestUser($req_user_url);
+					 if($req_user_data){
+								save('req_id', $requested_user); // saves the reqested_user id in cookie
+					$req_user_data = json_decode($req_user_data, true);
+					$req_user_data = $req_user_data	['data'];
+		
+						// Check if I'm the user
+				
+						$self_user = $requested_user == $_COOKIE['_id'] ? true : false;               
+					 }	
+				} 
+				
+				catch(Exception $e){
+						$http_status = $e->getMessage();
+						if ($http_status == 404){
+								// user not found(wrong ID in url);
+								http_response_code(404);
+								header('location:404');
+							 exit();
+						}
+						else{
+								// server error
+								http_response_code(500);
+								header('location:500');
+								exit();
+						}
+				}		
 
 	}
 	else{

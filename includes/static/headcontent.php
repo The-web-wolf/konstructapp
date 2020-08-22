@@ -15,7 +15,8 @@
 				families: ['Roboto:300,400,500,700:latin'],
 			}
 		});
-	</script>	
+	</script
+	>	
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -26,7 +27,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="chrome/chrome-favicon-16-16.png">
 	<link rel="manifest" href="manifest.json">
 	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="theme-color" content="#34374B">
+	<meta name="theme-color" content="#2c304a">
 
 
 	<!-- Bootstrap CSS -->
@@ -41,11 +42,27 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/fonts.min.css">
 	<link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.min.css" integrity="sha256-cZDeXQ7c9XipzTtDgc7DML5txS3AkSj0sjGvWcdhfns=" crossorigin="anonymous" />
 
+	<style type="text/css">
+		body{
+			max-width: 100%;
+			width: 100%;
+		}
+	</style>
+
 </head>
 
 
 <!-- Place preloader outside the body -->
-<div id="hellopreloader">
+
+<!-- Loader for page load -->
+<div class="fullpageloader" id="hellopreloader">
+	<div class="preloader">
+		<div class="loader-activity"><div class="indeterminate"></div></div>
+	</div>
+</div>
+
+<!-- Loader for actions -->
+<div class="fullpageloader" id="requestpreloader" >
 	<div class="preloader">
 		<div class="loader-activity"><div class="indeterminate"></div></div>
 	</div>

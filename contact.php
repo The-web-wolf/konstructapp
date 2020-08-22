@@ -31,6 +31,14 @@
     	 background-color:#2a2c48 !important
     }
 
+		.w-list a,.footer p{
+			font-size: 16px;
+			color: #ffffff
+		}
+		.footer .title{
+			font-size: 24px;
+		}
+
 </style>
 
 <!-- Stunning header -->
@@ -281,7 +289,7 @@
 					<h6 class="title">Company.</h6>
 					<ul>
 						<li>
-							<a href="./about">About</a>
+							<a href="./contact">Contact</a>
 						</li>
 						<li>
 							<a href="./about#team">Team</a>

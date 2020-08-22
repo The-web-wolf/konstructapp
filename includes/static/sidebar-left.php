@@ -120,7 +120,7 @@
 <div class="fixed-sidebar fixed-sidebar-responsive">
 
 	<div class="fixed-sidebar-left sidebar--small" id="sidebar-left-responsive">
-		<a href="#" class="logo js-sidebar-open" style="background: #34374B">
+		<a href="#" class="logo js-sidebar-open" style="background: #2c304a">
 			<img src="assets/img/logo/menulogo.png" alt="app">
 		</a>
 

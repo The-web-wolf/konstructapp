@@ -15,6 +15,17 @@ function save($key,$value){
     setcookie($key, $value, time() + (86400 * 30), "/");
 }
 
+
+// checks and ensure the request to a page is HTTP POSTrequest else, blocks the user access
+function check_post(){
+	if($_SERVER['REQUEST_METHOD'] != 'POST'){
+		http_response_code(404);
+		header('location:./index');
+
+		die('Unrecognised server request');		
+	}
+}
+
 // checks and ensure the request to a page is HTTP GET request by checking a key else, blocks the user access
 function check_get($key){
 	$key = $key;
@@ -23,6 +34,21 @@ function check_get($key){
 		http_response_code(404);
 		$response = "{'response' : false, 'message' : 'Unrecognised server request'}";
 		die($response);
+	}
+}
+
+// convert array to json for javascript
+
+function to_json($array){
+	if(!is_array($array)){ // check if the argument passed is an aray
+		$build = array('status' => 'error', 'description' => 'data passed is not an array'); ; // builds a json of error
+		$pass  = json_encode($build , true);
+		return $pass;
+	}
+	else{
+		$build = $array;
+		$pass = json_encode($build , true);
+		return $pass; // converts the array passed to json and returns it
 	}
 }
 

@@ -23,7 +23,7 @@
 	      	$('#new-bid .upload-image-container .file-upload .file-upload__label p').css('color', '#F8AC09')
 	      }
 	  });  	
-	  $("#new-bid input,#new-bid select").each(function(){
+	  $("#new-bid input,#new-bid select, #new-bid textarea").each(function(){
 	  	$(this).on('keyup change', function(){
 				if (!$("#new-bid").valid()) {
 	    		update_btn_state('createBid', 'disable');
@@ -48,6 +48,8 @@
 		let images_cont = $('#detailed-bid .modal-body 	.swiper-wrapper');
 		let modal_loader= $('#detailed-bid .modal-body 	.loader-activity');
 		let comment_list= $('#detailed-bid .commentBody .comments-list');
+		let imagesNav 	= $('#detailed-bid .modal-body .btn-prev-without, #detailed-bid .modal-body .btn-next-without')
+
 
 		$(modal_loader).fadeIn('linear')		
 		$(modal_top).html('').fadeOut()
@@ -61,6 +63,9 @@
 		.then( response  => {
 			bid 	= response.data;
 			let relative_date	= moment(bid.createdAt).format('LLLL');
+
+			var $isPicture 	 	= bid.pictures.length === 1 && bid.pictures[0].length ? true : false;
+			var $isPictures 	= bid.pictures.length > 1 ? true : false;
 
 			let tag_colors = ['bg-primary', 'bg-blue', 'bg-purple','bg-violet', 'bg-grey', 'bg-grey-light', 'bg-grey-lighter', 'bg-orange'];
 			let bid_tags = ' ' ;
@@ -139,8 +144,12 @@
 
 			// Activate swipe if more than 1 image available
 
-			if (bid.pictures.length > 1) {
+			if ($isPictures) {
+				$(imagesNav).show()
 				activateSwiper()
+			}
+			else{
+				$(imagesNav).hide()
 			}
 
 			let likes_count 		= bid.likes.length;
@@ -426,6 +435,7 @@
 		  			talert('Bid deleted');
 		  			swal.stopLoading();
 	    			swal.close();
+	    			hideModals()
 		  			loadBids('sub');
 		  		}
 		  	})

@@ -104,7 +104,13 @@
 	  		talert('cannot make empty status');
 	  		return
 	  	}
-	  	else{
+	  	else{	  		
+	  		let form = $('#new-status');
+	  		let portfolio = $(form).find('[name=portfolio]');
+
+	  		if ( $(portfolio).val().length === 0) {
+	  			$(form).find('[name=portfolio]').remove()
+	  		}
 	  		submitForm('new-status', 'statusCreated')
 	  	}
 	  })
@@ -184,7 +190,7 @@
 
 
 	function expandStatus(params){
-		let modal 		= $('#detailed-status');
+		let modal 			= $('#detailed-status');
 		let modal_top 	= $('#title-information')
 		let modal_body	= $('#detailed-status .modal-body #main-content');
 		let images_cont = $('#detailed-status .modal-body .swiper-wrapper');
@@ -216,7 +222,7 @@
 			var $isText 	 	= status.statusText.length ? true : false;
 			var $isPicture 	 	= status.pictures.length === 1 && status.pictures[0].length ? true : false;
 			var $isPictures 	= status.pictures.length > 1 ? true : false;
-			var $isPortfolio 	= 'portfolio' in status && status.portfolio ? true : false;
+			var $isPortfolio 	= status.portfolio && typeof status.portfolio === 'object' ?  true : false;
 
 			let poster = '' ;
 			let portfolioContent = '';
@@ -232,26 +238,31 @@
 			if($isPortfolio){
 				poster = 'tagged a portfolio';
 
-				let portfolio_details = status.portfolio.details.match(/(.{0,150}\w)\s/)[1]+` <a href='#' class='readmore' data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${status.portfolio._id}"}'> <b> ... </b> </a>`;
+				let portfolio_details = status.portfolio.details.match(/(.{0,150}\w)\s/)[1]+` <a href='#' class='readmore' data-target='custom-function' data-_fnc='expandBid' data-_param='{"id":"${status.portfolio._id}"}'> <b> ... </b> </a>`;
 
-				portfolioContent = `					
-					<div class="post-video">
-						<div class="video-thumb">
-							<img src="${status.portfolio.pictures[0]}" alt="photo" style='height:194px;width:197px;display:inline'>
-							<a href="#" class="play-video">
-								<svg class="olymp-magnifying-glass-icon">
-									<use xlink:href="#olymp-magnifying-glass-icon"></use>
-								</svg>
-							</a>
-						</div>
-			
-						<div class="video-content">
-							<a href="#" class="h4 title">${status.portfolio.title}</a>
-							<p>${portfolio_details}</p>
-						</div>
-					</div>`				
-			
+				if (!$isPictures && !$isPicture) {
+					portfolioContent = `					
+						<div class="post-video" style='border: 1px solid #34374b;'>
+							<div class="video-thumb">
+								<img src="${status.portfolio.pictures[0]}" alt="photo" style='height:194px;width:100%;display:inline;object-fit:cover'>
+								<a href="#" class="play-video" data-target='custom-function' data-_fnc='expandPortfolio' data-_param='{"id":"${status.portfolio._id}"}'>
+									<svg class="olymp-magnifying-glass-icon">
+										<use xlink:href="#olymp-magnifying-glass-icon"></use>
+									</svg>
+								</a>
+							</div>
+				
+							<div class="video-content">
+								<a href="#" class="h4 title">${status.portfolio.title}</a>
+							</div>
+						</div>`				
+				}
+				else{
+					// Show a mini expand to view portfolio button
+					portfolioContent = `<a href="#" data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${status._id}"}' class="more-comments">View Tagged Portfolio <span>+</span></a>`
+				}
 			}
+
 			let topContent = `
 				<div class="post__author author vcard inline-items">
 					<img src="${status.user.userPic}" alt="author">
@@ -318,11 +329,7 @@
 
 			let likes_count 	= status.likes.length;
 			let content 	= `				
-				<div class="row">
-					<div class="col col-lg-7 col-md-7 col-sm-12 col-12">
-
-					</div>
-				</div>
+				${portfolioContent}
 
 				<div class="post-additional-info inline-items">
 

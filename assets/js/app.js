@@ -3,7 +3,9 @@ $(window).ready(function(){
 	perfectScrollbarInit()
 });
 
-let devUrl = 'https://api.konstructapp.com';
+//let devUrl = 'https://konstructapps.herokuapp.com'; // test 
+
+let devUrl = 'https://api.konstructapp.com'; // live
 
 triggerBtns();
 
@@ -386,30 +388,28 @@ let submitForm = (formID, successFunction) => {
 	.fail(function(jqXHR){	
 	  	
 		try {
-	        let response = JSON.parse(jqXHR.responseText);
 		    switch (jqXHR.status) {
-		        case 401 :
-		          	talert(response.message);
-		          	resetBtn(targetForm)
-		        	break;
-		        case 400 :
-		          	talert(response.message);
-		          	resetBtn(targetForm)
-		        	break;
-		        case 500 :
-		          	talert(response.message);
-		          	resetBtn(targetForm)
-		        	break;
-		        default:
-		          	alert('Uncaught Error.\n' + jqXHR.responseText);
-		          	resetBtn(targetForm)
-		          	break;
+	        case 401 :
+	          	talert(jqXHR.statusText);
+	          	resetBtn(targetForm)
+	        	break;
+	        case 400 :
+	          	talert(jqXHR.statusText);
+	          	resetBtn(targetForm)
+	        	break;
+	        case 500 :
+	          	talert(jqXHR.statusText);
+	          	resetBtn(targetForm)
+	        	break;
+	        default:
+	          	talert('Uncaught Error.\n' + jqXHR.statusText);
+	          	resetBtn(targetForm)
+	          	break;
 		      }	
 	    } 
 	    catch(err) {
-	       resetBtn(targetForm);
-	       let Errresponse = jqXHR.responseText.replace(/(<([^>]+)>)/ig,"").trim();
-	       talert( Errresponse);
+	      resetBtn(targetForm);
+	      talert( jqXHR.statusText);
 	    }	  	
 	})
 }
@@ -427,33 +427,38 @@ let submitData = (data, method, action, callback) => {
 	  headers: { 'Authorization': `Bearer ${authtk}` },
 	   
 	}).done(function(response){
-		callback(null, response);
+		callback(undefined, response);
 	})
 	.fail(function(jqXHR){	
 		try {
-      let response = JSON.parse(jqXHR.responseText);
 	    switch (jqXHR.status) {
 	        case 401 :
-	          talert(response.message);
-	         	callBack(new Error('Authentication error'), jqXHR);
+	          talert(jqXHR.statusText);
+	         	throw('Authentication error');
 	        	break;
 	        case 400 : 
-	        	talert(response.message)
-	        	callBack(new Error('Authentication error'), jqXHR);
+	        	talert(jqXHR.statusText)
+	        	throw('Authentication error');
 	        	break;
 	        case 500 : 
-	        	talert(response.message)
-	        	callBack(new Error('Authentication error'), jqXHR);
+	        	talert(jqXHR.statusText)
+	        	throw('Internal server error');
+	        	break;
+	        case 404 : 
+	        	talert(jqXHR.statusText)
+	        	throw('Not found');
 	        	break;
 	        default:
-	          	callback(new Error('Uncaught Error.\n' + jqXHR.responseText), jqXHR);
-	          	break;
+          	talert(jqXHR.statusText);
+          	throw('Uncaught Error.\n' + jqXHR.statusText);
+          	break;
 	      }	
+
 	    } 
 	    catch(err) {
-	       let Errresponse = jqXHR.responseText.replace(/(<([^>]+)>)/ig,"").trim();
-	       talert( Errresponse);
-	    }	  	
+	       talert(jqXHR.statusText);
+	       callback(err, jqXHR);
+	    }	  
 	})
 
 }
@@ -508,7 +513,7 @@ function profilePictures() {
 		        setTimeout(function(){
 		        	cropper =	new Cropper(newImage, {
 						aspectRatio: cropAR,
-						moovable : true,
+						movable : true,
 						zoomable : true,
 						dragMode : 'move',
 						scalable : false,
@@ -544,10 +549,10 @@ function profilePictures() {
 
 			  	// Use `jQuery.ajax` method for example
 			  	$.ajax(formUrl, {
-			    	method: 'PUT',
+						method: 'PUT',
 			    	data: formData,
-			    	processData: false,
-			    	contentType: false,
+						processData: false,
+						contentType : false,
 			    	headers: { 'Authorization': `Bearer ${authtk}` },
 			    	
 			  	}).done(function(response){
@@ -555,22 +560,20 @@ function profilePictures() {
 			  		location.reload()
 			  	}).fail(function(jqXHR){	
 						try {
-			        let response = JSON.parse(jqXHR.responseText);
 				   		switch (jqXHR.status) {
 				        case 401 :
-			          	talert(response.message);
+			          	talert(jqXHR.statusText);
 			          	resetBtn(targetForm)
 				        	break;
 				        default:
-			          	alert('Uncaught Error.\n' + jqXHR.responseText);
+			          	alert('Uncaught Error.\n' + jqXHR.statusText);
 			          	resetBtn(targetForm)
 			          	break;
 				      }	
 			    	} 
 				    catch(err) {
-				       resetBtn(targetForm);
-				       let Errresponse = jqXHR.responseText.replace(/(<([^>]+)>)/ig,"").trim();
-				       talert( Errresponse);
+							 resetBtn(targetForm);
+				       talert( jqXHR.statusText);
 				    }	
 					})
 				}/*, 'image/png' */);	  		

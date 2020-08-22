@@ -32,6 +32,13 @@
     ol{
     	padding-left: 1em
     }
+		.w-list a,.footer p{
+			font-size: 16px;
+			color: #ffffff
+		}
+		.footer .title{
+			font-size: 24px;
+		}    
 </style>
 
 <div class="header--standard header--standard-landing " id="header--standard">
@@ -505,7 +512,7 @@
 					<h6 class="title">Company.</h6>
 					<ul>
 						<li>
-							<a href="./about">About</a>
+							<a href="./contact">Contact</a>
 						</li>
 						<li>
 							<a href="./about#team">Team</a>

@@ -6,10 +6,11 @@
 
 	function loadBids(callType){
 		if (callType === 'sub') {
-			$('#bids-section').html(`			<div class="ui-block-title">
-				<div class="h2 title">Bids</div>
+			$('#bids-section').html(`
+			<div class="ui-block-title no-border">
+				<div class="h5 title">Bids</div>
 					<div class="align-right">
-						<a href="#more" class="btn btn-primary btn-xs" >See all &nbsp <span class="fa fa-long-arrow-right">	</span></a>
+						<a href="bids" class="more" >See all &nbsp <span class="fa fa-long-arrow-right">	</span></a>
 					</div>			
 			</div>
 			<div class="loader-activity">
@@ -45,10 +46,11 @@
 	function loadPortfolio(callType){
 		let root = $('#portfolio-section');
 		if (callType === 'sub') {
-			$(root).html(`<div class="ui-block-title" style="padding-left: 0px">
-				<div class="h1 title">Portfolio</div>
+			$(root).html(`
+			<div class="ui-block-title no-border" style="padding-left: 0px">
+				<div class="h5 title">Portfolio</div>
 					<div class="align-right">
-						<a href="#more" class="btn btn-primary btn-xs" >See all &nbsp <span class="fa fa-long-arrow-right">	</span></a>
+						<a href="portfolio" class="more" >See all &nbsp <span class="fa fa-long-arrow-right">	</span></a>
 					</div>			
 			</div>
 			<div class="loader-activity">
@@ -81,12 +83,7 @@
 	function loadUsers(callType){
 		let root = $('#users-section');
 		if (callType === 'sub') {
-			$(root).html(`<div class="ui-block-title" style="padding-left: 0px">
-				<div class="h1 title">Featured Users</div>
-					<div class="align-right">
-						<a href="#more" class="btn btn-primary btn-xs" >See all &nbsp <span class="fa fa-long-arrow-right">	</span></a>
-					</div>			
-			</div>
+			$(root).html(`
 			<div class="loader-activity">
 			  <div class="indeterminate"></div>
 			</div>			
@@ -411,7 +408,7 @@
 		var $isPicture 	  = current_status.pictures.length === 1 ? true : false;
 		$isPicture 				=	current_status.pictures[0].length > 1 ? true : false; // check if array first child is empty
 		var $isPictures 	= current_status.pictures.length > 1 ? true : false;
-		var $isPortfolio 		= 'portfolio' in current_status && current_status.portfolio ? true : false;
+		var $isPortfolio 	= current_status.portfolio  ?  true : false;
 
 		let poster = '' ;
 		let portfolioContent = '';
@@ -426,6 +423,7 @@
 					</a>
 				</div>`
 		}
+
 		if ($isPictures){
 			poster 	= 'posted ' + current_status.pictures.length + ' photos';
 			let pictureGrid = '';
@@ -451,30 +449,9 @@
 		if($isPortfolio){
 			poster = 'tagged a portfolio';
 
-			let portfolio_details = current_status.portfolio.details.match(/(.{0,150}\w)\s/)[1]+` <a href='#' class='readmore' data-target='custom-function' data-_fnc='expandBid' data-_param='{"id":"${current_status.portfolio._id}"}'> <b> ... </b> </a>`;
-
-			if (!$isPictures) {
-				portfolioContent = `					
-					<div class="post-video">
-						<div class="video-thumb">
-							<img src="${current_status.portfolio.pictures[0]}" alt="photo" style='height:194px;width:197px;display:inline'>
-							<a href="#" class="play-video">
-								<svg class="olymp-magnifying-glass-icon">
-									<use xlink:href="#olymp-magnifying-glass-icon"></use>
-								</svg>
-							</a>
-						</div>
-			
-						<div class="video-content">
-							<a href="#" class="h4 title">${current_status.portfolio.title}</a>
-							<p>${portfolio_details}</p>
-						</div>
-					</div>`				
-			}
-			else{
 				// Show a mini expand to view portfolio button
-				portfolioContent = `<a href="#" data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${current_status._id}"}' class="more-comments">View Tagged Portfolio <span>+</span></a>`
-			}
+				portfolioContent = `<a href="#" data-target='custom-function' data-_fnc='expandPortfolio' data-_param='{"id":"${current_status.portfolio}"}' class="more-comments">View Tagged Portfolio <span>+</span></a>`
+			
 		}
 
 		let writeContent = new Promise (function(resolve,reject){

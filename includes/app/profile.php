@@ -25,11 +25,10 @@
 
 		let likes_count = current_status.likes.length;
 
-		var $isPicture 	  	= current_status.pictures.length === 1 ? true : false;
-		$isPicture 			= current_status.pictures[0].length > 1 ? true : false; // check if array first child is empty
+		var $isPicture 	  = current_status.pictures.length === 1 ? true : false;
+		$isPicture 				= current_status.pictures[0].length > 1 ? true : false; // check if array first child is empty
 		var $isPictures 	= current_status.pictures.length > 1 ? true : false;
-		//var $isPortfolio 	= current_status.portfolio.length > 0 ? true : false;
-		var $isPortfolio 	= 'portfolio' in current_status ? true : false;
+		var $isPortfolio 	= current_status.portfolio && typeof current_status.portfolio === 'object' ?  true : false;
 
 		let poster = '' ;
 		let portfolioContent = '';
@@ -71,12 +70,12 @@
 
 			let portfolio_details = current_status.portfolio.details.match(/(.{0,150}\w)\s/)[1]+` <a href='#' class='readmore' data-target='custom-function' data-_fnc='expandBid' data-_param='{"id":"${current_status.portfolio._id}"}'> <b> ... </b> </a>`;
 
-			if (!$isPictures) {
+			if (!$isPictures && !$isPicture) {
 				portfolioContent = `					
-					<div class="post-video">
+					<div class="post-video" style='border: 1px solid #34374b;'>
 						<div class="video-thumb">
-							<img src="${current_status.portfolio.pictures[0]}" alt="photo" style='height:194px;width:197px;display:inline'>
-							<a href="#" class="play-video">
+							<img src="${current_status.portfolio.pictures[0]}" alt="photo" style='height:194px;width:100%;display:inline;object-fit:cover'>
+							<a href="#" class="play-video" data-target='custom-function' data-_fnc='expandPortfolio' data-_param='{"id":"${current_status.portfolio._id}"}'>
 								<svg class="olymp-magnifying-glass-icon">
 									<use xlink:href="#olymp-magnifying-glass-icon"></use>
 								</svg>
@@ -85,7 +84,6 @@
 			
 						<div class="video-content">
 							<a href="#" class="h4 title">${current_status.portfolio.title}</a>
-							<p>${portfolio_details}</p>
 						</div>
 					</div>`				
 			}
@@ -101,7 +99,7 @@
 				<div class="ui-block">
 					<!-- Post -->
 					
-					<article class="hentry post">
+					<article class="hentry post" >
 					
 							<div class="post__author author vcard inline-items">
 								<img src="${current_status.user.userPic}" alt="author">
@@ -119,7 +117,7 @@
 					
 							</div>
 					
-							<p>
+							<p  data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${current_status._id}"}'>
 								${status_details}
 							</p>
 

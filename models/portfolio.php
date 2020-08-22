@@ -143,7 +143,6 @@
 		let method 	= 'DELETE';
 		let action 	= `${devUrl}/api/portfolio/${portfolio.id}`;
 		swal({
-		  title: portfolio.title,
 		  text: `Are you sure you want to delete this portfolio?`,
 		  icon: "warning",
 		  buttons: {
@@ -160,7 +159,6 @@
 		  if (value == 'proceedDelete') {
 		  	submitData(reqData,method,action, (error, response) => {
 		  		if(error){
-		  			talert(error);
 		  			if (response.status === 400) {
 		  				loadPortfolio('sub')
 		  			}
@@ -168,11 +166,11 @@
 		  		else{
 		  			// Successful
 		  			talert('Portfolio deleted');
-		  			swal.stopLoading();
-	    			swal.close();
 	    			hideModals()
 		  			loadPortfolio('sub');
 		  		}
+	  			swal.stopLoading();
+    			swal.close();		  		
 		  	})
 		  } else {
 		    
@@ -229,6 +227,7 @@
 		let images_cont = $('#detailed-portfolio .modal-body 	.swiper-wrapper');
 		let modal_loader= $('#detailed-portfolio .modal-body 	.loader-activity');
 		let comment_list= $('#detailed-portfolio .commentBody .comments-list');
+		let imagesNav 	= $('#detailed-portfolio .modal-body .btn-prev-without, #detailed-portfolio .modal-body .btn-next-without')
 
 		$(modal_loader).fadeIn('linear')		
 		$(modal_top).html('').fadeOut()
@@ -243,6 +242,8 @@
 			portfolio 	= portfolio.data;
 			let relative_date	=  moment(portfolio.createdAt).format('LLLL');
 
+			var $isPicture 	 	= portfolio.pictures.length === 1 && portfolio.pictures[0].length ? true : false;
+			var $isPictures 	= portfolio.pictures.length > 1 ? true : false;
 
 			let self_user_menu = portfolio.user._id === Cookies.get('_id') ? `
 				<div class="more" style='display:inline;'><svg class="olymp-three-dots-icon"><use xlink:href="#olymp-three-dots-icon"></use></svg>
@@ -251,15 +252,15 @@
 							<a href="#null"  data-target='custom-function' data-_fnc='editPortfolio' data-_param='{"id":"${portfolio._id}"}'>Edit Portfolio</a>
 						</li>
 						<li>
-							<a href="#null" data-target='custom-function' data-_fnc='deletePortfolio' data-_param='{"id":"${portfolio._id}","title":"${portfolio.title}"}'>Delete Portfolio</a>
+							<a href="#null" data-target='custom-function' data-_fnc='deletePortfolio' data-_param='{"id":"${portfolio._id}"	}'>Delete Portfolio</a>
 						</li>
 						<li>
 							<a href="#null" data-target='custom-function' data-_fnc="makePortfolioFeatured" 
-							data-_param='{"id":"${portfolio._id}","title":"${portfolio.title}"}'>Select as Featured</a>
+							data-_param='{"id":"${portfolio._id}"}'>Select as Featured</a>
 						</li>
 						<li>
 							<a href="#null" data-target='custom-function' data-_fnc="shareForReview" 
-							data-_param='{"id":"${portfolio._id}","title":"${portfolio.title}"}'>Share for review</a>
+							data-_param='{"id":"${portfolio._id}"}'>Share for review</a>
 						</li>
 					</ul>
 				</div>` : ''
@@ -301,8 +302,12 @@
 
 			// Activate swipe if more than 1 image available
 
-			if (portfolio.pictures.length > 1) {
+			if ($isPictures) {
+				$(imagesNav).show()
 				activateSwiper()
+			}
+			else{
+				$(imagesNav).hide()
 			}
 
 			let likes_count = portfolio.likes.length
