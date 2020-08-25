@@ -14,7 +14,7 @@ $(function(){
 	if ('serviceWorker' in navigator) {
 	  if (navigator.serviceWorker.controller) {} else {
 	    //Register the ServiceWorker
-	    navigator.serviceWorker.register('./sw.js', {
+	    navigator.serviceWorker.register('./sw.js?v=2', {
 	      scope: './'
 	    });
 	  }

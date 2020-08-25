@@ -133,7 +133,7 @@
 
 <script src="assets/js/libs/swiper.jquery.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="assets/js/app.js?v=3"></script>
 <!-- <script src='assets/js/index.js'></script> -->
 <script src="assets/js/libs-init/libs-init.js"></script>
 <script defer src="assets/fonts/fontawesome-all.js"></script>

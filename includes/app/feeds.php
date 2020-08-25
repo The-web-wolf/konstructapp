@@ -79,6 +79,26 @@
 
 		})
 	}
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+
 
 	function loadUsers(callType){
 		let root = $('#users-section');
@@ -92,7 +112,7 @@
 			</div>	`)
 		}
 
-		let targetUrl = `${devUrl}/api/users?limit=20`;
+		let targetUrl = `${devUrl}/api/users?limit=50`;
 		$.ajax({
 			url : targetUrl,	  
 			processData : false,
@@ -101,6 +121,12 @@
 
 			let response_data	= response.data
 			let response_count= response.count;
+			var keyArray = $.map(response_data, function (value, key) { return value; });
+			shuffle(keyArray);
+			
+			response_data = JSON.stringify(keyArray); // convert back to json
+			response_data = JSON.parse(response_data);
+
 			response_data.map(function(currentValue){
 				
 				if(currentValue.userPic === 'https://res.cloudinary.com/konstructapp/image/upload/v1590052164/defaultuser_ni5iiz.png'){
@@ -582,6 +608,7 @@
 				})
 			})
 		})
-	}	
-	
+	}
+
+
 </script>

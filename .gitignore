@@ -3,3 +3,4 @@ sw.js
 composer.json
 composer.LOCK
 .vscode
+vendor
