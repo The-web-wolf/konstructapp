@@ -126,12 +126,12 @@
 									<button type="submit" class="btn btn-lg btn-primary full-width">Login</button>
 									<!-- <p class="web-only">Forgotten your password? <a href="#" data-toggle="modal" data-target="#restore-password-1" >Click here!</a> to set a new one</p> -->
 			
-									<!-- <div class="or"></div>
+									<div class="or"></div>
 									
 									<a href="#" id="googleSignin" class="btn btn-block btn-md social-login">
 										<svg class="pass-SocialButton-icon pass-SocialButton-icon--google" width="16" height="16" viewBox="0 0 16 16"><defs><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-8a"></path><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-10c"></path><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-12e"></path><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-14g"></path></defs><g fill="none" fill-rule="evenodd"><g transform="translate(.08 .07)"><mask id="id-9b" fill="#fff"><use xlink:href="#id-8a"></use></mask><path fill="#FBBC05" fill-rule="nonzero" mask="url(#id-9b)" d="M-.72 12.616V3.244L5.406 7.93z"></path></g><g transform="translate(.08 .07)"><mask id="id-11d" fill="#fff"><use xlink:href="#id-10c"></use></mask><path fill="#EA4335" fill-rule="nonzero" mask="url(#id-11d)" d="M-.72 3.244L5.406 7.93 7.93 5.731l8.651-1.405V-.721H-.72z"></path></g><g transform="translate(.08 .07)"><mask id="id-13f" fill="#fff"><use xlink:href="#id-12e"></use></mask><path fill="#34A853" fill-rule="nonzero" mask="url(#id-13f)" d="M-.72 12.616l10.813-8.29 2.848.36 3.64-5.407v17.302H-.72z"></path></g><g transform="translate(.08 .07)"><mask id="id-15h" fill="#fff"><use xlink:href="#id-14g"></use></mask><path fill="#4285F4" fill-rule="nonzero" mask="url(#id-15h)" d="M16.581 16.581L5.407 7.931 3.965 6.848l12.616-3.605z"></path></g></g></svg>
 										Continue with  google
-									</a> -->
+									</a>
 	
 									<p class="web-only">Don't have an account? <a href="#" class="custom-register-trigger">Click here!</a> to set up a new account! and experience Konstructapp</p>
 		
@@ -139,14 +139,22 @@
 							</div>
 						</form>
 						<br>
-						<!-- <div class="reset_password_btn">
+						<div class="reset_password_btn">
 							<a href="#" class="forgot mobile-only c-white"  data-toggle="modal" data-target="#restore-password-1">Forgot my Password</a>
 							
-						</div>	 -->					
+						</div>						
 					</div>
 					<div class="tab-pane" id="register" role="tabpanel" data-mh="log-tab">
 						<div class="title h6">Register</div>
+						
 						<form class="content" id="registerationForm" data-method="POST" data-action="<?=$devUrl?>/api/register" enctype="multipart/form-data">
+									
+									<a href="#" id="googleSignup" class="btn btn-block btn-md social-login">
+										<svg class="pass-SocialButton-icon pass-SocialButton-icon--google" width="16" height="16" viewBox="0 0 16 16"><defs><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-8a"></path><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-10c"></path><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-12e"></path><path d="M15.32 6.488H7.93v3.064h4.254c-.397 1.947-2.055 3.064-4.254 3.064A4.677 4.677 0 0 1 3.244 7.93 4.677 4.677 0 0 1 7.93 3.244c1.118 0 2.127.397 2.92 1.046l2.307-2.307C11.751.757 9.949 0 7.93 0A7.907 7.907 0 0 0 0 7.93a7.907 7.907 0 0 0 7.93 7.93c3.965 0 7.57-2.883 7.57-7.93 0-.468-.072-.973-.18-1.442z" id="id-14g"></path></defs><g fill="none" fill-rule="evenodd"><g transform="translate(.08 .07)"><mask id="id-9b" fill="#fff"><use xlink:href="#id-8a"></use></mask><path fill="#FBBC05" fill-rule="nonzero" mask="url(#id-9b)" d="M-.72 12.616V3.244L5.406 7.93z"></path></g><g transform="translate(.08 .07)"><mask id="id-11d" fill="#fff"><use xlink:href="#id-10c"></use></mask><path fill="#EA4335" fill-rule="nonzero" mask="url(#id-11d)" d="M-.72 3.244L5.406 7.93 7.93 5.731l8.651-1.405V-.721H-.72z"></path></g><g transform="translate(.08 .07)"><mask id="id-13f" fill="#fff"><use xlink:href="#id-12e"></use></mask><path fill="#34A853" fill-rule="nonzero" mask="url(#id-13f)" d="M-.72 12.616l10.813-8.29 2.848.36 3.64-5.407v17.302H-.72z"></path></g><g transform="translate(.08 .07)"><mask id="id-15h" fill="#fff"><use xlink:href="#id-14g"></use></mask><path fill="#4285F4" fill-rule="nonzero" mask="url(#id-15h)" d="M16.581 16.581L5.407 7.931 3.965 6.848l12.616-3.605z"></path></g></g></svg>
+										Register with  google
+									</a>	
+
+						<div class="or"></div>
 							<div class="row">
 								<div class="col col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 									<div class="form-group label-floating">
@@ -183,10 +191,12 @@
 										</div>
 									</div>
 			
-									<button type='submit' class="btn btn-primary btn-lg full-width">Complete Registration!</a>
+									<button type='submit' class="btn btn-primary btn-lg full-width">Complete Registration!</button>
+								
 								</div>
 							</div>
 						</form>	
+
 					</div>					
 				</div>
 			</div>
@@ -225,35 +235,6 @@
 		</div>
 	</div>
 </div>
-
-<div class="modal fade" id="restore-password-2" tabindex="-1" role="dialog" aria-labelledby="restore-password-2" aria-hidden="true">
-	<div class="modal-dialog window-popup restore-password-popup" role="document">
-		<div class="modal-content">
-			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
-				<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>
-			</a>
-
-			<div class="modal-header">
-				<h6 class="title">Restore your Password</h6>
-			</div>
-
-			<div class="modal-body">
-				<form class="content no-ajaxy" id="resetForm2" method="POST" action="controllers/reset">
-					<p>Enter the code sent to your email and a new password to your account</p>
-					<div class="form-group label-floating">
-						<label class="control-label">Enter the Code</label>
-						<input class="form-control" placeholder="" type="text" value="">
-					</div>
-					<div class="form-group label-floating">
-						<label class="control-label">Your New Password</label>
-						<input class="form-control" placeholder="" type="password" value="olympus">
-					</div>
-					<button class="btn btn-primary btn-lg full-width">Change your Password!</button>
-				</form>
-
-			</div>
-		</div>
-	</div>
 </div>
 
 <!-- ... end Window-popup Restore Password -->
@@ -268,10 +249,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/app.js?v=3"></script>
+<script src="assets/js/app.js"></script>
 <script src="assets/js/libs-init/libs-init.js"></script>
 <script defer src="assets/fonts/fontawesome-all.js"></script>
-<script src="https://apis.google.com/js/api:client.js"></script>
+<script src="https://apis.google.com/js/api:client.js" async></script>
 
 <script src="assets/Bootstrap/dist/js/bootstrap.bundle.js"></script>
 
@@ -288,35 +269,52 @@
         client_id: '294565636344-a8stj0fogvkdqkb6ed3m5atqj0nolt8i.apps.googleusercontent.com',
         cookiepolicy: 'single_host_origin',
         fetch_basic_profile : true,
-        //ux_mode : redirect,
+        ux_mode : 'popup',
       });
       attachSignin(document.getElementById('googleSignin'));
+      attachSignin(document.getElementById('googleSignup'));
     });
  };
+
+ var setUser = function(payload) {
+	$('#requestpreloader').fadeIn()
+	let method 	= 'POST';
+	let action 	= `${devUrl}/api/googleauth`;
+	submitData(payload,method,action, (error, response) => {
+		if(error){
+			talert(error);
+			$('#requestpreloader').fadeOut()
+		}
+		else{
+			talert(response.message);
+			userFx(response);
+			$('#requestpreloader').fadeOut();
+		}
+	})
+ }
 
  function attachSignin(element) {
     auth2.attachClickHandler(element, {},
         function(googleUser) {
-          var id_token 	= googleUser.getAuthResponse().id_token;
-          let formData 	= {
+          	var id_token 	= googleUser.getAuthResponse().id_token;
+          	let formData 	= {
           	googleToken : id_token
-          } 
-          let method 	= 'POST';
-          let action 	= `controllers/googleauth`;
-          $('#requestpreloader').fadeIn()
+         	} 
+          	let method 	= 'POST';
+          	let action 	= `controllers/googleauth`;
+          	$('#requestpreloader').fadeIn()
 
-					submitData(formData,method,action, (error, response) => {
-						if(error){
-							talert('Could not complete')	
-          		$('#requestpreloader').fadeOut()
-						}
-						else{
-							// user signed in
-							let payload = JSON.parse(response);
-							console.log(payload);
-							$('#requestpreloader').fadeOut()
-						}
-					})          
+			submitData(formData,method,action, (error, response) => {
+				if(error){
+					talert('Could not complete signin')	
+          			$('#requestpreloader').fadeOut()
+				}
+				else{
+					let payload = JSON.parse(response);
+					$('#requestpreloader').fadeOut()					
+					setUser(payload)
+				}
+			})          
 
         }, function(error) {
           talert(JSON.stringify(error.error, undefined, 2));
@@ -325,7 +323,7 @@
 
 
 $(function(){
-	//startApp();
+	startApp();
 	$('.custom-signin-trigger').click(function(e){
 		e.preventDefault()
 		$('.signin-trigger').click()

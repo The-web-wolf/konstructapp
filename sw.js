@@ -2,13 +2,12 @@
 
 //Install stage sets up the index page (home page) in the cache and opens a new cache
 self.addEventListener('install', function(event) {
-  var indexPage = new Request('./');
+  var offlinePage = new Request('./offline');
   event.waitUntil(
-    fetch(indexPage).then(function(response) {
+    fetch(offlinePage).then(function(response) {
       return caches.open('konstructapp').then(function(cache) {
         //console.log(' Cached index page during Install'+ response.url);
         cache.addAll([
-          'offline.html',
           'assets/js/jQuery/jquery-3.4.1.js',
           'assets/css/custom.css',
           'assets/css/main.css',
@@ -18,7 +17,7 @@ self.addEventListener('install', function(event) {
           'chrome/chrome-favicon-16-16.png',
           'android/android-launchericon-192-192.png '
           ]).finally(function(){
-          return cache.put(indexPage, response);
+          return cache.put(offlinePage, response);
         })        
       });
   }));
@@ -43,7 +42,7 @@ self.addEventListener('fetch', function(event) {
     return caches.open('konstructapp').then(function (cache) {
       return fetch(request).then(function (response) {
         //console.log(' add page to offline'+response.url)
-        if(request.destination === 'style' || request.destination === 'font' || request.destination === 'script'){
+        if(request.destination === 'style' || request.destination === 'font' || request.destination === 'script' || request.destination== 'document'){
           return cache.put(request, response);
         }     
       });
@@ -59,8 +58,9 @@ self.addEventListener('fetch', function(event) {
       return caches.open('konstructapp').then(function (cache) {
         console.log(event.request)
         if (event.request.mode === 'navigate') {
-          return cache.match('offline.html');
-        }        
+          return cache.match('offline');
+        }
+               
       });
     })
   );

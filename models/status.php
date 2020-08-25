@@ -11,7 +11,7 @@
 		let getPortfolio = fetch(targetUrl)
 			.then( response => response.json())
 			.then( portfolio => {
-				if (portfolio.length === 0) {
+				if (portfolio.count === 0) {
 					talert('You have no portfolio')
 					$('#create-new-portfolio').modal('show');
 				}
@@ -111,7 +111,12 @@
 	  		if ( $(portfolio).val().length === 0) {
 	  			$(form).find('[name=portfolio]').remove()
 	  		}
-	  		submitForm('new-status', 'statusCreated')
+			submitForm('new-status', 'statusCreated')
+			  
+			if ( $(portfolio).val().length === 0) {
+				$(form).append(`<input type="hidden" name="portfolio">`);		
+				// recreate the portfolio input field if it was removed		
+			}
 	  	}
 	  })
 	}	

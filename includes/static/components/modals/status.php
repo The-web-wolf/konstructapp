@@ -1,4 +1,4 @@
-<!-- Window-popup Create Event -->
+<!-- Window-popup tag portfolio -->
 
 <div class="modal fade" id="choose-portfolio" tabindex="-1" role="dialog" aria-labelledby="choose-portfolio" aria-hidden="true">
 	<div class="modal-dialog window-popup create-event" role="document">
@@ -24,7 +24,7 @@
 	</div>
 </div>
 
-<!-- ... end Window-popup Create Event -->
+<!-- ... end Window-popup tag portfolio -->
 
 <!-- Window-popup Update Status -->
 

@@ -98,7 +98,12 @@
 	<div class="sections container">
 
 		<section id="users-section">
-
+			<!-- <div class="ui-block-title no-border" style="padding-left: 0px">
+				<div class="h5 title">Featured Users</div>
+				<div class="align-right">
+						<a href="users" class="more" >See all &nbsp <span class="fa fa-long-arrow-right">	</span></a>
+					</div>			
+			</div> -->
 			<div class="loader-activity">
 			  <div class="indeterminate"></div>
 			</div>			

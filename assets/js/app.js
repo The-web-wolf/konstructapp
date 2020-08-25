@@ -14,7 +14,7 @@ $(function(){
 	if ('serviceWorker' in navigator) {
 	  if (navigator.serviceWorker.controller) {} else {
 	    //Register the ServiceWorker
-	    navigator.serviceWorker.register('./sw.js?v=2', {
+	    navigator.serviceWorker.register('./sw.js', {
 	      scope: './'
 	    });
 	  }
@@ -549,10 +549,10 @@ function profilePictures() {
 
 			  	// Use `jQuery.ajax` method for example
 			  	$.ajax(formUrl, {
-						method: 'PUT',
+					method: 'PUT',
 			    	data: formData,
-						processData: false,
-						contentType : false,
+					processData: false,
+					contentType : false,
 			    	headers: { 'Authorization': `Bearer ${authtk}` },
 			    	
 			  	}).done(function(response){
@@ -566,13 +566,13 @@ function profilePictures() {
 			          	resetBtn(targetForm)
 				        	break;
 				        default:
-			          	alert('Uncaught Error.\n' + jqXHR.statusText);
+			          	talert('Uncaught Error.\n' + jqXHR.statusText);
 			          	resetBtn(targetForm)
 			          	break;
 				      }	
 			    	} 
 				    catch(err) {
-							 resetBtn(targetForm);
+						resetBtn(targetForm);
 				       talert( jqXHR.statusText);
 				    }	
 					})
