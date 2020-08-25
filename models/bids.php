@@ -232,8 +232,8 @@
 	}	
 
 	function likeBid(params){
-		let bid 		= params;
-		let user 		= Cookies.get('_id');
+		let bid 	= params;
+		let user 	= Cookies.get('_id');
 		let reqData = {likes : user};
 		let likeBtn = $(document).find(`.likeBtn.${bid.id}`);	
 		let likeText= $(document).find(`.likeText.${bid.id}`);	

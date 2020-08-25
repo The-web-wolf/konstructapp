@@ -139,10 +139,10 @@
 							</div>
 						</form>
 						<br>
-						<div class="reset_password_btn">
+						<!-- <div class="reset_password_btn">
 							<a href="#" class="forgot mobile-only c-white"  data-toggle="modal" data-target="#restore-password-1">Forgot my Password</a>
 							
-						</div>						
+						</div>						 -->
 					</div>
 					<div class="tab-pane" id="register" role="tabpanel" data-mh="log-tab">
 						<div class="title h6">Register</div>

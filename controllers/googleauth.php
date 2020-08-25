@@ -39,7 +39,7 @@ if ($payload) {
   print($output);
   
 } else {
-  // Invalid ID token
-  http_response_code(401);
+  	// Invalid ID token
+  	http_response_code(401);
  	exit();
 }

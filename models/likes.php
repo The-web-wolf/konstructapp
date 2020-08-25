@@ -1,6 +1,6 @@
 <script type="text/javascript">
 	function refreshLikes(ref_item){
-		let user 				= Cookies.get('_id');
+		let user 			= Cookies.get('_id');
 		let likeBtn 		= $(document).find(`.likeBtn`);	
 		let likeText		= $(document).find(`.likeText`);
 		let user_id			= Cookies.get('_id');
