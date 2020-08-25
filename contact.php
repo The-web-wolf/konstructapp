@@ -70,16 +70,16 @@
 								<a href="https://konstructapp.com" class="nav-link">Home</a>
 							</li>
 							<li class="nav-item">
-								<a href="about" class="nav-link">About</a>
+								<a href="#" class="nav-link">About</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link">Contact</a>
+								<a href="./contact" class="nav-link">Contact</a>
 							</li>
 							<li class="nav-item">
 								<a href="https://konstructapp.com/business" class="nav-link">Business</a>
 							</li>
 							<li class="nav-item">
-								<a href="policy" class="nav-link">Privacy Policy</a>
+								<a href="./" class="nav-link">Get Started</a>
 							</li>
 							<li class="close-responsive-menu js-close-responsive-menu">
 								<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>
@@ -90,11 +90,6 @@
 									<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>
 								</a>
 							</li>
-							<!-- <li class="menu-search-item">
-								<a href="#" class="nav-link" data-toggle="modal" data-target="#main-popup-search">
-									<svg class="olymp-magnifying-glass-icon"><use xlink:href="#olymp-magnifying-glass-icon"></use></svg>
-								</a>
-							</li> -->
 						</ul>
 					</div>
 				</div>
@@ -262,7 +257,7 @@
 <div class="footer footer-full-width" id="footer">
 	<div class="container">
 		<div class="row">
-			<div class="col col-lg-4 col-md-4 col-sm-12 col-12">
+			<div class="col col-lg-2 col-md-4 col-sm-12 col-12">
 
 				
 				<!-- Widget About -->
@@ -280,19 +275,19 @@
 
 			</div>
 
-			<div class="col col-lg-2 col-md-4 col-sm-12 col-12">
+			<div class="col col-lg-3 col-md-4 col-sm-12 col-12">
 
 				
 				<!-- Widget List -->
 				
 				<div class="widget w-list">
 					<h6 class="title">Company.</h6>
-					<ul>
+					<ul>					
 						<li>
-							<a href="./contact">Contact</a>
+							<a href="./about">About Us</a>
 						</li>
 						<li>
-							<a href="./about#team">Team</a>
+							<a href="./contact">Contact Us</a>
 						</li>
 						<li>
 							<a href="https://konstructapp.com/how-it-works">How it works</a>
@@ -303,17 +298,17 @@
 				<!-- ... end Widget List -->
 
 			</div>
-			<div class="col col-lg-2 col-md-4 col-sm-12 col-12">
+			<div class="col col-lg-3 col-md-4 col-sm-12 col-12">
 
 				
 				<div class="widget w-list">
 					<h6 class="title">KonstructApp</h6>
 					<ul>
 						<li>
-							<a href="./policy">Privacy Policy</a>
+							<a href="terms">User Agreement</a>
 						</li>
 						<li>
-							<a href="terms">User Agreement</a>
+							<a href="./policy">Privacy Policy</a>
 						</li>
 						<li>
 							<a href="faq">Frequently asked question</a>
@@ -324,26 +319,26 @@
 			</div>
 
             <div class="col col-lg-4 col-md-4 col-sm-12 col-12">
-							<h6 class="title">Contact Us.</h6>
-		                    <p>Write us a line at <a href="mailto:info@konstructapp.com">info@konstructapp.com</a>
-		                    or reach out to us on our social handles</p>
-		                    <ul class="socials">
-								<li>
-									<a href="https://twitter.com/KonstructApp" target='_blank'>
-										<i class="fab fa-facebook-square" aria-hidden="true"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://web.facebook.com/KonstructApp/" target='_blank'>
-										<i class="fab fa-twitter" aria-hidden="true"></i>
-									</a>
-								</li>
-								<li>
-									<a href="https://www.linkedin.com/company/konstructapp" target="_blank">
-										<i class="fab fa-linkedin" aria-hidden="true"></i>
-									</a>
-								</li>
-							</ul>
+					<h6 class="title">Quick Line.</h6>
+                    <p>Write us a line at <a href="mailto:info@konstructapp.com">info@konstructapp.com</a>
+                    or reach out to us on our social handles</p>
+                    <ul class="socials">
+						<li>
+							<a href="https://twitter.com/KonstructApp" target='_blank'>
+								<i class="fab fa-twitter-square" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://web.facebook.com/KonstructApp/" target='_blank'>
+								<i class="fab fa-facebook" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/company/konstructapp" target="_blank">
+								<i class="fab fa-linkedin" aria-hidden="true"></i>
+							</a>
+						</li>
+					</ul>
             </div>
 
 			<div class="col col-lg-12 col-md-12 col-sm-12 col-12">

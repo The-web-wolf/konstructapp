@@ -69,4 +69,63 @@ php_value post_max_size 500M
    Header set Access-Control-Allow-Headers: "Origin, X-Requested-With, Content-Type, Accept, Authorization"
 </ifmodule>
 
+
+<IfModule mod_headers.c>
+Header set Connection keep-alive
+
+# Cache-control headers
+    # 2 HOURS
+    #<filesMatch "*">
+        Header set Cache-Control "max-age=7200, must-revalidate"
+    #</filesMatch>
+
+    # 480 weeks - 290304000
+    # 2 WEEKS
+    <filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|swf)$">
+        Header set Cache-Control "max-age=1209600, public"
+    </filesMatch>
+
+    # 1 DAY
+    <filesMatch "\.(css)$">
+        Header set Cache-Control "max-age=86400, public, must-revalidate"
+        #Header set Cache-Control "max-age=0, public, must-revalidate"
+    </filesMatch>
+
+    # 2 DAYS
+    <filesMatch "\.(xml|txt)$">
+        Header set Cache-Control "max-age=172800, public, must-revalidate"
+    </filesMatch>
+
+    # 2 HOURS
+    <filesMatch "\.(html|htm)$">
+        Header set Cache-Control "max-age=7200, must-revalidate"
+    </filesMatch>
+
+	<filesMatch "\.(eot|svg|ttf|woff|woff2)$">
+	    Header set Cache-Control "max-age=1209600, public"
+	</filesMatch>
+	
+    <FilesMatch "\.(gif|jpg|png|ico|css|js|pdf|txt)$">
+        Header append Cache-Control "public"
+    </FilesMatch>
+</IfModule>
+
+<ifModule mod_headers.c>
+	<filesMatch "\\.(ico|pdf|flv|jpg|jpeg|png|gif|swf|ttf|otf|woff|woff2|eot|svg)$">
+	Header set Cache-Control "max-age=2592000, public"
+	</filesMatch>
+	<filesMatch "\\.(css)$">
+	Header set Cache-Control "max-age=604800, public"
+	</filesMatch>
+	<filesMatch "\\.(js)$">
+	Header set Cache-Control "max-age=216000, private"
+	</filesMatch>
+	<filesMatch "\\.(xml|txt)$">
+	Header set Cache-Control "max-age=216000, public, must-revalidate"
+	</filesMatch>
+	<filesMatch "\\.(php)$">
+	Header set Cache-Control "max-age=1, private, must-revalidate"
+	</filesMatch>
+</ifModule>
+
 ErrorDocument 404 http://localhost/konstructapp/404
