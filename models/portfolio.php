@@ -114,20 +114,20 @@
 				let reviewLink 	= `https://konstructapp.com/ratings?ref=${portfolio}`;
 				let message 		= ` ${reviewLink} \nThanks.`	;
 				let whatsapp		= `<button 
-														class="btn bg-green btn-block btn-md no-ajaxy" 
-														data-sharer="whatsapp" 
-														data-title=" Hi ${clientName},\nkindly provide a portfolio review & rating for my portfolio (${params.title}) on Konstructapp" 
-														data-url = '${reviewLink}'
-														>Send on Whatsapp														
-													</button>`;
+										class="btn bg-green btn-block btn-md no-ajaxy" 
+										data-sharer="whatsapp" 
+										data-title=" Hi ${clientName},\nkindly provide a portfolio review & rating for my portfolio (${params.title}) on Konstructapp" 
+										data-url = '${reviewLink}'
+										>Send on Whatsapp														
+									</button>`;
 				let email 			= `<button 
-														class ='btn bg-dribbble btn-block btn-md no-ajaxy' 
-														data-sharer	='email' 
-														data-title=' Hi ${clientName},\nkindly provide a portfolio review & rating for my portfolio (${params.title}) on Konstructapp'
-														data-subject	= 'Invite for review'
-														data-url = '${reviewLink}'
-														data-to = ''> Share via email 
-													</button>`
+										class ='btn bg-dribbble btn-block btn-md no-ajaxy' 
+										data-sharer	='email' 
+										data-title=' Hi ${clientName},\nkindly provide a portfolio review & rating for my portfolio (${params.title}) on Konstructapp'
+										data-subject	= 'Invite for review'
+										data-url = '${reviewLink}'
+										data-to = ''> Share via email 
+									</button>`
 
 				let temp = `${whatsapp}  ${email} <br> <button class='btn btn-primary btn-block' data-dismiss='modal'> Close </button>`;
 				$(root).find('.formBox').slideUp()

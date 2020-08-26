@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta http-equiv="Refresh" content="1000; URL=https://app.konstructapp.com/">
 <?php include('includes/static/headcontent.php') ?>
 <style type="text/css">
 	.svg-error-icon{

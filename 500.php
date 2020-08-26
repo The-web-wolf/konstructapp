@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include('includes/static/headcontent.php') ?>
+<meta http-equiv="Refresh" content="1000; URL=https://app.konstructapp.com/">
 <body class="body-bg-white darkmode">
 	<style type="text/css">
 		#offline-icon{
