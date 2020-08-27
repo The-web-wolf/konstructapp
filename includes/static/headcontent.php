@@ -18,7 +18,7 @@
 			}
 		});
 	</script>	
-	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content='default'>
 
@@ -26,16 +26,10 @@
 	<meta name="application-name" content="KonstructApp"/>
 	<meta name="theme-color" content="#2c304a">
 
-	<link rel="icon" type="image/png" href="./icons/favicon-196x196.png" sizes="196x196" />
-	<link rel="icon" type="image/png" href="./icons/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/png" href="./icons/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="./icons/favicon-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="./icons/favicon-128.png" sizes="128x128" />
-	<link rel="apple-touch-icon" type="image/png" href="apple-touch-icon.png" sizes="150x150" />
 	<link rel="shortcut icon" type="image/png" href="./icons/favicon-128.png" />
 
 	<link rel="manifest" href="manifest.webmanifest">
-	<script async src="https://cdn.jsdelivr.net/npm/pwacompat" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
 
 	<!-- Bootstrap CSS -->
 
