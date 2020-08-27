@@ -89,7 +89,7 @@
 		<div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
 			
 			<!-- Login-Registration Form  -->
-<img src="chatvia-dark.angular.themesbrand.com/assets/imar-4.jpg" style='height:400px;width:400px;' alt="">
+<!-- <img src="chatvia-dark.angular.themesbrand.com/assets/imar-4.jpg" style='height:400px;width:400px;' alt=""> -->
 			
 			<div class="registration-login-form">
 				<!-- Nav tabs -->

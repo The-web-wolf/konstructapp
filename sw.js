@@ -1,26 +1,27 @@
-//This is the "Offline copy of pages" service worker
+// Names of the two caches used in this version of the service worker.
+// Change to v2, etc. when you update any of the local resources, which will
+// in turn trigger the install event again.
+const PRECACHE = 'precache-v1';
+const RUNTIME = 'runtime';
+// Customize this with a different URL if needed.
+const OFFLINE_URL = 'offline';
 
-//Install stage sets up the index page (home page) in the cache and opens a new cache
-self.addEventListener('install', function(event) {
-  var offlinePage = new Request('./offline');
-  event.waitUntil(
-    fetch(offlinePage).then(function(response) {
-      return caches.open('konstructapp').then(function(cache) {
-        //console.log(' Cached index page during Install'+ response.url);
-        cache.addAll([
-          'assets/js/jQuery/jquery-3.4.1.js',
-          'assets/css/custom.css',
-          'assets/css/main.css',
-          'assets/bootstrap/css/bootstrap.css',
-          'https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js',
-          'android/android-launchericon-96-96.png',
-          'chrome/chrome-favicon-16-16.png',
-          'android/android-launchericon-192-192.png '
-          ]).finally(function(){
-          return cache.put(offlinePage, response);
-        })        
-      });
-  }));
+// A list of local resources we always want to be cached.
+const PRECACHE_URLS = [
+  './',
+  './assets/css/custom.css',
+  './assets/css/main.css',
+  './assets/js/app.js',
+  './assets/js/main.js',
+];
+
+// The install handler takes care of precaching the resources we always need.
+self.addEventListener('install', event => {
+  event.waitUntil(( async () => {
+    const cache = await caches.open(PRECACHE)
+      await cache.addAll(PRECACHE_URLS);
+      await cache.add(new Request(OFFLINE_URL, {cache: 'reload'}));
+  })());
 });
 
 self.addEventListener('activate', (event) => {
@@ -36,32 +37,37 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-//If any fetch fails, it will look for the request in the cache and serve it from there first
-self.addEventListener('fetch', function(event) {
-  var updateCache = function(request){
-    return caches.open('konstructapp').then(function (cache) {
-      return fetch(request).then(function (response) {
-        //console.log(' add page to offline'+response.url)
-        if(request.destination === 'style' || request.destination === 'font' || request.destination === 'script' || request.destination== 'document'){
-          return cache.put(request, response);
-        }     
-      });
-    });
-  };
-
-  event.waitUntil(updateCache(event.request));
-
-  event.respondWith(
-    fetch(event.request).catch(function(error) {
-      console.log( ' Network request Failed. Serving content from cache: ' + error );
-
-      return caches.open('konstructapp').then(function (cache) {
-        console.log(event.request)
-        if (event.request.mode === 'navigate') {
-          return cache.match('offline');
+self.addEventListener('fetch', (event) => {
+  // We only want to call event.respondWith() if this is a navigation request
+  // for an HTML page.
+  if (event.request.mode === 'navigate') {
+    event.respondWith((async () => {
+      try {
+        // First, try to use the navigation preload response if it's supported.
+        const preloadResponse = await event.preloadResponse;
+        if (preloadResponse) {
+          return preloadResponse;
         }
-               
-      });
-    })
-  );
-})
+
+        const networkResponse = await fetch(event.request);
+        return networkResponse;
+      } catch (error) {
+        // catch is only triggered if an exception is thrown, which is likely
+        // due to a network error.
+        // If fetch() returns a valid HTTP response with a response code in
+        // the 4xx or 5xx range, the catch() will NOT be called.
+        console.log('Fetch failed; returning offline page instead.', error);
+
+        const cache = await caches.open(PRECACHE);
+        const cachedResponse = await cache.match(OFFLINE_URL);
+        return cachedResponse;
+      }
+    })());
+  }
+
+  // If our if() condition is false, then this fetch handler won't intercept the
+  // request. If there are any other fetch handlers registered, they will get a
+  // chance to call event.respondWith(). If no fetch handlers call
+  // event.respondWith(), the request will be handled by the browser as if there
+  // were no service worker involvement.
+});
