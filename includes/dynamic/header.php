@@ -7,7 +7,7 @@ session_start();
 //inherits all from functions.php where all my functions lies
 require_once 'functions.php';
 
-$devUrl = prodArena('live');
+$devUrl = prodArena('test');
 
 date_default_timezone_set("Africa/Lagos");
 

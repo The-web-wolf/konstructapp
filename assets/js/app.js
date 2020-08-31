@@ -3,9 +3,9 @@ $(window).ready(function(){
 	perfectScrollbarInit()
 });
 
-//let devUrl = 'https://konstructapps.herokuapp.com'; // test 
+let devUrl = 'https://konstructapps.herokuapp.com'; // test 
 
-let devUrl = 'https://api.konstructapp.com'; // live
+//let devUrl = 'https://api.konstructapp.com'; // live
 
 triggerBtns();
 
@@ -40,7 +40,8 @@ $(function(){
 	  // Wait for the user to respond to the prompt
 	  deferredPrompt.userChoice.then((choiceResult) => {
 	    if (choiceResult.outcome === 'accepted') {
-	      talert('Install Successful')
+		  talert('Install Successful')
+		  $('.installAppPrompt').show()  // hide the install prompt after successful install
 	    }
 	    else{
 	    	Cookies.set('install','false')

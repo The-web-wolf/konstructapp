@@ -41,7 +41,7 @@
 				<div class="crumina-module crumina-heading">
 					<h2 class="h1 heading-title">An error occured!</h2>
 					<p class="heading-text color-white">
-						It's not you, It's us. we are working on fixing this, if the problem persists, send us a mail to: <a href="mailto:support@konstructapp.com" target="_blank">support@konstructapp.com</a>
+						It's not you, It's us. we are working on fixing this, check your internet connection and  if the problem persists, send us a mail to: <a href="mailto:support@konstructapp.com" target="_blank">support@konstructapp.com</a>
 					</p>
 					<a href="./" class="btn btn-primary btn-lg error-previous-page">Return to home</a>
 				</div>

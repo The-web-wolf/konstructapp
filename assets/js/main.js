@@ -41,8 +41,8 @@ $(document).ready(function() {
 });
 
 function activateSwiper(){
-	var swipers = {};
-  var e = 0,
+    var swipers = {};
+    var e = 0,
       i = !1;
   $(".swiper-container").each(function () {
       var a = $(this),
@@ -87,10 +87,9 @@ function activateSwiper(){
                       i.find(".slides-item").eq(t).addClass("slide-active");
                   }
               },
-          })),
+          }));
           e++;
   });
-
   $(".btn-prev").on("click", function () {
       var e = $(this).closest(".slider-slides").siblings(".swiper-container").attr("id");
       swipers["swiper-" + e].slidePrev();

@@ -22,6 +22,12 @@ $id_token  = sanitizeString($_POST['googleToken']);
 $client = new Google_Client(['client_id' => $CLIENT_ID]);  // Specify the CLIENT_ID of the app that accesses the backend
 
 $payload = $client->verifyIdToken($id_token);
+// print($payload);
+// try {
+// 	//code...
+// } catch (\Throwable $th) {
+// 	//throw $th;
+// }
 if ($payload) {
   $userid = $payload['sub'];
  	if ($payload['aud'] != $CLIENT_ID) {

@@ -267,7 +267,7 @@
 			;			
 
 			let topContent = `
-				<img src="assets/img/badge8.png" class='web-only' alt="author">
+				<img src="assets/img/badge8.png" class='web-only' alt="portfolio">
 				${self_user_menu}
 				<div class="author-date">
 					<a class="h4 event-title" href="#null">${portfolio.title}</a>
@@ -286,7 +286,7 @@
 				$(images_cont).append(`							
 					<div class="swiper-slide">
 						<div class="photo-item" data-swiper-parallax="-300" data-swiper-parallax-duration="500">
-							<img src="${currentPicture}" alt="Portfolio banner">
+							<img src="${currentPicture}" class='custom-bg' alt="${portfolio.title}">
 							<div class="overlay overlay-dark"></div>
 
 							<div class="content">
@@ -298,17 +298,16 @@
 				)				
 			})
 
-			$(modal_loader).hide()
-
-			// Activate swipe if more than 1 image available
-
+			activateSwiper()
+						
 			if ($isPictures) {
-				$(imagesNav).show()
-				activateSwiper()
+				$(imagesNav).show()				
 			}
 			else{
-				$(imagesNav).hide()
+				$(imagesNav).hide()// hide swiper navigation if only one image
 			}
+
+			$(modal_loader).hide()
 
 			let likes_count = portfolio.likes.length
 

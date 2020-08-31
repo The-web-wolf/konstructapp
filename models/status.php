@@ -321,16 +321,16 @@
 				})				
 			}
 
+			activateSwiper()
+						
 			if ($isPictures) {
-				$(imagesNav).show()
-				activateSwiper()
+				$(imagesNav).show()				
 			}
 			else{
-				$(imagesNav).hide()
+				$(imagesNav).hide()// hide swiper navigation if only one image
 			}
 
 			$(modal_loader).hide()
-
 
 			let likes_count 	= status.likes.length;
 			let content 	= `				

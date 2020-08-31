@@ -127,4 +127,4 @@ Header set Connection keep-alive
 	</filesMatch>
 </ifModule>
 
-ErrorDocument 404 http://localhost/konstructapp/404
+ErrorDocument 404 http://localhost:8080/konstructapp/404

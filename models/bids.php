@@ -140,17 +140,16 @@
 				)				
 			})
 
-			$(modal_loader).hide()
-
-			// Activate swipe if more than 1 image available
-
+			activateSwiper()
+						
 			if ($isPictures) {
-				$(imagesNav).show()
-				activateSwiper()
+				$(imagesNav).show()				
 			}
 			else{
-				$(imagesNav).hide()
+				$(imagesNav).hide()// hide swiper navigation if only one image
 			}
+
+			$(modal_loader).hide()
 
 			let likes_count 		= bid.likes.length;
 			let comments_count 	= response.commentsCount;
