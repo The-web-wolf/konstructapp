@@ -44,11 +44,11 @@ function activateSwiper(){
     var swipers = {};
     var e = 0,
       i = !1;
-  $(".swiper-container").each(function () {
-      var a = $(this),
-          t = "swiper-unique-id-" + e;
-      a.addClass("swiper-" + t + " initialized").attr("id", t), a.find(".swiper-pagination").addClass("pagination-" + t);
-      var n = a.data("effect") ? a.data("effect") : "slide",
+    $(".swiper-container").each(function () {
+        var a = $(this),
+        t = "swiper-unique-id-" + e;
+        a.addClass("swiper-" + t + " initialized").attr("id", t), a.find(".swiper-pagination").addClass("pagination-" + t);
+        var n = a.data("effect") ? a.data("effect") : "slide",
           s = !a.data("crossfade") || a.data("crossfade"),
           o = 0 != a.data("loop") || a.data("loop"),
           r = a.data("show-items") ? a.data("show-items") : 1,
@@ -88,8 +88,12 @@ function activateSwiper(){
                   }
               },
           }));
+
+          var mySwiper = document.querySelector(".swiper-" + t).swiper;
+          mySwiper.update();          
           e++;
   });
+
   $(".btn-prev").on("click", function () {
       var e = $(this).closest(".slider-slides").siblings(".swiper-container").attr("id");
       swipers["swiper-" + e].slidePrev();

@@ -20,7 +20,7 @@
 						<div class="loader-activity">
 						  <div class="indeterminate"></div>
 						</div>						
-						<div class="swiper-container auto-height" data-effect="fade" data-crossfade='crossfade' data-autoplay="4000" >
+						<div class="swiper-container auto-height" data-loop='false' data-effect="fade" data-crossfade='crossfade' data-autoplay="4000" >
 							<div class="swiper-wrapper">
 
 							</div>

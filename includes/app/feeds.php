@@ -414,6 +414,11 @@
 		relative_date 		= relative_date.fromNow();
 
 		let self_user = current_status.user._id === Cookies.get('_id')	? true : false;
+		console.log(current_status)
+
+		let statusText = current_status.statusText; ;
+		var length = 200;
+		statusText = statusText.length > length ? statusText.substring(0, length - 3) + `<a href='#' class='readmore' data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${current_status._id}"}'> <b> ... </b> </a>` : statusText;
 
 		let self_user_menu = self_user === true ? 
 		`<div class="more" style='float:right'><svg class="olymp-three-dots-icon"><use xlink:href="#olymp-three-dots-icon"></use></svg>
@@ -432,8 +437,8 @@
 
 		let comments_count = all_data.count;
 
-		var $isPicture 	  = current_status.pictures.length === 1 ? true : false;
-		$isPicture 				=	current_status.pictures[0].length > 1 ? true : false; // check if array first child is empty
+		var $isPicture 	  	= current_status.pictures.length === 1 ? true : false;
+		$isPicture 			=	current_status.pictures[0].length > 1 ? true : false; // check if array first child is empty
 		var $isPictures 	= current_status.pictures.length > 1 ? true : false;
 		var $isPortfolio 	= current_status.portfolio  ?  true : false;
 
@@ -506,7 +511,7 @@
 							</div>
 					
 							<p data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${current_status._id}"}'>
-								${status_details}
+								${statusText}
 							</p>
 
 							${pictureContent}

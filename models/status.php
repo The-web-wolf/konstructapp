@@ -205,7 +205,7 @@
 
 		$(modal_loader).fadeIn('linear')		
 		$(modal_top).html('').fadeOut()
-		$(images_cont).html('')
+		$(images_cont).html('').hide()
 		$(modal_body).html('')
 		$(comment_list).html('')
 		$(modal).modal('show')
@@ -243,8 +243,6 @@
 			if($isPortfolio){
 				poster = 'tagged a portfolio';
 
-				let portfolio_details = status.portfolio.details.match(/(.{0,150}\w)\s/)[1]+` <a href='#' class='readmore' data-target='custom-function' data-_fnc='expandBid' data-_param='{"id":"${status.portfolio._id}"}'> <b> ... </b> </a>`;
-
 				if (!$isPictures && !$isPicture) {
 					portfolioContent = `					
 						<div class="post-video" style='border: 1px solid #34374b;'>
@@ -264,7 +262,7 @@
 				}
 				else{
 					// Show a mini expand to view portfolio button
-					portfolioContent = `<a href="#" data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${status._id}"}' class="more-comments">View Tagged Portfolio <span>+</span></a>`
+					portfolioContent = `<a href="#" data-target='custom-function' data-_fnc='expandPortfolio' data-_param='{"id":"${status.portfolio._id}"}' class="more-comments">View Tagged Portfolio <span>+</span></a>`
 				}
 			}
 
@@ -301,7 +299,7 @@
 			if ($isText) {
 				topContent += `
 				<br>
-				<p class="statusDetails" style='max-height:130px !important; overflow-y:scroll'>
+				<p class="statusDetails">
 					${status.statusText}
 				</p>`				
 			}
@@ -318,11 +316,10 @@
 							</div>
 						</div>`
 					)				
-				})				
+				})	
+				$(images_cont).show()		
 			}
-
-			activateSwiper()
-						
+			activateSwiper()		
 			if ($isPictures) {
 				$(imagesNav).show()				
 			}
