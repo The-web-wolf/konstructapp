@@ -11,7 +11,7 @@
         background-color: #2a2c48
     }
     .darkmode .contact-title,.title {
-        color:#fff
+        color:#dee2e6
     }
     .darkmode .sub-title{
     	color: #eee
@@ -33,7 +33,7 @@
 
 		.w-list a,.footer p{
 			font-size: 16px;
-			color: #ffffff
+			color: #dee2e6
 		}
 		.footer .title{
 			font-size: 24px;

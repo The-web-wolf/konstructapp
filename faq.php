@@ -11,7 +11,7 @@
         background-color: #2c304a
     }
     .heading-title,.title {
-        color:#fff
+        color:#dee2e6
     }
 
 
@@ -34,7 +34,7 @@
     }
 		.w-list a,.footer p{
 			font-size: 16px;
-			color: #ffffff
+			color: #dee2e6
 		}
 		.footer .title{
 			font-size: 24px;

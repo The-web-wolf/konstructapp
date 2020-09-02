@@ -32,7 +32,7 @@
         background-color: #2a2c48
     }
     .heading-title,.title {
-        color:#fff
+        color:#dee2e6
     }
     .teammembers-thumb{
         border-radius:5px
@@ -100,7 +100,7 @@
 
 		.w-list a,.footer p{
 			font-size: 16px;
-			color: #ffffff
+			color: #dee2e6
 		}
 		.footer .title{
 			font-size: 24px;

@@ -147,6 +147,23 @@
 	<div class='row'>
 		<div class='col-md-8 col-lg-6 mr-auto ml-auto'>
 			<div class="container">
+			<div class="ui-block">
+
+				<!-- W-Build-Fav -->
+				
+				<a class="widget w-build-fav installAppPrompt">
+				
+					<div class="content">
+						<span>Install App Icon</span>
+						<a href="#" class="h4 title">Start Using KonstructApp In seconds!</a>
+						<p><a href="#" class="bold">Click here</a> to add konstructApp to your homescreen for easy access </p>
+					</div>
+				</a>
+				
+				<!-- ... end W-Build-Fav -->
+				
+
+			</div>				
 				<div id="newsfeed-items-grid">
 				</div>	
 				<a id="load-more-feed-status" href="#load-more" class="btn btn-control btn-more no-ajaxy">
@@ -157,10 +174,6 @@
 			</div>
 		</div>
 	</div>
-
-	<a class="back-to-top" href="#">
-		<img src="assets/svg-icons/back-to-top.svg" alt="arrow" class="back-icon">
-	</a>
 
 	<!-- Load portfolio and bids files -->
 

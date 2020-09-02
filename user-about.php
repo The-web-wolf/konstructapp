@@ -73,7 +73,9 @@
 					</div>
 					<div class="top-header-author">
 						<a href="#" class="author-thumb">
-							<img src="<?php echo $req_user_data['userPic'] ?>" class='custom-bg' alt="avatar">
+							<img src="<?php echo $req_user_data['userPic'] ?>" class='custom-bg' alt="
+								<?php echo($req_user_data['firstName'] . $req_user_data['firstName']); ?>
+							">
 						</a>
 						<div class="author-content">
 							<a href="#" class="h4 author-name"><?php echo $req_user_data['firstName'] ?> <?php echo $req_user_data['lastName'] ?></a>
@@ -113,12 +115,57 @@
 					</div>
 				</div>
 			</div>
+			<div class="ui-block mobile-only">
+				<div class="ui-block-title">
+					<h6 class="title">Share profile</h6>
+					<a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="#olymp-three-dots-icon"></use></svg></a>
+				</div>
+				<div class="ui-block-content">
+
+					
+					<!-- Widget About -->
+					
+					<div class="widget w-about">
+						<p>Share <?php echo $req_user_data['firstName'] ?>'s profile on one of the following social platforms to promote them </p>
+						<ul class="socials">
+							<li>
+								<a href="#facebook" class="no-ajaxy" data-sharer='facebook' data-hashtag='KonstructApp' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+									<i class="fab fa-facebook-square" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#twitter" class="no-ajaxy" data-sharer='twitter' data-title="Check Out <?php echo $req_user_data['firstName'] ?>'s profile On KonstructApp" data-hashtags='KonstructApp,Construction,<?php echo $req_user_data['occupation'] ?>' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+									<i class="fab fa-twitter"  aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#reddit" class="no-ajaxy" data-sharer='reddit' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+									<i class="fab fa-reddit" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#whatsapp" class="no-ajaxy" data-sharer='whatsapp' data-title="Check Out <?php echo $req_user_data['firstName'] ?>'s profile On KonstructApp" data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+									<i class="fab fa-whatsapp" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#linkedin" class="no-ajaxy" data-sharer='linkedin' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+									<i class="fab fa-linkedin" aria-hidden="true"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+					<!-- ... end Widget About -->
+
+				</div>
+			</div>	
 		</div>
 
 		<div class="col col-xl-4 order-1 order-xl-1 col-lg-4 order-lg-1 col-md-12 order-md-2 col-sm-12 col-12">
 			<div class="ui-block">
 				<div class="ui-block-title">
-					<h6 class="title" style="display: block;">Bio: <span class="text" style="color:#888da8;font-weight: normal;font-size: 12px;text-align: right;float:right;"> <?php echo $req_user_data['bio'] ?> </span></h6>
+					<h6 class="title" style="display: block;">Bio: <span class="text" style="color:#888da8;font-weight: normal;font-size: 12px;float:right;"> <?php echo $req_user_data['bio'] ?> </span></h6>
 				</div>
 				<div class="ui-block-content">
 
@@ -198,9 +245,7 @@
 </div>
 
 
-<a class="back-to-top" href="#">
-	<img src="assets/svg-icons/back-to-top.svg" alt="arrow" class="back-icon">
-</a>
+
 
 
 <?php include('includes/static/scripts.php') ?>

@@ -31,12 +31,12 @@
 					</a>
 				</li>
 				<li>
-					<a href="ratings">
-						<svg class="olymp-star-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="COMMENTS AND REVIEWS"><use xlink:href="#olymp-star-icon"></use></svg>
+					<a href="user-reviews?id=<?php echo $_COOKIE['_id']; ?> ">
+						<svg class="olymp-star-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="REVIEWS AND RATINGS"><use xlink:href="#olymp-star-icon"></use></svg>
 					</a>
 				</li>
 				<li>
-					<a href="#loans">
+					<a href="#loans" data-toggle='modal' data-target='#coming-soon'>
 						<svg class="olymp-share-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="LOANS"><use xlink:href="#olymp-share-icon"></use></svg>
 					</a>
 				</li>
@@ -79,13 +79,13 @@
 					</a>
 				</li>
 				<li>
-					<a href="ratings">
-						<svg class="olymp-star-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="COMMENTS AND REVIEWS"><use xlink:href="#olymp-star-icon"></use></svg>
-						<span class="left-menu-title">Comments And Reviews</span>
+					<a href="user-reviews?id=<?php echo $_COOKIE['_id']; ?> ">
+						<svg class="olymp-star-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="REVIEWS AND RATINGS"><use xlink:href="#olymp-star-icon"></use></svg>
+						<span class="left-menu-title">Reviews and ratings</span>
 					</a>
 				</li>
 				<li>
-					<a href="#null">
+					<a href="#loans" data-toggle='modal' data-target='#coming-soon'>
 						<svg class="olymp-share-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="LOANS"><use xlink:href="#olymp-share-icon"></use></svg>
 						<span class="left-menu-title">Loans</span>
 					</a>
@@ -105,7 +105,7 @@
 					</div>
 				</div>
 
-				<span>Complete <a href="#">your profile</a> so people can know more about you!</span>
+				<span>Complete <a href="settings">your profile</a> so people can know more about you!</span>
 
 			</div>
 		</div>
@@ -174,9 +174,9 @@
 					</a>
 				</li>
 				<li>
-					<a href="ratings">
-						<svg class="olymp-star-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="COMMENTS AND REVIEWS"><use xlink:href="#olymp-star-icon"></use></svg>
-						<span class="left-menu-title">Ratings and reviews</span>
+					<a href="user-reviews?id=<?php echo $_COOKIE['_id']; ?> ">
+						<svg class="olymp-star-icon left-menu-icon"  data-toggle="tooltip" data-placement="right"   data-original-title="Reviews and ratings"><use xlink:href="#olymp-star-icon"></use></svg>
+						<span class="left-menu-title">Reviews and ratings</span>
 					</a>
 				</li>
 				<!-- <li>

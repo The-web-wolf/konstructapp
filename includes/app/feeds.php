@@ -41,6 +41,9 @@
 			})				
 
 		})
+		.fail(function(){
+			$('#bids-section').fadeOut();
+		})
 	}
 
 	function loadPortfolio(callType){
@@ -78,6 +81,9 @@
 			})	
 
 		})
+		.fail(function(){
+			$('#portfolio-section').fadeOut();
+		})
 	}
 	
 	function shuffle(array) {
@@ -112,8 +118,9 @@
 			
 			</div>	`)
 		}
-
-		let targetUrl = `${devUrl}/api/users?limit=50`;
+		let page 	= Math.floor(Math.random() * 6) // update manuallly until dedicated route for feeds users
+		let limit 	= 50;
+		let targetUrl = `${devUrl}/api/users?limit=${limit}&page=${page}`;
 		$.ajax({
 			url : targetUrl,	  
 			processData : false,
@@ -183,6 +190,25 @@
 			if (response_count == 0) {
 				talert('Nothing left to load')
 			}
+		})
+		.fail(function(){
+			$('#news-items-feed').html(`<section class="" style='padding-top:120px;padding-bottom:120px'>
+				<div class="container">
+					<div class="row">
+						<div class="col col-xl-4 col-lg-12 col-md-12 col-12 m-auto">
+							<div class="logout-content">
+								<div class="logout-icon">
+									<i class="fas fa-network-wired"></i>
+								</div>
+								<h6>Uh Oh!</h6>
+								<p class="heading-text">
+									Sorry, KonstructApp requires an active internet connection
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>`)
 		})
 	}
 	

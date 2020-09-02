@@ -179,9 +179,7 @@
 </div>
 
 
-<a class="back-to-top" href="#">
-	<img src="assets/svg-icons/back-to-top.svg" alt="arrow" class="back-icon">
-</a>
+
 
 <?php include('includes/static/components/modals/portfolio.php') ?>
 

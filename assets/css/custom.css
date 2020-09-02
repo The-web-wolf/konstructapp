@@ -13,6 +13,15 @@
 
 }
 
+@media(max-width :540px){
+  .modal-dialog{
+   margin:0px auto !important
+  }
+  .modal-dialog.has-widgets{
+    margin: 1.75rem auto !important
+  }
+}
+
 img.custom-bg {
   background: #888DA8;
   background: -webkit-radial-gradient(top, #888DA8, #2C304A);
@@ -410,7 +419,7 @@ img.custom-bg {
   }
 
   .sections .ui-block-title .title {
-    color: #ffffff
+    color: #dee2e6
   }
 
   .w-last-video li {
@@ -531,21 +540,21 @@ img.custom-bg {
   }
 
   .darkmode .control-block .author-subtitle{
-    color:#ffffff;
+    color:#dee2e6;
   }
 
   .darkmode .left-menu a{
-    color:#ffffff;
+    color:#dee2e6;
   }
   .darkmode .left-menu .left-menu-icon{
-    fill : #ffffff
+    fill : #dee2e6
   }
 
   .darkmode .modal-header{
     border-bottom: 1px solid #2c304a;
   }
   .darkmode .modal-header .title{
-    color:#fff;
+    color:#dee2e6;
   }
   .darkmode .modal-footer{
     border-top: 1px solid #2c304a;
@@ -684,7 +693,7 @@ img.custom-bg {
     background-color: #1F2229
   }
   .darkmode .account-settings svg {
-    fill :#ffffff;
+    fill :#dee2e6;
   }
   .swal-overlay:before {
     vertical-align: bottom;
@@ -714,10 +723,10 @@ img.custom-bg {
 }
 
 .estimate-box input:checked + .icon svg{
-  fill:#fff !important;
+  fill:#dee2e6 !important;
 }
 .estimate-box input:checked + .icon p{
-  color:#fff !important;
+  color:#dee2e6 !important;
 }
 .estimate-box input:checked + .icon{
   background :linear-gradient(to left bottom , #F8AC09 , #e06433);
@@ -739,7 +748,7 @@ img.custom-bg {
   box-shadow: 0px 0px 25px rgba(0,0,0,.1);
   display: flex;
   justify-content: center;
-  background:#FFF;
+  background:#dee2e6;
   align-content: center;
 }
 .estimate-box svg {

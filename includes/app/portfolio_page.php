@@ -71,23 +71,23 @@
 			}			
 
 		}).fail(function(response){
-				$('#root').html(`<section class="" style='padding-top:120px;padding-bottom:120px'>
-					<div class="container">
-						<div class="row">
-							<div class="col col-xl-4 col-lg-12 col-md-12 col-12 m-auto">
-								<div class="logout-content">
-									<div class="logout-icon">
-										<i class="fas fa-folder-open"></i>
-									</div>
-									<h6>Uh Oh!</h6>
-									<p class="heading-text">
-										Sorry, KonstructApp requires an active internet connection
-									</p>
+			$('#root').html(`<section class="" style='padding-top:120px;padding-bottom:120px'>
+				<div class="container">
+					<div class="row">
+						<div class="col col-xl-4 col-lg-12 col-md-12 col-12 m-auto">
+							<div class="logout-content">
+								<div class="logout-icon">
+									<i class="fas fa-network-wired"></i>
 								</div>
+								<h6>Uh Oh!</h6>
+								<p class="heading-text">
+									Sorry, KonstructApp requires an active internet connection
+								</p>
 							</div>
 						</div>
 					</div>
-				</section>`)
+				</div>
+			</section>`)
 
 		})	
 	}

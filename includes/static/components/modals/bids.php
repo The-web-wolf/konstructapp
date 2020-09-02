@@ -171,7 +171,7 @@
 <!-- Window-popup Bid Details -->
 
 <div class="modal fade fullheight" id="detailed-bid" tabindex="-1" role="dialog" aria-labelledby="detailed-bid" aria-hidden="true">
-	<div class="modal-dialog window-popup event-private-public private-event" role="document">
+	<div class="modal-dialog has-widgets window-popup event-private-public private-event" role="document">
 		<div class="modal-content">
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
 				<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>

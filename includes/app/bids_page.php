@@ -98,7 +98,7 @@
 							<div class="col col-xl-4 col-lg-12 col-md-12 col-12 m-auto">
 								<div class="logout-content">
 									<div class="logout-icon">
-										<i class="fas fa-folder-open"></i>
+										<i class="fas fa-network-wired"></i>
 									</div>
 									<h6>Uh Oh!</h6>
 									<p class="heading-text">
