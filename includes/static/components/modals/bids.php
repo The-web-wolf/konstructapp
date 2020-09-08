@@ -104,7 +104,13 @@
 						<option value='Tiling'>Tiling</option>
 						<option value='Upholstery, Sewing'>Upholstery, Sewing</option>
 						<option value='Water Treatment'>Water Treatment</option>
-						
+						<option value='Solar Energy/Installation '>Solar Energy/Installation </option>
+						<option value='Renewable Energy '>Renewable Energy </option>
+						<option value='Green Energy '>Green Energy </option>
+						<option value='Hydro Engineering'>Hydro Engineering</option>
+						<option value='Bio Energy'>Bio Energy</option>
+						<option value='Inverter installation'>Inverter installation</option>
+						<option value='Solar Panels'>Solar Panels</option>							
 					</select>
 				</div>				
 			</div>

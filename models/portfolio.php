@@ -111,7 +111,7 @@
 			}
 			else{
 				let clientName 	= formData[0]['value'];
-				let reviewLink 	= `https://konstructapp.com/review?ref=${portfolio}`;
+				let reviewLink 	= `https://app.konstructapp.com/review?ref=${portfolio}`;
 				let message 		= ` ${reviewLink} \nThanks.`	;
 				let whatsapp		= `<button 
 										class="btn bg-green btn-block btn-md no-ajaxy" 
