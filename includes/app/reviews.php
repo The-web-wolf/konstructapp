@@ -31,7 +31,7 @@
 
 		/* Load Reviews */  
 
-		let targetUrl = `${devUrl}/api/user/${_id}/reviews`;
+		let targetUrl = `${devUrl}/api/user/${_id}/review`;
 
 		$.ajax({
 			url : targetUrl,	  

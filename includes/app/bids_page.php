@@ -39,7 +39,7 @@
 			<!-- Single post item -->
 				<div class='col-md-6 col-lg-4 col-xl-3'>
 					<ul class="widget w-last-video">
-					<li data-target='custom-function' data-_fnc='expandBid' data-_param='{"id":"${current_bid._id}"}'><img src="${current_bid.pictures[0]}" alt="${current_bid.title}"></li>
+					<li data-target='custom-function' data-_fnc='expandBid' data-_param='{"id":"${current_bid._id}"}'><img src="${current_bid.pictures[0]}" alt="${current_bid.title}" class='custom-bg'></li>
 					<div class="outside-content">
 						<h5>${current_bid.title}</h5>
 						<h5>${statusUi} - <time class="published" datetime="${current_bid.createdAt}">${relative_date}</time></h5>
@@ -87,7 +87,7 @@
 				writeAllBids(currentValue, response)
 			})
 			if (response_count == 0) {
-				talert('Nothing left to load')
+				talert('You have caught up with us')
 			}			
 
 		}).fail(function(response){

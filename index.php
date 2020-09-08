@@ -1,7 +1,6 @@
 <?php $page_name = 'index'; require 'includes/dynamic/header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <?php include('includes/static/headcontent.php') ?>
 
 <link rel="stylesheet" href="assets/css/owl-carousel.min.css" />
@@ -147,29 +146,27 @@
 	<div class='row'>
 		<div class='col-md-8 col-lg-6 mr-auto ml-auto'>
 			<div class="container">
-			<div class="ui-block">
+				<div class="ui-block  installAppPrompt ">
 
-				<!-- W-Build-Fav -->
-				
-				<a class="widget w-build-fav installAppPrompt">
-				
-					<div class="content">
-						<span>Install App Icon</span>
-						<a href="#" class="h4 title">Start Using KonstructApp In seconds!</a>
-						<p><a href="#" class="bold">Click here</a> to add konstructApp to your homescreen for easy access </p>
+					<!-- W-Build-Fav -->
+					
+					<div class="widget w-build-fav">
+					
+						<div class="content">
+							<span>Install App Icon</span>
+							<a href="#install" class="h4 title">Start Using KonstructApp In seconds!</a>
+							<p><a href="#install">Click here</a> to add konstructApp to your homescreen for easy access </p>
+						</div>
 					</div>
-				</a>
-				
-				<!-- ... end W-Build-Fav -->
-				
+					
+					<!-- ... end W-Build-Fav -->
+					
 
-			</div>				
+				</div>				
 				<div id="newsfeed-items-grid">
 				</div>	
 				<a id="load-more-feed-status" href="#load-more" class="btn btn-control btn-more no-ajaxy">
-					<svg class="olymp-three-dots-icon">
-						<use xlink:href="#olymp-three-dots-icon"></use>
-					</svg>
+					
 				</a>		
 			</div>
 		</div>
@@ -188,7 +185,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha256-+BEKmIvQ6IsL8sHcvidtDrNOdZO3C9LtFPtF2H0dOHI=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment-with-locales.min.js" integrity="sha256-4HOrwHz9ACPZBxAav7mYYlbeMiAL0h6+lZ36cLNpR+E=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=" crossorigin="anonymous"></script>
-	<script src="assets/js/freewall.js"></script>
+	<script src="assets/js/freewall.min.js"></script>
 
 
 	<?php include('models/bids.php') ?>

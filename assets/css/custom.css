@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /*------------- #CUSTOM SCRIPTS FOR APP --------- */
 
-@media (min-width: 720px){
+@media (min-width: 799px){
   .mobile-only{
     display: none;
   }
 }
-@media (max-width: 720px){
+@media (max-width: 799px){
   .web-only{
     display: none;
   }
@@ -18,7 +18,8 @@
    margin:0px auto !important
   }
   .modal-dialog.has-widgets{
-    margin: 1.75rem auto !important
+    margin: 1.75rem auto !important;
+    margin-bottom:0px !important;
   }
 }
 
@@ -610,8 +611,18 @@ img.custom-bg {
   .darkmode .socials li a {
     color : #F8AC09;
   }
+  .darkmode .swal-title{
+    color : #dee2e6
+  }
   .darkmode .swal-text{
     color: #888da8;
+  }
+
+  .darkmode .swal-icon--success:after, .swal-icon--success:before{
+    background : #2c304a
+  }
+  .darkmode .swal-icon--success__hide-corners{
+    background : #2c304a
   }
 
   .darkmode .btn-secondary{
@@ -818,4 +829,13 @@ img.custom-bg {
   height: 40px;
   object-fit: cover;
   margin-left: -10px;     
+}
+
+.installAppPrompt{
+  display:none
+}
+
+#fc_frame, #fc_frame.fc-widget-normal{
+  z-index :1049 !important;
+  /* Keep chat widget below swal and modals */
 }

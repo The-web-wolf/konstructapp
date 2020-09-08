@@ -1,18 +1,20 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v1';
-const RUNTIME = 'runtime';
+const PRECACHE  = 'precache-v1';
+const RUNTIME   = 'runtime';
 // Customize this with a different URL if needed.
 const OFFLINE_URL = 'offline';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
   './',
-  './assets/css/custom.css',
-  './assets/css/main.css',
+  './assets/css/custom.min.css',
+  './assets/css/main.min.css',
   './assets/js/app.js',
   './assets/js/main.js',
+  'https://unpkg.com/pwacompat',
+  './icons/favicon-128.png'
 ];
 
 // The install handler takes care of precaching the resources we always need.
@@ -37,37 +39,45 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-self.addEventListener('fetch', (event) => {
-  // We only want to call event.respondWith() if this is a navigation request
-  // for an HTML page.
-  if (event.request.mode === 'navigate') {
-    event.respondWith((async () => {
-      try {
-        // First, try to use the navigation preload response if it's supported.
-        const preloadResponse = await event.preloadResponse;
-        if (preloadResponse) {
-          return preloadResponse;
-        }
-
-        const networkResponse = await fetch(event.request);
-        return networkResponse;
-      } catch (error) {
-        // catch is only triggered if an exception is thrown, which is likely
-        // due to a network error.
-        // If fetch() returns a valid HTTP response with a response code in
-        // the 4xx or 5xx range, the catch() will NOT be called.
-        console.log('Fetch failed; returning offline page instead.', error);
-
-        const cache = await caches.open(PRECACHE);
-        const cachedResponse = await cache.match(OFFLINE_URL);
-        return cachedResponse;
-      }
-    })());
+// The fetch handler serves responses for same-origin resources from a cache.
+// If no response is found, it populates the runtime cache with the response
+// from the network before returning it to the page.
+self.addEventListener('fetch', event => {
+  // Handle only request made to the API
+  if ( (event.request.url.startsWith('https://api.konstructapp.com') || event.request.url.startsWith('https://konstructapps.herokuapp.com')) && event.request.method === 'GET') {
+    event.respondWith(
+      caches.open(RUNTIME).then(function(cache) {
+        return fetch(event.request).then(function(response) {
+          cache.put(event.request, response.clone());
+          return response;
+        });
+      })
+    );
   }
-
-  // If our if() condition is false, then this fetch handler won't intercept the
-  // request. If there are any other fetch handlers registered, they will get a
-  // chance to call event.respondWith(). If no fetch handlers call
-  // event.respondWith(), the request will be handled by the browser as if there
-  // were no service worker involvement.
+  else if (event.request.url.startsWith(self.location.origin)){
+   
+      event.respondWith((async () => {
+        try {
+          // First, try to use the navigation preload response if it's supported.
+          const preloadResponse = await event.preloadResponse;
+          if (preloadResponse) {
+            return preloadResponse;
+          }
+  
+          const networkResponse = await fetch(event.request);
+          return networkResponse;
+        } catch (error) {
+          // catch is only triggered if an exception is thrown, which is likely
+          // due to a network error.
+          // If fetch() returns a valid HTTP response with a response code in
+          // the 4xx or 5xx range, the catch() will NOT be called.
+          console.log('Fetch failed; returning offline page instead.', error);
+  
+          const cache = await caches.open(PRECACHE);
+          const cachedResponse = await cache.match(OFFLINE_URL);
+          return cachedResponse;
+        }
+      })());
+    }
+  
 });

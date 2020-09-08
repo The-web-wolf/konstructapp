@@ -114,7 +114,6 @@
 <!-- JS Scripts -->
 <script src="assets/js/libs/jquery.appear.js"></script>
 <script src="assets/js/libs/jquery.mousewheel.js"></script>
-<script src="assets/js/libs/perfect-scrollbar.js"></script>
 <script src="assets/js/libs/jquery.matchHeight.js"></script>
 <script src="assets/js/libs/svgxuse.js"></script>
 <script src="assets/js/libs/imagesloaded.pkgd.js"></script>
@@ -132,8 +131,8 @@
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 
 <script src="assets/js/libs/swiper.jquery.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="assets/js/main.min.js"></script>
+<script src="assets/js/app.min.js"></script>
 <!-- <script src='assets/js/index.js'></script> -->
 <script src="assets/js/libs-init/libs-init.js"></script>
 <script defer src="assets/fonts/fontawesome-all.js"></script>

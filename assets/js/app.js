@@ -1,11 +1,10 @@
 $(window).ready(function(){
 	$('#hellopreloader').fadeOut('slow'); // remove preloader when page is ready
-	perfectScrollbarInit()
 });
 
-let devUrl = 'https://konstructapps.herokuapp.com'; // test 
+//let devUrl = 'https://konstructapps.herokuapp.com'; // test 
 
-//let devUrl = 'https://api.konstructapp.com'; // live
+let devUrl = 'https://api.konstructapp.com'; // live
 
 triggerBtns();
 
@@ -14,7 +13,7 @@ $(function(){
 	if ('serviceWorker' in navigator) {
 	  if (navigator.serviceWorker.controller) {} else {
 	    //Register the ServiceWorker
-	    navigator.serviceWorker.register('./sw.js', {
+	    navigator.serviceWorker.register('./sw.min.js', {
 	      scope: './'
 	    });
 	  }
@@ -50,13 +49,13 @@ $(function(){
 	});	
 
 	window.addEventListener('appinstalled', (evt) => {
-	  $('.installAppPrompt').hide(); // hide install button once pwa installed
+	  	$('.installAppPrompt').hide(); // hide install button once pwa installed
 	 	Cookies.set('install', 'true');
 	});	
 
 	if (Cookies.get('install')) {		
-		if (Cookies.get('install') === 'true') {$('.installAppPrompt').hide();}
-		else{$('.installAppPrompt').show();}
+		if (Cookies.get('install') !== 'true') {$('.installAppPrompt').show();}
+		else{$('.installAppPrompt').hide();}
 	}
 
 })
@@ -436,23 +435,18 @@ let submitData = (data, method, action, callback) => {
 	        case 401 :
 	          talert(jqXHR.statusText);
 	         	throw('Authentication error');
-	        	break;
 	        case 400 : 
 	        	talert(jqXHR.statusText)
 	        	throw('Authentication error');
-	        	break;
 	        case 500 : 
 	        	talert(jqXHR.statusText)
 	        	throw('Internal server error');
-	        	break;
 	        case 404 : 
 	        	talert(jqXHR.statusText)
 	        	throw('Not found');
-	        	break;
 	        default:
           	talert(jqXHR.statusText);
           	throw('Uncaught Error.\n' + jqXHR.statusText);
-          	break;
 	      }	
 
 	    } 

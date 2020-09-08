@@ -111,7 +111,7 @@
 				
 			</div>			
 		</div>
-		<div class="ui-block">
+		<!-- <div class="ui-block">
 				
 				<div class="rate-item inline-items">
 					<div class="author-thumb">
@@ -150,7 +150,7 @@
 					</div>
 				</div>
 							
-		</div>		
+		</div>		 -->
 	</div>
 	
 </div>

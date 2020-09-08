@@ -7,7 +7,7 @@ session_start();
 //inherits all from functions.php where all my functions lies
 require_once 'functions.php';
 
-$devUrl = prodArena('test');
+$devUrl = prodArena('live');
 
 date_default_timezone_set("Africa/Lagos");
 
@@ -17,10 +17,12 @@ $complete_profile = true;
 
 if(!isset($authpage) && !isset($openpage) && !isset($_COOKIE['_id'])){
 	header('location:signin'); // redirects to signin page if cookie for user does not exist
+	exit();
 }
 
 if (isset($_COOKIE['_id']) && isset($authpage)) {
 	header('location:./'); // redirects to feed if user cookie exists and pops on an auth page
+	exit();
 }
 
 if (isset($_COOKIE['_id']) && !isset($openpage)) { // avoid checking for user if in an open
@@ -38,6 +40,10 @@ if (isset($_COOKIE['_id']) && !isset($openpage)) { // avoid checking for user if
 					}
 				}
 				//TODO :  map cookie to check user decision concerning showing complete profile alert
+			}
+			else{
+				throw new Exception("Error Processing Request", 1);
+				exit();				
 			}
 		} 
 		

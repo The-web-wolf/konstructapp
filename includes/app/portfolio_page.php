@@ -10,7 +10,7 @@
 			<div class="col col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
 				<div class="ui-block video-item">
 					<div class="video-player">
-						<img src="${current_portfolio.pictures[0]}" alt="Portfolio banner" style='height:212px'>
+						<img src="${current_portfolio.pictures[0]}" alt="${current_portfolio.title}" class="custom-bg" style='height:212px'>
 						<a href="#expand" class="play-video" data-target='custom-function' data-_fnc='expandPortfolio' data-_param='{"id":"${current_portfolio._id}"}'>
 							<svg class="olymp-magnifying-glass-icon"><use xlink:href="#olymp-magnifying-glass-icon"></use></svg>
 						</a>
@@ -67,7 +67,7 @@
 			})
 
 			if (response_count == 0) {
-				talert('Nothing left to load')
+				talert('You have caught up with us')
 			}			
 
 		}).fail(function(response){

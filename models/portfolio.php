@@ -89,7 +89,7 @@
 		$(root).html(
 			`<div class="formBox">
 				<p>Give Information of contact person</p>
-				<form action="#" id="makeReview">
+				<form action="#" id="sendInvite">
 					<div class="form-group label-floating">
 						<label class="control-label"> Client name</label>
 						<input class="form-control" placeholder="" name="client_name" type="text" required="">
@@ -101,7 +101,7 @@
 				<p>Choose how to send invite for review</p>										
 			</div>`)
 
-		let form 	= $('#makeReview');
+		let form 	= $('#sendInvite');
 		$(form).submit(function(e){
 			e.preventDefault();
 			let formData 		= $(form).serializeArray();
@@ -111,19 +111,19 @@
 			}
 			else{
 				let clientName 	= formData[0]['value'];
-				let reviewLink 	= `https://konstructapp.com/ratings?ref=${portfolio}`;
+				let reviewLink 	= `https://konstructapp.com/review?ref=${portfolio}`;
 				let message 		= ` ${reviewLink} \nThanks.`	;
 				let whatsapp		= `<button 
 										class="btn bg-green btn-block btn-md no-ajaxy" 
 										data-sharer="whatsapp" 
-										data-title=" Hi ${clientName},\nkindly provide a portfolio review & rating for my portfolio (${params.title}) on Konstructapp" 
+										data-title="Hi ${clientName},\nkindly provide a portfolio review & rating for my portfolio on Konstructapp" 
 										data-url = '${reviewLink}'
 										>Send on Whatsapp														
 									</button>`;
 				let email 			= `<button 
 										class ='btn bg-dribbble btn-block btn-md no-ajaxy' 
 										data-sharer	='email' 
-										data-title=' Hi ${clientName},\nkindly provide a portfolio review & rating for my portfolio (${params.title}) on Konstructapp'
+										data-title='Hi ${clientName},\nkindly provide a portfolio review & rating for my portfolio on Konstructapp'
 										data-subject	= 'Invite for review'
 										data-url = '${reviewLink}'
 										data-to = ''> Share via email 
@@ -286,7 +286,7 @@
 				$(images_cont).append(`							
 					<div class="swiper-slide">
 						<div class="photo-item" data-swiper-parallax="-300" data-swiper-parallax-duration="500">
-							<img src="${currentPicture}" class='custom-bg' alt="${portfolio.title}">
+							<img src="${currentPicture}" alt="${portfolio.title}">
 							<div class="overlay overlay-dark"></div>
 
 							<div class="content">

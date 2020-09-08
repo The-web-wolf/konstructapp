@@ -1,5 +1,6 @@
 .htaccess
 sw.js
+sw.min.js
 composer.json
 composer.LOCK
 .vscode

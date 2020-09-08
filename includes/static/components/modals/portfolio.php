@@ -228,3 +228,54 @@
 </div>
 
 <!-- Window-popup Update Portfolio -->
+
+
+<!-- Popup Write Rewiev -->
+
+<div class="modal fade" id="make-review" tabindex="-1" role="dialog" aria-labelledby="make-review" aria-hidden="true">
+	<div class="modal-dialog window-popup popup-write-rewiev" role="document">
+		<div class="modal-content">
+			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
+				<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>
+			</a>
+
+			<div class="modal-header">
+				<h6 class="title">Write a Review</h6>
+			</div>
+
+			<div class="modal-body">
+				<form class="form-write-rewiev" action='#'>
+					<div class="row">
+
+						<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+							<div class="form-group label-floating">
+								<label class="control-label">Display Name</label>
+								<input class="form-control" placeholder="" name='clientName' type="name" required>
+							</div>	
+
+							<div class="form-group label-floating is-select">
+								<label class="control-label">Select Rating</label>
+								<select class="selectpicker form-control" name='starRating' required>
+									<option value="5">5 Stars Rating</option>
+									<option value="4">4 Stars Rating</option>
+									<option value="3">3 Stars Rating</option>
+									<option value="2">2 Stars Rating</option>
+									<option value="1">1 Stars Rating</option>
+								</select>
+							</div>
+
+							<div class="form-group">
+								<textarea class="form-control" name='comment' placeholder="Write a little description about the review" required></textarea>
+							</div>
+
+							<button type='submit' id='postReview' class="btn btn-primary btn-lg full-width">Send your Review</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- ... end Popup Write Rewiev -->

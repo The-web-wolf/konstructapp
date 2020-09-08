@@ -148,11 +148,17 @@
 			})	
 
 		})
+		.fail(function(){
+			$(root).find('.loader-activity').hide()
+		})
 	}
 
 	function loadStatus(callType){
 
 		let root = document.getElementById('newsfeed-items-grid');
+		let loader = $('#load-more-feed-status');
+
+		$(loader).fadeOut('slow');
 
 		if (callType === 'sub') {
 			$(root).html('<div class="loader-activity"><div class="indeterminate"></div></div>');
@@ -171,10 +177,10 @@
 
 		let targetUrl = `${devUrl}/api/status?limit=5&page=${status_page}`;
 
-		$.ajax({
-			url : targetUrl,	  
-			type : 'GET',
-			processData : false,
+	$.ajax({
+		url : targetUrl,	  
+		type : 'GET',
+		processData : false,
 		contentType : false,
 		headers: { 'Authorization': `Bearer ${authtk}` },
 		}).done(function(response){
@@ -183,16 +189,23 @@
 			let response_count= response.data.length;
 
 			response_data.map(function(currentValue){
-
 				writeFeedStatus(currentValue, response)
 			})
 
 			if (response_count == 0) {
-				talert('Nothing left to load')
+				talert('You have caught up with us')
+				$(root).addClass('caught-up')
+			}
+			else{
+				$(loader).html(
+					`<svg class="olymp-three-dots-icon">
+						<use xlink:href="#olymp-three-dots-icon"></use>
+					</svg>`
+				).fadeIn()		
 			}
 		})
 		.fail(function(){
-			$('#news-items-feed').html(`<section class="" style='padding-top:120px;padding-bottom:120px'>
+			$('#newsfeed-items-grid').html(`<section class="" style='padding-top:120px;padding-bottom:120px'>
 				<div class="container">
 					<div class="row">
 						<div class="col col-xl-4 col-lg-12 col-md-12 col-12 m-auto">
@@ -211,12 +224,30 @@
 			</section>`)
 		})
 	}
-	
-	$('#load-more-feed-status').on('click', function() {
-		status_page++;
-		$('#newsfeed-items-grid').append('<div class="loader-activity"><div class="indeterminate"></div></div>');
-		loadStatus();
+
+	let loadMoreFeedStatus = () => {
+		if( !$("#newsfeed-items-grid").hasClass("caught-up") ){
+			status_page++;
+			$('#load-more-feed-status').html('<div class="loader-activity"><div class="indeterminate"></div></div>');
+			loadStatus();				
+		}
+		else{
+			talert('You have caught up with us')
+		}
+	}
+
+	// load more content when scrolled to bottom of the page
+	$(window).scroll(function() {
+		if($(window).scrollTop() === $(document).height() - $(window).height()) {
+			loadMoreFeedStatus();
+		}
 	});
+
+	// alternatively, load content on load more button click
+	$('#load-more-feed-status').on('click', function(e) {
+		e.preventDefault()
+		loadMoreFeedStatus()
+	})
 
 	function writeFeedBids(current_bid){
 		let relative_date	= moment(current_bid.createdAt);
@@ -440,7 +471,6 @@
 		relative_date 		= relative_date.fromNow();
 
 		let self_user = current_status.user._id === Cookies.get('_id')	? true : false;
-		console.log(current_status)
 
 		let statusText = current_status.statusText; ;
 		var length = 200;
@@ -477,7 +507,7 @@
 			pictureContent = `
 				<div class="post-thumb">
 					<a href="#expand" data-target='custom-function' data-_fnc='expandStatus' data-_param='{"id":"${current_status._id}"}'> 
-						<img src="${current_status.pictures[0]}" alt="photo">
+						<img src="${current_status.pictures[0]}" class='custom-bg' alt="photo">
 					</a>
 				</div>`
 		}

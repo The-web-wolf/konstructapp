@@ -1,57 +1,48 @@
 <?php $openpage = 'review'; require 'includes/dynamic/header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 	<?php include('includes/static/headcontent.php') ?>
 
-    <style>
-
-body.darkmode{
-        background-color: #2a2c48
-    }
-    .heading-title,.title {
-        color:#dee2e6
-    }
-
-    .crumina-teammembers-item .teammember-content .socials li a{
-        color:white !important;
-    }
-    .socials--round .social-item{
-        width: 36px;
-        height:36px;
-        font-size:15px;
-    }
-
-    .darkmode #footer{
-        background-color:#2a2c48
-    }
-
-    .darkmode .sub-footer-copyright{
-        border-top:0px
-    }
-
-    @media(max-width:1024px){
-        .firstSection{
-            padding-top:100px
-        }
-        .negative-margin-right150 {
-            margin-right: 0; 
-            margin-bottom:30px
-        }     
-	}
-	
-		.w-list a,.footer p{
-			font-size: 16px;
-			color: #dee2e6
-		}
-		.footer .title{
-			font-size: 24px;
-		}
-
-    
-    </style>
 <body class=" darkmode">
+	<style>
 
+	body.darkmode{
+		background-color: #2a2c48
+	}
+	.heading-title,.title {
+		color:#dee2e6
+	}
+	.socials--round .social-item{
+		width: 36px;
+		height:36px;
+		font-size:15px;
+	}
+
+	.darkmode #footer{
+		background-color:#2a2c48
+	}
+
+	.darkmode .sub-footer-copyright{
+		border-top:0px
+	}	
+		.w-list a,.footer p{
+		font-size: 16px;
+		color: #dee2e6
+	}
+	.footer .title{
+		font-size: 24px;
+	}
+
+	#primary_content .post-thumb img{
+		width : 100%;
+		margin:0px auto;
+		height:500px;
+		object-fit:cover
+	}
+
+	</style>
 
 <div class="header--standard header--standard-landing " id="header--standard">
 	<div class="container">
@@ -102,8 +93,24 @@ body.darkmode{
 	</div>
 </div>
 
-<section class=' medium-padding180 first-section'  style='background:#131417'>
 
+<div class="header-spacer header-spacer-large"></div>
+
+<section class=' medium-padding80 first-section'  style='background:#131417'>
+	<div class="container" >
+		<div class="row mt50" id='absolute_root'>
+			
+			<div class="col col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12" id='primary_content'>
+
+			</div>
+
+			<div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12" id='secondary_content'>
+
+			</div>
+
+		</div>
+
+	</div>
 </section>
 
 <div class="footer footer-full-width" id="footer">
@@ -212,25 +219,19 @@ body.darkmode{
 </div>
 
 
-<!-- ... end Footer Full Width -->
 
-<script src="assets/js/libs/perfect-scrollbar.js"></script>
-<script src="assets/js/libs/svgxuse.js"></script>
-<script src="assets/js/libs/Headroom.js"></script>
-<script src="assets/js/libs/material.min.js"></script>
-<script src="assets/js/libs/bootstrap-select.js"></script>
+<?php include('includes/static/components/modals/portfolio.php') ?>
 
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/app.js"></script>
-<script src="assets/js/libs-init/libs-init.js"></script>
-<script defer src="assets/fonts/fontawesome-all.js"></script>
+<?php include('includes/static/scripts.php') ?>
 
-<script src="assets/Bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha256-+BEKmIvQ6IsL8sHcvidtDrNOdZO3C9LtFPtF2H0dOHI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment-with-locales.min.js" integrity="sha256-4HOrwHz9ACPZBxAav7mYYlbeMiAL0h6+lZ36cLNpR+E=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=" crossorigin="anonymous"></script>
 
-<!-- SVG icons loader -->
-<script src="assets/js/svg-loader.js"></script>
-<!-- ------------------ -->
+<?php include('models/portfolio.php') ?>
+<?php include('models/likes.php') ?>
+
+<?php include('includes/app/client_review.php'); ?>
 
 </body>
 </html>
