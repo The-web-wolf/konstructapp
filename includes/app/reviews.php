@@ -1,26 +1,57 @@
 <script type="text/javascript">
 
-	function writeAllreviews(current_review, all_data){
-		let review_details 	= current_review.details.replace(/(<([^>]+)>)/ig,"");
+	function writeAllReviews(current_review, all_data){
+		let review_details 	= current_review.comment.replace(/(<([^>]+)>)/ig,"");
 		let relative_date	= moment(current_review.createdAt);
 		relative_date 		= relative_date.fromNow();
+
+		let rate_stars = 20 * current_review.starRating;
+		// multiply 20 by the int star rating, meaning (1=>20,2=>40,3=>60,4=>80,5=>100). to define width of full color star image
 
 		let self_user = current_review.user._id === Cookies.get('_id')	? true : false;	
 
 		let writeContent = new Promise (function(resolve,reject){
-			let write = $('#all-review-container').append(`			
-
+			let write = $('#root #all-reviews-container .all-reviews').append(`			
+				<div class='col-lg-6 '>		
+					<div class="ui-block">										
+						<div class="rate-item inline-items">
+							<div class="author-thumb">
+								<img src="assets/img/logo/app.png" style="width: 36px;border:1px solid rgba(255,255,255,.1)" alt="author">
+							</div>
+							<div class="rate-author-name">
+								<a href="#" class="h6 author-name"> ${current_review.clientName} </a>
+								<div class="rate-client">${current_review.portfolio.client} 
+									- <span class='rate-date'>${relative_date}</span>
+								</div>
+							</div>
+							<a href="#" class="btn btn-sm bg-primary"  data-target='custom-function' data-_fnc="expandPortfolio"	data-_param='{"id":"${current_review.portfolio._id}"}' >View Project</a>
+							<div class="star-rating" style='display:block'>
+								<div>
+									<img src="./assets/img/stars_blank.png" alt="">
+								</div>
+								<div class="cornerimage" style="width:${rate_stars}%;">
+									<img src="./assets/img/stars_full.png" alt="${current_review.starRating} star rating">
+								</div>				
+							</div>
+							<div class="text-rating">
+								<span class='fa fa-quote-left' style='position:absolute;font-size:24px;left:30px;opacity:.4;bottom:38px'></span>
+								${current_review.comment}
+							</div>
+						</div>
+					</div>	
+				</div>
 			`)
 			if (write) { resolve('done')}
 		})	
+
 	}
 
 	function loadReviews(callType){
 
 		if (callType === 'sub') {
-			$('#all-review-container').fadeOut().html('')
+			$('#all-review-container').fadeOut();
+			$('#root .all-reviews').html('')
 			$('#root').find('#no-review').fadeOut().remove()
-			$('#header-container').fadeIn()
 			// reset containers if call is re trigerred
 		}
 
@@ -31,7 +62,7 @@
 
 		/* Load Reviews */  
 
-		let targetUrl = `${devUrl}/api/user/${_id}/review`;
+		let targetUrl = `${devUrl}/api/user/${_id}/reviews`;
 
 		$.ajax({
 			url : targetUrl,	  
@@ -89,23 +120,13 @@
 
 			}
 			else{
-				let headerContent =
-				`<div class="ui-block" >
-					<div class="ui-block-title">
-						<h6 class="title">All Reviews</h6>		
-					</div>
-                </div>`;
-                
-				$('#all-review-container').append(headerContent).fadeIn()
-
 				response_data.map(function(currentValue){
 					writeAllReviews(currentValue, response)
 				})
-
 			}
 
 		}).fail(function(response){
-				$('#root').html(`<section class="" style='padding-top:120px;padding-bottom:120px'>
+				$('#root .all-reviews').html(`<section class="" style='padding-top:120px;padding-bottom:120px'>
 					<div class="container">
 						<div class="row">
 							<div class="col col-xl-4 col-lg-12 col-md-12 col-12 m-auto">

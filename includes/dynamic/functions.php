@@ -96,7 +96,7 @@ function requestUser($url) {
     if(curl_errno($ch)){
         $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-        throw new Exception ($http_status);
+        throw new Exception ($http_status, 1);
     }	
     curl_close($ch);
 	return $data;

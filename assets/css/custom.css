@@ -835,6 +835,8 @@ img.custom-bg {
   display:none
 }
 
+/* Webchat custom css */
+
 #fc_frame, #fc_frame.fc-widget-normal{
   z-index :1049 !important;
   /* Keep chat widget below swal and modals */

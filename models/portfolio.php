@@ -221,7 +221,7 @@
 	}
 
 	function expandPortfolio(params){
-		let modal 			= $('#detailed-portfolio');
+		let modal 		= $('#detailed-portfolio');
 		let modal_top 	= $('#detailed-portfolio .title-information')
 		let modal_body	= $('#detailed-portfolio .modal-body 	.main-content');
 		let images_cont = $('#detailed-portfolio .modal-body 	.swiper-wrapper');
@@ -317,7 +317,7 @@
 				<div class="row">
 					<div class="col col-lg-7 col-md-7 col-sm-12 col-12">
 						<div class="post__author author vcard inline-items">
-							<img src="${portfolio.user.userPic}" alt="author">
+							<img src="${portfolio.user.userPic}" alt="${portfolio.user.firstName}">
 
 							<div class="author-date">
 								<a class="h6 post__author-name fn" href="user?id=${portfolio.user._id}">${portfolio.user.firstName} ${portfolio.user.lastName} </a> created this <a href="#">portfolio</a>
@@ -329,7 +329,9 @@
 							</div>
 
 						</div>
-
+						<p class="portfolioDetails web-only" style='max-height:130px !important; overflow-y:scroll'>
+							${portfolio.details}
+						</p>
 
 					</div>
 					<div class="col col-lg-5 col-md-5 col-sm-12 col-12">
@@ -347,7 +349,7 @@
 								<span>${portfolio.role}</span>
 							</div>
 						</div>
-						<p class="portfolioDetails" style='max-height:130px !important; overflow-y:scroll'>
+						<p class="portfolioDetails mobile-only" style='max-height:130px !important; overflow-y:scroll'>
 							${portfolio.details}
 						</p>
 					</div>
@@ -402,7 +404,7 @@
 				// Successful
 				$(likeBtn).addClass('liked');
 				$(likeText).addClass('liked');
-				let new_count = response.likescount;				
+				let new_count = response.likesCount;				
 				$(count).html(`${new_count} like(s) `)
 			}
 		})

@@ -195,23 +195,28 @@
 		  		}
 		  		else{
 		  			// Successful
-					talert('You have successfully reviewed this portfolio');
+					resetBtn(form)
 					swal({
 						title : 'Review successful',
 						text: `KonstructApp is a multi-sided user generated platform that leverages social selling and social proof in construction demand and supply.`,
 						icon: "success",
 						buttons: {
-							cancel : 'Cancel',
+							cancel : {
+								text : 'I want In',
+								value: 'reg',
+							},
 							proceedDelete : {
 								text : 'Learn more!',
 								value : 'visit',
-								closeModal: 'false',
 							}
 						}
 					})
 					.then((value) => {
 						if(value === 'visit'){
 							window.location.replace('https://konstructapp.com');
+						}
+						else if(value === 'reg'){
+							window.location.replace('./')
 						}
 					})
 		  		}

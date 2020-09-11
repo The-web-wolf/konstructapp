@@ -50,15 +50,15 @@ if (isset($_COOKIE['_id']) && !isset($openpage)) { // avoid checking for user if
 		catch(Exception $e){
 				$http_status = $e->getMessage();
 				if ($http_status == 400){
-						// user not found(self user does not exist);
-						// ID in cookie does not match record, log out user
+					// user not found(self user does not exist);
+					// ID in cookie does not match record, log out user
 					 killSession();
 					 exit();
 				}
 				else{
-						// server error
-						http_response_code(500);
-						header('location:500');
+					// server error
+					http_response_code(500);
+					header('location:500');
 				}
 		}
 		

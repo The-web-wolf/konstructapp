@@ -9,17 +9,46 @@
 <?php include('includes/static/headcontent.php') ?>
 
 <style type="text/css">
+	#root .container{
+		margin-bottom:60px
+	}
 	.section .title.h5{
 		color:white;
 		padding-bottom: 10px
 	}
-	.rate-item .star-rating{
-		
+	.rate-item .rate-author-name{
+		text-transform:capitalize
 	}
 	.rate-item .text-rating{
 		display: block;
-		margin-top: 10px
+		margin-top: 10px;
+		text-align:center;
 	}
+	.rate-item .rate-client{
+		text-transform:capitalize
+	}
+	.rate-item .rate-date{
+		color:#888da8;
+		font-size:10px;
+	}
+	.rate-item .text-rating{
+		margin-bottom:10px
+	}
+	.star-rating {
+		position: relative;
+		width: 100px;
+		margin: 10px auto 0px auto;
+	} 
+	.cornerimage {
+		border: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+	} 
+	.star-rating img{
+		max-width: 100px;
+	}	
 	
 </style>
 
@@ -111,46 +140,7 @@
 				
 			</div>			
 		</div>
-		<!-- <div class="ui-block">
-				
-				<div class="rate-item inline-items">
-					<div class="author-thumb">
-						<img src="assets/img/logo/app.png" style="width: 36px;border:1px solid rgba(255,255,255,.1)" alt="author">
-					</div>
-					<div class="rate-author-name">
-						<a href="#" class="h6 author-name">Taye Olajide </a>
-						<div class="rate-date">KonstructApp</div>
-					</div>
-					<a href="#" class="btn btn-sm bg-primary">View Project</a>
-					<div class="star-rating">
-						<ul class="rait-stars">
-							<li>
-								<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
-							</li>
-							<li>
-								<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
-							</li>
 
-							<li>
-								<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
-							</li>
-							<li>
-								<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
-							</li>
-							<li>
-								<i class="far fa-star star-icon" aria-hidden="true"></i>
-							</li>
-						</ul>						
-					</div>
-					<div class="text-rating">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat.
-					</div>
-				</div>
-							
-		</div>		 -->
 	</div>
 	
 </div>
