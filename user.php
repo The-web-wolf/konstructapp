@@ -78,6 +78,11 @@
 						<div class="author-content">
 							<a href="#" class="h4 author-name"><?php echo $req_user_data['firstName'] ?> <?php echo $req_user_data['lastName'] ?></a>
 							<div class="country"><?php echo $req_user_data['occupation'] ?></div>
+							<div class="star-rating" >
+								<div class="cornerimage" style="width:100%;">
+									<img src="./assets/img/stars_full.png" alt="5 star rating">
+								</div>				
+							</div>
 						</div>
 					</div>
 				</div>

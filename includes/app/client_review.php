@@ -14,8 +14,8 @@
 				contentType : false,
 			}).done(function(response){
 				let portfolio	= response.data;
-				console.log(portfolio)
-				$('title').html(`${portfolio.title} Review | KonstructApp`)
+				$('title').html(`${portfolio.title} Review | KonstructApp`);
+				let canReview = portfolio.starRating ? "disabled='disabled'" : '';
 				resolve(portfolio.user._id)
 				$(p_root).html(`
 				<div class="ui-block">
@@ -58,7 +58,7 @@
 							</div>
 						</div>
 						<button class="btn btn-md-2 btn-primary btn-block" data-target='custom-function' data-_fnc='expandPortfolio' data-_param='{"id":"${portfolio._id}"}'>View Full Portfolio</button>
-						<button class="btn btn-md-2 btn-secondary btn-block" data-target='custom-function' data-_fnc='makeReview' data-_param='{"id":"${portfolio._id}"}'>Make Your Review as ${portfolio.client} </button>
+						<button class="btn btn-md-2 btn-secondary btn-block" data-target='custom-function' data-_fnc='makeReview' ${canReview} data-_param='{"id":"${portfolio._id}"}'>Make Your Review as ${portfolio.client} </button>
 
 					</article>
 
@@ -70,7 +70,7 @@
 				})	
 			})
 			.fail(function(jqXHR){
-				if(jqXHR.status === 404 || jqXHR.status === 500){
+				if(jqXHR.status === 404 || jqXHR.status === 400){
 					$(root).html(`<section class="" style='padding-top:30px;padding-bottom:10px;'>
 						<div class="container">
 							<div class="row">
@@ -81,7 +81,7 @@
 										</div>								
 										<h6>Sorry!</h6>
 										<p class="heading-text">
-											We could not load this portfolio, The link must be broken, kindly request for another or contact our support if you think this is a mistake
+											We could not load this portfolio, The link must be broken, kindly request for another or contact our support if you think this is a mistake.
 										</p>
 									</div>
 								</div>
@@ -176,7 +176,6 @@
 		let body 	= $('#make-review .modal-body');
 		let main	= $('#make-review');
 		let form 	= $(main).find('form');
-		console.log(form)
 		$(main).modal('show');
 		if(!$(form).find("[name = 'portfolio']").length){
 			$(form).append(`<input type='hidden' name='portfolio' value='${findGetParameter('ref')}' >`);
@@ -197,12 +196,12 @@
 		  			// Successful
 					resetBtn(form)
 					swal({
-						title : 'Review successful',
-						text: `KonstructApp is a multi-sided user generated platform that leverages social selling and social proof in construction demand and supply.`,
+						title: 'Review successful',
+						text: `KonstructApp, easily FIND or be FOUND for verified Construction Services.`,
 						icon: "success",
 						buttons: {
-							cancel : {
-								text : 'I want In',
+							getIn : {
+								text : 'Sign me up',
 								value: 'reg',
 							},
 							proceedDelete : {

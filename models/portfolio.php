@@ -116,14 +116,14 @@
 				let whatsapp		= `<button 
 										class="btn bg-green btn-block btn-md no-ajaxy" 
 										data-sharer="whatsapp" 
-										data-title="Hi ${clientName},\nkindly provide a portfolio review & rating for my portfolio on Konstructapp" 
+										data-title="Hi ${clientName},\nkindly provide review & rating for my project with you. Thank you." 
 										data-url = '${reviewLink}'
 										>Send on Whatsapp														
 									</button>`;
 				let email 			= `<button 
 										class ='btn bg-dribbble btn-block btn-md no-ajaxy' 
 										data-sharer	='email' 
-										data-title='Hi ${clientName},\nkindly provide a portfolio review & rating for my portfolio on Konstructapp'
+										data-title='Hi ${clientName},\nkindly provide review & rating for my project with you. Thank you.'
 										data-subject	= 'Invite for review'
 										data-url = '${reviewLink}'
 										data-to = ''> Share via email 

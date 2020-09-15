@@ -616,6 +616,11 @@ img.custom-bg {
   }
   .darkmode .swal-text{
     color: #888da8;
+    text-align:center
+  }
+
+  .darkmode .swal-button{
+    background-color:#888da8
   }
 
   .darkmode .swal-icon--success:after, .swal-icon--success:before{
