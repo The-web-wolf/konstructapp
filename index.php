@@ -64,7 +64,7 @@
 							<div class="col-8 col-xs-4">
 								<div class="add-options-message">
 									<a class="options-message image-upload no-ajaxy" data-toggle="tooltip" data-placement="top" data-original-title="ADD PHOTO(S)" href="#photo-upload" href="#upload-images">
-										<input type="file" name="pictures" multiple="" style="position: absolute;height: 22px;width: 22px;top: 0px;left: 0px;z-index: 100;opacity: 0">
+										<input type="file" accept='image/*' name="pictures" multiple="" style="position: absolute;height: 22px;width: 22px;top: 0px;left: 0px;z-index: 100;opacity: 0">
 										<svg class="olymp-multimedia-icon" data-toggle="modal" data-target="#status-image-upload"><use xlink:href="#olymp-multimedia-icon"></use></svg>
 									</a>								
 									<a href="#s" class="options-message choose-portfolio-tag no-ajaxy" data-toggle="tooltip" data-placement="top"   data-original-title="TAG PORTFOLIO" id="status_tag_portfolio">									

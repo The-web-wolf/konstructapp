@@ -129,27 +129,27 @@
 						<p>Share <?php echo $req_user_data['firstName'] ?>'s profile on one of the following social platforms to promote them </p>
 						<ul class="socials">
 							<li>
-								<a href="#facebook" class="no-ajaxy" data-sharer='facebook' data-hashtag='KonstructApp' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+								<a href="#facebook" class="no-ajaxy" data-sharer='facebook' data-hashtag='KonstructApp' data-url="https://app.konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
 									<i class="fab fa-facebook-square" aria-hidden="true"></i>
 								</a>
 							</li>
 							<li>
-								<a href="#twitter" class="no-ajaxy" data-sharer='twitter' data-title="Check Out <?php echo $req_user_data['firstName'] ?>'s profile On KonstructApp" data-hashtags='KonstructApp,Construction,<?php echo $req_user_data['occupation'] ?>' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+								<a href="#twitter" class="no-ajaxy" data-sharer='twitter' data-title="Check Out <?php echo $req_user_data['firstName'] ?>'s profile On KonstructApp" data-hashtags='KonstructApp,Construction,<?php echo $req_user_data['occupation'] ?>' data-url="https://app.konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
 									<i class="fab fa-twitter"  aria-hidden="true"></i>
 								</a>
 							</li>
 							<li>
-								<a href="#reddit" class="no-ajaxy" data-sharer='reddit' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+								<a href="#reddit" class="no-ajaxy" data-sharer='reddit' data-url="https://app.konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
 									<i class="fab fa-reddit" aria-hidden="true"></i>
 								</a>
 							</li>
 							<li>
-								<a href="#whatsapp" class="no-ajaxy" data-sharer='whatsapp' data-title="Check Out <?php echo $req_user_data['firstName'] ?>'s profile On KonstructApp" data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+								<a href="#whatsapp" class="no-ajaxy" data-sharer='whatsapp' data-title="Check Out <?php echo $req_user_data['firstName'] ?>'s profile On KonstructApp" data-url="https://app.konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
 									<i class="fab fa-whatsapp" aria-hidden="true"></i>
 								</a>
 							</li>
 							<li>
-								<a href="#linkedin" class="no-ajaxy" data-sharer='linkedin' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+								<a href="#linkedin" class="no-ajaxy" data-sharer='linkedin' data-url="https://app.konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
 									<i class="fab fa-linkedin" aria-hidden="true"></i>
 								</a>
 							</li>
@@ -209,27 +209,27 @@
 						<p>Share <?php echo $req_user_data['firstName'] ?>'s profile on one of the following social platforms to promote them </p>
 						<ul class="socials">
 							<li>
-								<a href="#facebook" class="no-ajaxy" data-sharer='facebook' data-hashtag='KonstructApp' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+								<a href="#facebook" class="no-ajaxy" data-sharer='facebook' data-hashtag='KonstructApp' data-url="https://app.konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
 									<i class="fab fa-facebook-square" aria-hidden="true"></i>
 								</a>
 							</li>
 							<li>
-								<a href="#twitter" class="no-ajaxy" data-sharer='twitter' data-title="Check Out <?php echo $req_user_data['firstName'] ?>'s profile On KonstructApp" data-hashtags='KonstructApp,Construction,<?php echo $req_user_data['occupation'] ?>' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+								<a href="#twitter" class="no-ajaxy" data-sharer='twitter' data-title="Check Out <?php echo $req_user_data['firstName'] ?>'s profile On KonstructApp" data-hashtags='KonstructApp,Construction,<?php echo $req_user_data['occupation'] ?>' data-url="https://app.konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
 									<i class="fab fa-twitter"  aria-hidden="true"></i>
 								</a>
 							</li>
 							<li>
-								<a href="#reddit" class="no-ajaxy" data-sharer='reddit' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+								<a href="#reddit" class="no-ajaxy" data-sharer='reddit' data-url="https://app.konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
 									<i class="fab fa-reddit" aria-hidden="true"></i>
 								</a>
 							</li>
 							<li>
-								<a href="#whatsapp" class="no-ajaxy" data-sharer='whatsapp' data-title="Check Out <?php echo $req_user_data['firstName'] ?>'s profile On KonstructApp" data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+								<a href="#whatsapp" class="no-ajaxy" data-sharer='whatsapp' data-title="Check Out <?php echo $req_user_data['firstName'] ?>'s profile On KonstructApp" data-url="https://app.konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
 									<i class="fab fa-whatsapp" aria-hidden="true"></i>
 								</a>
 							</li>
 							<li>
-								<a href="#linkedin" class="no-ajaxy" data-sharer='linkedin' data-url="https://konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
+								<a href="#linkedin" class="no-ajaxy" data-sharer='linkedin' data-url="https://app.konstructapp.com/user?id=<?php echo $req_user_data['_id'] ?>">
 									<i class="fab fa-linkedin" aria-hidden="true"></i>
 								</a>
 							</li>

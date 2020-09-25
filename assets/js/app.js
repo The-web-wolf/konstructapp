@@ -2,23 +2,57 @@ $(window).ready(function(){
 	$('#hellopreloader').fadeOut('slow'); // remove preloader when page is ready
 });
 
-//let devUrl = 'https://konstructapps.herokuapp.com'; // test 
+let devUrl = 'https://konstructapps.herokuapp.com'; // test 
 
-let devUrl = 'https://api.konstructapp.com'; // live
+//let devUrl = 'https://api.konstructapp.com'; // live
 
 triggerBtns();
 
-$(function(){
-	/* Install Service worker*/
-	if ('serviceWorker' in navigator) {
-	  if (navigator.serviceWorker.controller) {} else {
-	    //Register the ServiceWorker
-	    navigator.serviceWorker.register('./sw.min.js', {
-	      scope: './'
-	    });
-	  }
-	}	
 
+const check = () => {
+	if (!('serviceWorker' in navigator)) {
+	  throw new Error('No Service Worker support!')
+	}
+	if (!('PushManager' in window)) {
+	  throw new Error('No Push API Support!')
+	}
+}
+
+// I added a function that can be used to register a service worker.
+const registerServiceWorker = async () => {
+	const swRegistration = await navigator.serviceWorker.register('sw.min.js', {
+		scope: './'
+	});
+	return swRegistration;
+}	  
+
+
+// Request permission for notification
+
+const requestNotificationPermission = async () => {
+	const permission = await window.Notification.requestPermission();		
+	if(permission !== 'granted'){
+		throw new Error('Permission not granted for Notification');
+	}
+}
+
+const showLocalNotification = (title, body, swRegistration) => {
+    const options = {
+        body,
+        // here you can add more properties like icon, image, vibrate, etc.
+    };
+    swRegistration.showNotification(title, options);
+}
+
+const progressiveF = async () => {
+    check();
+    const swRegistration = await registerServiceWorker();
+    const permission =  await requestNotificationPermission();
+}
+
+progressiveF();
+
+$(function(){
 	// Prevent pop up of install
 
 	let deferredPrompt = null;
@@ -39,8 +73,7 @@ $(function(){
 	  // Wait for the user to respond to the prompt
 	  deferredPrompt.userChoice.then((choiceResult) => {
 	    if (choiceResult.outcome === 'accepted') {
-		  talert('Install Successful')
-		  $('.installAppPrompt').show()  // hide the install prompt after successful install
+		  $('.installAppPrompt').slideUp()  // hide the install prompt after successful install
 	    }
 	    else{
 	    	Cookies.set('install','false')
@@ -50,13 +83,23 @@ $(function(){
 
 	window.addEventListener('appinstalled', (evt) => {
 	  	$('.installAppPrompt').hide(); // hide install button once pwa installed
-	 	Cookies.set('install', 'true');
+		Cookies.set('install', 'true');	
+		if(Notification.permission === 'default'){
+			requestNotificationPermission();
+		}
 	});	
 
 	if (Cookies.get('install')) {		
 		if (Cookies.get('install') !== 'true') {$('.installAppPrompt').show();}
 		else{$('.installAppPrompt').hide();}
 	}
+
+	if(location.search === '?newlogin'){
+		if(Notification.permission === 'default'){
+			requestNotificationPermission();
+		}
+		history.replaceState('KonstructApp | Demand and supply starts here', 'KonstructApp | Demand and supply starts here', './');
+	}	
 
 })
 
@@ -241,7 +284,7 @@ function userFx (response){
     	data : {token : userToken, user : userId},
   	}).done(function(callback){
     	talert('Redirecting...');
-    	location.reload()
+    	location.replace('./?newlogin')
   	})
 }
 
@@ -260,10 +303,11 @@ function portfolioCreated(response){
 	hideModals()
 	document.getElementById('new-portfolio').reset()
 	resetBtn($('#new-portfolio'));
-	$('#createPortfolio').attr('disabled','disabled')
- 	$('.upload-image-container .file-upload .file-upload__label svg').css('fill', '#c2c5d9')
-	$('.upload-image-container .file-upload .file-upload__label p').css('color', '#c2c5d9')
-	$("#statusMessage").text(`No images selected`)	
+	let modal = ('#create-new-portfolio');
+	$(modal).find('#createPortfolio').attr('disabled','disabled')
+ 	$(modal).find('.upload-image-container .file-upload .file-upload__label svg').css('fill', '#c2c5d9')
+	$(modal).find('.upload-image-container .file-upload .file-upload__label p').css('color', '#c2c5d9')
+	$(modal).find(".upload-image-container .file-upload .file-upload__label p").text(`No images selected`)	
 }
 
 function portfolioUpdated(response){
@@ -280,10 +324,11 @@ function bidCreated(response){
 	document.getElementById('new-bid').reset()
 	$('.selectpicker').selectpicker('val', 'refresh')
 	resetBtn($('#new-bid'));
-	$('#createBid').attr('disabled','disabled')
- 	$('.upload-image-container .file-upload .file-upload__label svg').css('fill', '#c2c5d9')
-	$('.upload-image-container .file-upload .file-upload__label p').css('color', '#c2c5d9')
-	$("#statusMessage").text(`No images selected`)
+	let modal = ('#create-new-bid');
+	$(modal).find('#createBid').attr('disabled','disabled')
+ 	$(modal).find('.upload-image-container .file-upload .file-upload__label svg').css('fill', '#c2c5d9')
+	$(modal).find('.upload-image-container .file-upload .file-upload__label p').css('color', '#c2c5d9')
+	$(modal).find(".upload-image-container .file-upload .file-upload__label p").text(`No images selected`)		
 }
 
 function bidUpdated(response){

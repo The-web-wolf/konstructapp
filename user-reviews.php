@@ -34,21 +34,7 @@
 	.rate-item .text-rating{
 		margin-bottom:10px
 	}
-	.star-rating {
-		position: relative;
-		width: 100px;
-		margin: 10px auto 0px auto;
-	} 
-	.cornerimage {
-		border: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		overflow: hidden;
-	} 
-	.star-rating img{
-		max-width: 100px;
-	}	
+
 	
 </style>
 
@@ -131,7 +117,7 @@
 <div id="root">
 
 	<div class="container section">
-		<div class="h5 title">My Reviews</div>		
+		<div class="h5 title">Ratings and Reviews</div>		
 		<div class="loader-activity">
 		  <div class="indeterminate"></div>
 		</div>

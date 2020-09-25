@@ -33,6 +33,15 @@ self.addEventListener('activate', (event) => {
     if ('navigationPreload' in self.registration) {
       await self.registration.navigationPreload.enable();
     }
+
+    try {
+      const options = {}
+      const subscription = await self.registration.pushManager.subscribe(options)
+      console.log(JSON.stringify(subscription))
+    } catch (err) {
+      console.log('Error', err)
+    }
+    
   })());
 
   // Tell the active service worker to take control of the page immediately.

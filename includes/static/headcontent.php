@@ -1,5 +1,4 @@
 <head>
-
 	<title>KonstructApp | Demand And Supply Start  Here</title>
 	<meta name='title' content='KonstructApp'>
 	<meta name='description' content='Quick, low-cost access to Construction Services & Project Financing anytime, anywhere.'>
@@ -8,7 +7,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-
+	<link rel="preconnect" href="https://api.konstructapp.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.konstructapp.com/">
 	<!-- Main Font -->
 	<script src="assets/js/libs/webfontloader.min.js"></script>
 	<script>
@@ -27,6 +27,7 @@
 	<meta name="theme-color" content="#2c304a">
 
 	<link rel="shortcut icon" type="image/png" href="./icons/favicon-128.png" />
+	<link rel="icon" type="image/png" href="./icons/favicon-128.png" />
 
 	<link rel="manifest" href="manifest.webmanifest">
 	<script src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>

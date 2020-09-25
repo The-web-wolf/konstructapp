@@ -846,3 +846,38 @@ img.custom-bg {
   z-index :1049 !important;
   /* Keep chat widget below swal and modals */
 }
+
+.star-rating {
+  position: relative;
+  width: 100px;
+  margin: 10px auto 0px auto;
+} 
+.cornerimage {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+} 
+.star-rating img{
+  max-width: 100px;
+}	
+
+.u-average-rating{
+  padding-bottom:8px;
+  margin-top:5px;
+  height:1px;
+}
+
+@media(max-width:799px){
+  .u-average-rating{
+    padding-bottom:0px;
+    position: absolute;
+    width:80px;
+    bottom:67.5%;
+    right:5px;
+  }
+  .u-average-rating img{
+    max-width:80px;
+  }
+}
