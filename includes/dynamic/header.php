@@ -7,7 +7,8 @@ session_start();
 //inherits all from functions.php where all my functions lies
 require_once 'functions.php';
 
-$devUrl = prodArena('test');
+$devUrl = prodArena('live');
+$__ver = 3; // for styles and scripts
 
 date_default_timezone_set("Africa/Lagos");
 
@@ -32,7 +33,10 @@ if (isset($_COOKIE['_id']) && !isset($openpage)) { // avoid checking for user if
 			$get_user = requestUser($user_prf);
 			if($get_user){
 				$user_data = json_decode($get_user, true);
-				$user_data = $user_data['data'];		
+				$user_data = $user_data['data'];	
+
+				// saved identity_verification status
+				$identity_verified = $user_data['userIdentityVerify'];
 				
 				foreach ($user_data as $key => $value) {
 					if (strlen($value) < 2) {
@@ -72,9 +76,9 @@ if (isset($page_mode) && $page_mode == 'user') {
 				try{
 						$req_user_data = requestUser($req_user_url);
 					 if($req_user_data){
-								save('req_id', $requested_user); // saves the reqested_user id in cookie
-					$req_user_data = json_decode($req_user_data, true);
-					$req_user_data = $req_user_data	['data'];
+						save('req_id', $requested_user); // saves the reqested_user id in cookie
+						$req_user_data = json_decode($req_user_data, true);
+						$req_user_data = $req_user_data	['data'];
 		
 						// Check if I'm the user
 				

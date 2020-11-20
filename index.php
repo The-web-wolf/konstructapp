@@ -1,4 +1,4 @@
-<?php $page_name = 'index'; require 'includes/dynamic/header.php'; ?>
+<?php $page_name = 'index'; require 'includes/dynamic/header.php'; $pretitle = 'Feed';  ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include('includes/static/headcontent.php') ?>

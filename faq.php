@@ -1,4 +1,4 @@
-<?php $openpage = 'faq'; require 'includes/dynamic/header.php'; ?>
+<?php $openpage = 'faq'; require 'includes/dynamic/header.php'; $pretitle = 'Frequently asked questions';  ?>
 <!DOCTYPE html>
 <html lang="en">
 

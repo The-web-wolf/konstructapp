@@ -2,7 +2,7 @@
 <div class="fixed-sidebar">
 	<div class="fixed-sidebar-left sidebar--small" id="sidebar-left">
 
-		<div class="mCustomScrollbar" data-mcs-theme="dark">
+		<div data-mcs-theme="dark">
 			<ul class="left-menu">
 				<li>
 					<a href="#" class="js-sidebar-open">
@@ -136,7 +136,7 @@
 					</div>
 					<a href="user?id=<?php echo $_COOKIE['_id'] ?>" class="author-name fn">
 						<div class="author-title c-white">
-							<?php echo $user_data['firstName'] ?> <?php echo $user_data['lastName'] ?> <svg class="olymp-dropdown-arrow-icon"><use xlink:href="#olymp-dropdown-arrow-icon"></use></svg>
+							<?php echo $user_data['firstName'] ?> <?php echo $user_data['lastName'] ?> 
 						</div>
 						<span class="author-subtitle"><?php echo $user_data['occupation'] ?></span>
 					</a>

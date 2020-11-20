@@ -1,4 +1,4 @@
-<?php require 'includes/dynamic/header.php'; ?>
+<?php require 'includes/dynamic/header.php'; $pretitle = 'User settings';  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +29,7 @@
 											<h6 class="mb-0">
 												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="no-ajaxy">
 													Profile Settings
-													<svg class="olymp-dropdown-arrow-icon"><use xlink:href="#olymp-dropdown-arrow-icon"></use></svg>
+													<svg class="olymp-dropdown-arrow-icon" style='width:10px;height:10px'><use xlink:href="#olymp-dropdown-arrow-icon"></use></svg>
 												</a>
 											</h6>
 										</div>
@@ -81,22 +81,24 @@
 		<div class="container">
 			<div class="row">
 				<div class="col col-lg-8 m-auto col-md-8 col-sm-12 col-12">
-					<!-- <div class="main-header-content">
+					<div class="main-header-content">
 						<h1>Your Account Dashboard</h1>
 						<p>Welcome to your account dashboard! Here you’ll find everything you need to change your profile
 						information, settings, read notifications and requests, view your latest messages, change your pasword and much
-						more! Also you can create portfolio!</p>
-					</div> -->
+						more! Also you can manage your interests!</p>
+					</div>
 
 				</div>
 			</div>
 		</div>
 		<img class="img-bottom" src="assets/img/account-bottom.png" alt="friends">
+
 	</div>
 
-	<div class="mobile-only" style="margin-top: 20px"></div>
-	<!-- ... end Main Header Account -->
+	<div class="mobile-only" style="margin-top: 20px">
 
+</div>
+	<!-- ... end Main Header Account -->
 
 	<!-- Your Account Personal Information -->
 
@@ -106,9 +108,17 @@
 
 				<div class="tab-content" id="myTabContent">
 					<div class="tab-pane fade show active" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+
+						<?php if(!$identity_verified) : ?>
+							<div id='user_ver' class=' center-text d-block text-center'>
+								<p>Become verfied today to get the special konstructapp verified badge on your profile to increase your chance of getting a connection</p>
+								<a href="#" data-toggle='modal' data-target='#identity-verification' class='btn btn-transparent btn-primary btn-md btn--half-width'>Become verified <span class='fa fa-check-circle'></span></a>
+							</div>	
+						<?php endif; ?>					
+
 						<div class="ui-block">
 							<div class="ui-block-title">
-								<h6 class="title">Personal Information</h6>
+								<h6 class="title">Personal Information </h6>
 							</div>
 							<div class="ui-block-content">
 								
@@ -237,7 +247,7 @@
 								
 											<div class="form-group label-floating ">
 												<label class="control-label">Your Phone Number</label>
-												<input class="form-control" placeholder="" type="text" name="phoneNumber" data-defvalue="<?php echo $user_data['phoneNumber'] ?>" value="<?php echo $user_data['phoneNumber'] ?>" required='' id='phoneNumber'>
+												<input class="form-control" placeholder="" type="text" name="phoneNumber" data-defvalue="<?php echo $user_data['phoneNumber'] ?>" value="<?php echo (isset($user_data['phoneNumber']) ? $user_data['phoneNumber'] : ' ' );?>" required='' id='phoneNumber'>
 											</div>
 										</div>
 								
@@ -436,7 +446,6 @@
 						<div class="ui-block">
 							<div class="ui-block-title">
 								<h6 class="title">Manage your interests</h6>
-								<a href="#" class="more"><svg class="olymp-three-dots-icon"><use xlink:href="#olymp-three-dots-icon"></use></svg></a>
 							</div>
 
 						    <div class="container">
@@ -450,8 +459,8 @@
 						                  <input type="checkbox" name="interest[]" class="i_need" value="buiding">
 						                  <div class="icon">
 						                    <div class="id">
-						                      <span> <svg><use xlink:href="#olymp-cupcake-icon"></use></svg></span>
-						                      <p>Building</p>                      
+						                      <span> <svg><use xlink:href="#olymp-home-icon"></use></svg></span>
+						                      <p class=''>Building</p>                      
 						                    </div>
 						                  </div>
 						                </div>
@@ -461,7 +470,7 @@
 						                  <input type="checkbox" name="interest[]" class="i_need" value="infrastructure">
 						                  <div class="icon">
 						                    <div class="id">
-						                      <span class=""><svg><use xlink:href="#olymp-headphones-icon"></use></svg></span>
+						                      <span class=""><svg><use xlink:href="#olymp-albums-icon"></use></svg></span>
 						                      <p>Infrastructure</p>                      
 						                    </div>
 						                  </div>
@@ -472,23 +481,23 @@
 						                  <input type="checkbox" name="interest[]" class="i_need" value="industrial">
 						                  <div class="icon">
 						                    <div class="id">
-						                      <span class=""><svg><use xlink:href="#olymp-heart-icon"></use></svg></span>
+						                      <span class=""><svg><use xlink:href="#olymp-settings-icon"></use></svg></span>
 						                      <p>Industrial</p>                      
 						                    </div>
 						                  </div>
 						                </div>
-						              </div><!-- 
+						              </div>
 						              <div class=" col-6 col-md-3">
 						                <div class="estimate-box">
-						                  <input type="checkbox" name="interest[]" class="i_need" value="marketplace">
+						                  <input type="checkbox" name="interest[]" class="i_need" value="merchandise">
 						                  <div class="icon">
 						                    <div class="id">
-						                      <span class=""><svg><use xlink:href="#olymp-heart-icon"></use></svg></span>
-						                      <p>Market Place</p>                      
+						                      <span class=""><svg><use xlink:href="#olymp-shopping-bag-icon"></use></svg></span>
+						                      <p>Merchandise</p>                      
 						                    </div>
 						                  </div>
 						                </div>
-						              </div> -->
+						              </div>
 						              <div class="clear"></div>
 						            </div>   
 						            <div class="row">
@@ -527,7 +536,7 @@
 											<h6 class="mb-0">
 												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="no-ajaxy">
 													Profile Settings
-													<svg class="olymp-dropdown-arrow-icon"><use xlink:href="#olymp-dropdown-arrow-icon"></use></svg>
+													<svg class="olymp-dropdown-arrow-icon" style='width:10px;height:10px'><use xlink:href="#olymp-dropdown-arrow-icon"></use></svg>
 												</a>
 											</h6>
 										</div>
@@ -566,6 +575,7 @@
 			</div>
 		</div>
 	</div>
+	
 
 	<!-- ... end Your Account Personal Information -->
 
@@ -576,7 +586,7 @@
 	<!-- ## -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha256-+BEKmIvQ6IsL8sHcvidtDrNOdZO3C9LtFPtF2H0dOHI=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha256-KsRuvuRtUVvobe66OFtOQfjP8WA2SzYsmm4VPfMnxms=" crossorigin="anonymous"></script>
-
+	<script src="https://js.paystack.co/v1/inline.js" defer></script> 												
 	<?php include('models/settings.php') ?>
 	<?php include('includes/app/settings.php') ?>
 

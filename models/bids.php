@@ -96,7 +96,7 @@
 			let makeAwarded = bid.status === 'open' ? `<li><a href="#null" data-target='custom-function' data-_fnc='awardBid' data-_param='{"id":"${bid._id}"}'>Mark Awarded</a></li>` : '';
 
 			let topContent = `
-				<img src="assets/img/badge8.png" class='web-only' alt="author">
+				<img src="assets/img/badge8.png" class='web-only' alt="bid">
 				<div class="author-date">
 					<a class="h4 event-title" href="#null">${bid.title} <span style='padding-left:10px'> ${statusUi}</span></a>
 					<div class="event__date">

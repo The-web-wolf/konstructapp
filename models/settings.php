@@ -214,4 +214,123 @@
 		})		
 	}	
 
+
+	// IDENTITY VERIFICATION CHECK
+
+	function identityVerification(){
+		let form 		= $('#verify-identity-form');
+		let submitBtn	= $('#proceedVerification');
+
+		$(form).find('input').each(function(){
+			$(this).on('input', function(){
+				if($(this).valid()){
+					$(submitBtn).removeAttr('disabled')
+				}
+				else{
+					$(submitBtn).attr('disabled', 'disabled')
+				}
+			})
+		});
+
+		// MAKE PAYMENT 
+
+		function payWithPaystack(currency,chargeAmount) {			
+			var handler = PaystackPop.setup({
+				//key: 'pk_live_18ea49b37d7eb167bfd335fe33d92b69d0ed78b4',
+				key : 'pk_test_9c76f32e6fc03682bee18402810a1c8d77e42e44',
+				email: localStorage.getItem('email'),
+				amount: chargeAmount * 100, 
+				currency: currency, 
+				firstname: localStorage.getItem('firstName'),
+				lastname: localStorage.getItem('lastName'),
+				callback: function(response) {
+					
+					// call for the verification,  first call a preloader
+
+					$('#requestpreloader').fadeIn()
+
+					// submitData
+
+					let form 	= $('#verify-identity-form');
+					let reqData = $(form).serialize();
+					let method 	= $(form).data('method');
+					let action 	= $(form).data('action');
+
+
+					$.ajax({
+						url : action,
+						type : method,
+						data : reqData,
+						headers: { 'Authorization': `Bearer ${authtk}` },
+						
+					}).done(function(response){
+						$("#user_ver").slideUp();
+						resetBtn(form);
+						$('#requestpreloader').fadeOut()
+
+						let userData 	= response.data;	
+						localStorage.setItem('firstName', userData.firstName);
+						localStorage.setItem('lastName', userData.lastName);	
+
+						swal('Verification successful', 'You have earned the new verified user badge', 'success');
+					})
+					.fail(function(jqXHR){	
+						$('#requestpreloader').fadeOut()
+						resetBtn(form);
+						
+						switch (jqXHR.status) {
+							case 401 :
+								talert(jqXHR.statusText);
+								swal("Verification failed", "Information provided is incorrect", 'error');
+								break;
+							case 500 : 
+								talert(jqXHR.statusText)
+								break;
+							case 404 : 
+								talert(jqXHR.statusText)
+								break;
+							default:
+							talert('Uncaught Error.\n' + jqXHR.statusText);
+						}	
+						 
+					})					
+				},
+				onClose: function() {
+					swal('Verification cancelled','Payment was not completed', 'info');
+				},
+			});
+			handler.openIframe();
+		} 		
+
+		$(form).submit( async function(e){
+			disableBtn(form)
+			e.preventDefault();
+
+			// convert 5 dollar to naira
+
+			let url = 'https://free.currconv.com/api/v7/convert?q=USD_NGN&compact=ultra&apiKey=57a3ccafcc08ac05c30a';
+			let amount,currency;
+
+			let getRate = await fetch(url);
+
+			if (getRate.ok) {
+				resetBtn(form)
+				let response = await getRate.json();
+				let curRate  = response.USD_NGN;
+
+				let amount 	= Math.floor(curRate * 5);
+				let currency= 'NGN'; 
+				payWithPaystack(currency,amount);	
+			} else {
+				let currency = 'USD';
+				let amount = 5;
+
+				// proceed with payment if call is not successful
+				payWithPaystack(currency,amount);	
+			}					
+
+		})
+ 		
+	}
+
 </script>

@@ -1,7 +1,8 @@
 <?php 
 	$page_name = 'Bids';
 	$page_mode = 'user';
- 	require 'includes/dynamic/header.php';
+	 require 'includes/dynamic/header.php';
+	 $pretitle = 'User bids'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,11 +91,24 @@
 					</div>
 					<div class="top-header-author">
 						<a href="#" class="author-thumb">
-							<img src="<?php echo $req_user_data['userPic'] ?>" class='custom-bg' alt="avatar">
+							<img src="<?php echo $req_user_data['userPic'] ?>" class='custom-bg' alt="<?php $req_user_data['firstName']?>'s avatar" >
 						</a>
+
 						<div class="author-content">
-							<a href="#" class="h4 author-name"><?php echo $req_user_data['firstName'] ?> <?php echo $req_user_data['lastName'] ?></a>
+							<a href="#" class="h4 author-name">
+								<?php echo $req_user_data['firstName'] ?> <?php echo $req_user_data['lastName'] ?>  
+								<?php if($req_user_data['userIdentityVerify']) : ?>
+									<span class='fa fa-check-circle text-primary'></span>
+								<?php endif; ?>
+							</a>
 							<div class="country"><?php echo $req_user_data['occupation'] ?></div>
+
+							<div class="star-rating u-average-rating" >
+								<div class="cornerimage" style="width:<?php echo ($req_user_data['averageRating'] * 20); ?>%;">
+									<img src="./assets/img/stars_full.png" alt="<?=$req_user_data['averageRating']?> star rating">
+								</div>	
+								<img src="./assets/img/stars_blank.png" alt="<?=$req_user_data['averageRating']?> star rating">										
+							</div>
 						</div>
 					</div>
 				</div>

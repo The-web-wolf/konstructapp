@@ -2,12 +2,11 @@ $(window).ready(function(){
 	$('#hellopreloader').fadeOut('slow'); // remove preloader when page is ready
 });
 
-let devUrl = 'https://konstructapps.herokuapp.com'; // test 
+//let devUrl = 'https://konstructapps.herokuapp.com'; // test 
 
-//let devUrl = 'https://api.konstructapp.com'; // live
+let devUrl = 'https://api.konstructapp.com'; // live
 
 triggerBtns();
-
 
 const check = () => {
 	if (!('serviceWorker' in navigator)) {
@@ -33,6 +32,8 @@ const requestNotificationPermission = async () => {
 	const permission = await window.Notification.requestPermission();		
 	if(permission !== 'granted'){
 		throw new Error('Permission not granted for Notification');
+
+		// send not declined to the backend
 	}
 }
 
@@ -103,7 +104,7 @@ $(function(){
 
 })
 
-/* MAke back key close modal**/
+/* MAke back key close modal and routing based on active modal **/
 
 $(document).ready(function(){
   $('div.modal').on('show.bs.modal', function() {
@@ -121,11 +122,13 @@ $(document).ready(function(){
 	  }
     }
   });
+  
   $('div.modal').on('hidden.bs.modal', function() {
 	var hash = this.id;
 	var url  = window.location.pathname + window.location.search
     history.replaceState('', document.title, url);
   });
+  
   // when close button clicked simulate back
   $('div.modal button.close').on('click', function(){
     window.history.back();
@@ -478,17 +481,17 @@ let submitData = (data, method, action, callback) => {
 		try {
 	    switch (jqXHR.status) {
 	        case 401 :
-	          talert(jqXHR.statusText);
-	         	throw('Authentication error');
+	          	talert(jqXHR.statusText);
+				throw('Authentication error');
 	        case 400 : 
 	        	talert(jqXHR.statusText)
-	        	throw('Authentication error');
+				throw('Authentication error');
 	        case 500 : 
 	        	talert(jqXHR.statusText)
-	        	throw('Internal server error');
+				throw('Internal server error');
 	        case 404 : 
 	        	talert(jqXHR.statusText)
-	        	throw('Not found');
+				throw('Not found');
 	        default:
           	talert(jqXHR.statusText);
           	throw('Uncaught Error.\n' + jqXHR.statusText);
@@ -615,8 +618,8 @@ function profilePictures() {
 						resetBtn(targetForm);
 				       talert( jqXHR.statusText);
 				    }	
-					})
-				}/*, 'image/png' */);	  		
+				})
+			}/*, 'image/png' */);	  		
 	  	})
 
 	}
@@ -629,4 +632,67 @@ function profilePictures() {
 $('#status-container-toggle').click(function(e){
 	e.preventDefault();
 	$('#status-container').toggle('slow','linear')
+})
+
+// search function 
+function searchUser(text){
+	let root = $(document).find('.search-result-content');
+	$(root).html(`<div class="loader-activity"><div class="indeterminate"></div></div>`);
+	if(text){
+		let reqData = {searchTerm : text};
+		let action  = `${devUrl}/api/searchuser`;
+		let method 	= 'POST';
+		let matches = submitData(reqData,method,action, (error, response) => {
+			if(error){
+				talert(error);
+				$(root).html(`<h5 class='text-center'>Could not complete your search </h5>`);
+			}
+			else{
+				if(response.data.length == 0){
+					$(root).html(`<h5 class='text-center'>Could not find any user that matches your search</h5>`);
+				}
+				else{
+					$(root).html('');
+					response.data.map(function(current_user){
+						$(root).append(`
+							<div class="inline-items">
+								<div class="author-thumb">
+									<a href='user?id=${current_user.id}'>
+										<img src="${current_user.userPic}" class='custom-bg' alt="${current_user.firstName}" style='width:40px'>
+									</a>
+								</div>
+								<div class="notification-event">									
+									<a href='user?id=${current_user.id}'>
+										<span class="h6 notification-friend"> ${current_user.firstName} ${current_user.lastName} </span>
+									</a>
+									<a href='user?id=${current_user.id}'>
+										<span class="chat-message-item">${current_user.occupation}</span>
+									</a>
+								</div>
+								<a href='user?id=${current_user.id}' style='float:right'>
+									<span class="notification-icon"><svg class="olymp-happy-face-icon"><use xlink:href="#olymp-happy-face-icon"></use></svg></span>
+								</a>
+							</div>
+						`)
+					})
+				}
+			}
+		})
+	}
+}
+
+// search field
+
+$('.user-search').on('input', function(e){
+	e.preventDefault();
+	let currentInput = $(this).val();
+	searchUser(currentInput);
+
+})
+
+// searchform
+$('.user-search-form').on('submit', function(e){
+	e.preventDefault();
+	let currentInput = $(this).find('[type=search]').val();
+	searchUser(currentInput);
 })

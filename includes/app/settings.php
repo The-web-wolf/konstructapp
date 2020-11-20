@@ -243,6 +243,7 @@
 	$(document).ready(function(){
 		userEmploymentHistory();
 		userCertifications();
+		identityVerification();
 	})
 
 </script>

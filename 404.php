@@ -1,3 +1,4 @@
+<?php $pretitle = 'Resource not found'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <meta http-equiv="Refresh" content="1000; URL=https://app.konstructapp.com/">
@@ -44,7 +45,7 @@
 					<p class="heading-text">Our squirrels coudn't find you this page. if you think this is an issue, kindly send us a mail to:
 						<a href="mailto:support@konstructapp.com" class="no-ajaxify" target="_blank">support@konstructapp.com</a>
 					</p>
-					<a href="./" class="btn btn-primary btn-lg error-previous-page">Return to home</a>
+					<a href="./" class="btn btn-primary btn-lg error-previous-page ">Return to home</a>
 				</div>
 				
 			</div>

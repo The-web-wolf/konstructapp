@@ -147,3 +147,68 @@
 </div>	
 
 <!-- END -- Window-popup Add certificate-->
+
+
+<!-- Window-popup Identity verification -->
+
+<?php if(!$identity_verified) : ?>
+
+	<div class="modal fullheight fade modal-md" id="identity-verification" tabindex="-1" role="dialog" aria-labelledby="identity-verification" aria-hidden="true">
+		<div class="modal-dialog window-popup create-event" role="document">
+			
+		<form class="modal-content" id="verify-identity-form" action="#" data-action="<?php echo $devUrl ?>/api/verifyuser" data-method='POST'>
+
+			<img src="assets/img/id-verify.svg" alt="Verify user" style='width:100%'>
+				<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
+					<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>
+				</a>
+
+				<div class="modal-header">
+					<h6 class="title">Identity verification</h6>
+				</div>
+
+				<div class="modal-body">
+					<p>Provide your details for verification, you will be charged a service fee of $5 for the process, read more of this process <a href="#" title='service charge for identity verification'>here.</a>
+					</p>
+				</div>
+
+				<div class="ui-block-title ui-block-title-small">
+					<h6 class="title">Review your name, which we'll use to check your authenticity</h6>
+				</div>
+
+				<div class="modal-body">
+					<div class="employment-history-container">
+
+						<div class="employment-history">
+							<div class="row">
+								<div class="col col-sm-12 col-12">
+									<div class="form-group label-floating">
+										<label class="control-label">First Name</label>
+										<input class="form-control" placeholder="" type="text" name="firstName" required="" value='<?=$user_data["firstName"]?>'>
+									</div>
+								</div>
+								<div class="col col-sm-12 col-12">
+									<div class="form-group label-floating">
+										<label class="control-label">First Name</label>
+										<input class="form-control" placeholder="" type="text" name="lastName" required="" value='<?=$user_data["lastName"]?>'>
+									</div>
+								</div>
+								<div class="col col-sm-12 col-12">
+									<div class="form-group label-floating">
+										<label class="control-label">BVN</label>
+										<input class="form-control" placeholder="" type="tel" name="bvn" required="" minlength='11' maxlength='11'>
+									</div>
+								</div>					
+							</div>										
+						</div>
+					</div>
+
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary btn-lg full-width" id="proceedVerification" disabled="">Proceed to verify</button>
+				</div>
+			</form>
+		</div>
+	</div>	
+	
+<?php endif; ?>
+<!-- END -- Window-popup Identity verfication -->

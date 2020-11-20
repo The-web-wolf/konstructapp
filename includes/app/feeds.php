@@ -120,11 +120,12 @@
 		}
 		let page 	= Math.floor(Math.random() * 6) // update manuallly until dedicated route for feeds users
 		let limit 	= 50;
-		let targetUrl = `${devUrl}/api/users?limit=${limit}&page=${page}`;
+		let targetUrl = `${devUrl}/api/usersprofilepic?limit=${limit}&page=${page}`;
 		$.ajax({
 			url : targetUrl,	  
 			processData : false,
-		  contentType : false,
+		  	contentType : false,
+		  	type : 'GET',
 		}).done(function(response){
 
 			let response_data	= response.data
@@ -137,9 +138,9 @@
 
 			response_data.map(function(currentValue){
 				
-				if(currentValue.userPic === 'https://res.cloudinary.com/konstructapp/image/upload/v1590052164/defaultuser_ni5iiz.png'){
-					return false;
-				}				
+				// if(currentValue.userPic === 'https://res.cloudinary.com/konstructapp/image/upload/v1590052164/defaultuser_ni5iiz.png'){
+				// 	return false;
+				// }				
 				writeFeedUsers(currentValue)
 			})
 

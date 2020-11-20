@@ -1,4 +1,4 @@
-<?php $openpage = 'terms'; require 'includes/dynamic/header.php'; ?>
+<?php $openpage = 'terms'; require 'includes/dynamic/header.php'; $pretitle = 'User agreement';  ?>
 <!DOCTYPE html>
 <html lang="en">
 

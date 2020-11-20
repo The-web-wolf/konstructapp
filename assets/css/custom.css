@@ -684,6 +684,14 @@ img.custom-bg {
     content: none;
   }
 
+  .darkmode .selectize-dropdown{
+    background:#2c304a;
+    border:0px;
+  }
+  .darkmode .selectize-dropdown:hover{
+   background:#2c304a
+  }
+
   .darkmode .registration-login-form{
     background-color: #1F2229;
     border: 1px solid #1F2229
@@ -779,6 +787,7 @@ img.custom-bg {
   font-family: 'Poppins',sans-serif;
   text-transform: uppercase;
   color:#F8AC09;
+  font-size:12px !important;
 } 
 
 .estimate-form .row .col-6{
@@ -871,11 +880,8 @@ img.custom-bg {
 
 @media(max-width:799px){
   .u-average-rating{
-    padding-bottom:0px;
-    position: absolute;
     width:80px;
-    bottom:67.5%;
-    right:5px;
+
   }
   .u-average-rating img{
     max-width:80px;

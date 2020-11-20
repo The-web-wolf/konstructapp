@@ -1,4 +1,4 @@
-<?php $openpage = 'review'; require 'includes/dynamic/header.php'; ?>
+<?php $openpage = 'review'; require 'includes/dynamic/header.php'; $pretitle = 'Make review';  ?>
 
 <!DOCTYPE html>
 <html lang="en">

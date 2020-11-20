@@ -1,5 +1,5 @@
 <head>
-	<title>KonstructApp | Demand And Supply Start  Here</title>
+	<title><?php echo $pretitle ? $pretitle : '' ?> | KonstructApp | Demand And Supply Start  Here</title>
 	<meta name='title' content='KonstructApp'>
 	<meta name='description' content='Quick, low-cost access to Construction Services & Project Financing anytime, anywhere.'>
 
@@ -38,9 +38,11 @@
 
 	<script src="assets/js/jQuery/jquery-3.4.1.js"></script>
 
-	<!-- Main Styles CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/custom.min.css">
+	<!-- Main Styles CSS  versioned-->
+	<link rel="stylesheet" type="text/css" href="assets/css/main.min.css?ver=<?=$__ver?>">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.min.css?ver=<?=$__ver?>">
+
+
 	<link rel="stylesheet" type="text/css" href="assets/css/fonts.min.css">
 	<link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.min.css" integrity="sha256-cZDeXQ7c9XipzTtDgc7DML5txS3AkSj0sjGvWcdhfns=" crossorigin="anonymous" />
 

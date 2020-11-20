@@ -1,6 +1,7 @@
 <?php 
 	$page_name = 'Portfolio';
- 	require 'includes/dynamic/header.php';
+	 require 'includes/dynamic/header.php';
+	 $pretitle = 'Bids'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">

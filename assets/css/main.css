@@ -145,7 +145,7 @@
     position: unset; }
   .control-block .author-title {
     font-weight: 700;
-    font-size: 12px;
+    font-size: 14px;
     color: #dee2e6; }
     .control-block .author-title > svg {
       margin-left: 15px;
@@ -161,7 +161,7 @@
 .link-find-friend {
   padding: 25px 20px;
   color: #dee2e6;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   display: inline-block; }
 
@@ -256,7 +256,7 @@
   z-index: 20;
   padding: 20px;
   color: #dee2e6;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   display: block;
   text-align: center;
@@ -294,7 +294,7 @@
   margin-bottom: 0; }
   .account-settings a {
     padding: 13px 0;
-    font-size: 12px;
+    font-size: 14px;
     color: #515365;
     display: block;
     font-weight: 700; }
@@ -308,7 +308,7 @@
   margin: 15px 25px; }
   .custom-status input {
     padding: 0.5rem 1.1rem;
-    font-size: 12px; }
+    font-size: 14px; }
   .custom-status.form-group.with-button button {
     border-radius: 0 5px 5px 0;
     background-color: #7c5ac2;
@@ -397,7 +397,7 @@
     text-align: center; }
     .profile-menu .friend-count-item .title {
       font-weight: 400;
-      font-size: 12px; }
+      font-size: 14px; }
 
 .top-header-author {
   position: absolute;
@@ -1296,7 +1296,7 @@
   .tab-content-responsive .notification-list.friend-requests .selectize-dropdown .notification-icon {
     float: right; }
   .profile-section {
-    padding: 30px 0;
+    padding: 50px 0px 10px 0;
     z-index: 5; }
   .header--standard-landing .header-menu {
     background-color: #F8AC09; }
@@ -1486,7 +1486,7 @@
   border-top: 1px solid #e6ecf5;
   margin-top: 60px; }
   .sub-footer-copyright span {
-    font-size: 12px; }
+    font-size: 14px; }
   .sub-footer-copyright a {
     color: #F8AC09;
     opacity: .7;
@@ -1647,7 +1647,7 @@ section {
   color: #21759b;
   display: block;
   font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: bold;
   height: auto;
   left: 5px;
@@ -1915,7 +1915,7 @@ select, input {
   display: block;
   width: 100%;
   padding: 1.1rem 1.1rem;
-  font-size: .875rem;
+  font-size: 1rem;
   line-height: 1.25;
   color: #464a4c;
   background-color: transparent;
@@ -1926,7 +1926,7 @@ select, input {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
 
 p {
-  font-size: .875rem; }
+  font-size: 1rem; }
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #515365; }
@@ -2150,7 +2150,7 @@ img {
   .card-header a {
     font-size: 14px; }
   .form-group.label-floating label.control-label, .form-group.label-placeholder label.control-label {
-    font-size: 12px; } }
+    font-size: 14px; } }
 
 /*------------- #BLOCKS --------------*/
 /*------------- #UI-BLOCK --------------*/
@@ -2329,7 +2329,7 @@ button:hover {
   cursor: pointer; }
 
 .btn-icon-left i, .btn-icon-left svg {
-  font-size: 12px;
+  font-size: 14px;
   margin-right: 10px; }
 
 .btn-lg i, .btn-lg svg {
@@ -2372,7 +2372,7 @@ button:hover {
     bottom: 100%; }
     .btn-control .more-dropdown li {
       line-height: 1.3;
-      font-size: 12px; }
+      font-size: 14px; }
   .btn-control > i, .btn-control svg {
     font-size: 20px;
     width: 20px;
@@ -2670,7 +2670,7 @@ textarea {
 input, .form-control {
   color: #515365;
   line-height: inherit;
-  font-size: .875rem; }
+  font-size: 1rem; }
 
 .label-floating.has-success:after {
   content: '\f00c';
@@ -2952,7 +2952,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   line-height: 1.25;
   text-align: center;
   padding: 0.5rem 1rem;
-  font-size: 0.812rem;
+  font-size: 1rem;
   border-radius: 0.25rem;
   transition: all 0.2s ease-in-out; }
   .file-upload__label:hover {
@@ -3352,8 +3352,8 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
       float: right;
       color: #515365; }
   .fixed-sidebar .mCustomScrollbar {
-    max-height: calc(100vh - 70px);
-    overflow: hidden; }
+    max-height: calc(100vh - 50px);
+    overflow: auto; }
   .fixed-sidebar .ps > .ps__scrollbar-y-rail, .fixed-sidebar .ps:hover > .ps__scrollbar-y-rail {
     opacity: 0;
     z-index: -1;
@@ -3585,7 +3585,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     .chat-users .author-thumb .icon-status {
       border-color: #dee2e6; }
   .chat-users .author-name {
-    font-size: 12px; }
+    font-size: 14px; }
   .chat-users .status {
     text-transform: uppercase;
     font-size: 8px;
@@ -3651,7 +3651,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   margin-top: auto; }
   .search-friend input {
     padding: .5rem 1.1rem;
-    font-size: 12px; }
+    font-size: 14px; }
   .search-friend .form-group {
     margin: 15px 20px;
     max-width: 150px; }
@@ -3700,7 +3700,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     box-shadow: none;
     border-left: none; }
   .fixed-sidebar .mCustomScrollbar {
-    max-height: calc(100vh - 70px); } }
+    max-height: calc(100vh - 10px); } }
 
 /*------------- #SKILLS --------------*/
 .skills-item {
@@ -3716,7 +3716,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 .skills-item-info {
   margin-bottom: 16px;
   color: #515365;
-  font-size: 12px; }
+  font-size: 14px; }
   .skills-item-info .skills-item-count {
     float: right; }
 
@@ -3841,7 +3841,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     vertical-align: middle; }
   .more-dropdown a {
     padding: 7px 0;
-    font-size: 12px;
+    font-size: 14px;
     color: #515365;
     display: block;
     font-weight: 700; }
@@ -4090,7 +4090,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   .pagination .page-item {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     padding: 0 4px; }
   .pagination .page-link {
@@ -4541,18 +4541,16 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 /*------------- #NOTIFICATION --------------*/
 .notification-list {
   margin-bottom: 0; }
-  .notification-list .selectize-dropdown-content > *, .notification-list li {
+  .notification-list .selectize-dropdown-content > *:not(.loader-activity), .notification-list li {
     padding: 25px;
     border-bottom: 1px solid #e6ecf5;
     display: block;
     position: relative;
     transition: all .3s ease; }
-    .notification-list .selectize-dropdown-content > * > *, .notification-list li > * {
+    .notification-list .selectize-dropdown-content > *:not(.loader-activity) > *:not(.loader-activity), .notification-list li > * {
       margin-bottom: 0;
       display: inline-block;
       vertical-align: middle; }
-    .notification-list .selectize-dropdown-content > *:hover, .notification-list li:hover {
-      background-color: #fafbfd; }
       .notification-list .selectize-dropdown-content > *:hover .more, .notification-list li:hover .more {
         opacity: 1; }
     .notification-list .selectize-dropdown-content > *.un-read, .notification-list li.un-read {
@@ -4622,7 +4620,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
 
 .chat-message .notification-event {
   max-width: 75%;
-  font-size: 12px; }
+  font-size: 14px; }
 
 .chat-message .notification-friend {
   display: block; }
@@ -4783,7 +4781,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   margin-top: 10px; }
 
 .friend-requests .chat-message-item {
-  font-size: 12px; }
+  font-size: 14px; }
 
 .rate-item {
   padding: 25px; }
@@ -4792,7 +4790,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     height: 40px;
     margin-right: 12px; }
   .rate-item .-date {
-    font-size: 12px; }
+    font-size: 14px; }
   .rate-item .btn {
     margin-bottom: 0;
     float: right;
@@ -4929,7 +4927,7 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
     margin-top: 0;
     border-radius: 10px;
     margin-bottom: 5px;
-    font-size: 12px; }
+    font-size: 14px; }
   .popup-chat .notification-date {
     float: right; }
   .popup-chat .author-thumb {
@@ -5215,7 +5213,7 @@ figure {
     .create-event .more-dropdown input {
       border: 0;
       border-bottom: 1px solid #e6ecf5;
-      font-size: 12px; }
+      font-size: 14px; }
     .create-event .more-dropdown .form-group {
       margin-bottom: 0; }
     .create-event .more-dropdown li {
@@ -5277,7 +5275,8 @@ figure {
     line-height: 1;
     margin-bottom: 0; }
   .private-event-head .event__date {
-    font-size: 12px; }
+    font-size: 14px;
+    font-weight:bold }
   .private-event-head .more {
     float: right;
     font-size: 16px;
@@ -5685,7 +5684,7 @@ ol ol li {
     color: #c2c5d9; }
 
 .names-people-likes {
-  font-size: 12px; }
+  font-size: 14px; }
   .names-people-likes a {
     color: #515365;
     font-weight: 700; }
@@ -5837,17 +5836,17 @@ ol ol li {
         padding-bottom: 0; }
 
 .reply {
-  font-size: 12px;
+  font-size: 14px;
   color: #888da8; }
 
 .report {
-  font-size: 12px;
+  font-size: 14px;
   color: #888da8; }
 
 .more-comments {
   text-align: center;
   padding: 15px 0;
-  font-size: 12px;
+  font-size: 14px;
   color: #515365;
   display: block;
   font-weight: 700;
@@ -6258,7 +6257,7 @@ ol ol li {
     margin: 0 auto 15px;
     display: block; }
   .blog-post.format-quote .post__author-name {
-    font-size: 12px;
+    font-size: 14px;
     color: #dee2e6; }
   .blog-post.format-quote .author-prof {
     font-size: 10px;
@@ -6422,9 +6421,9 @@ ol ol li {
 
 .author-date.not-uppercase {
   text-transform: none;
-  font-size: 12px; }
+  font-size: 14px; }
   .author-date.not-uppercase .post__author-name {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     text-transform: none; }
 
@@ -6434,7 +6433,7 @@ ol ol li {
   border-top: 1px solid #e6ecf5;
   border-bottom: 1px solid #e6ecf5; }
   .choose-reaction .title {
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 30px; }
     .choose-reaction .title span {
       color: #515365; }
@@ -6512,14 +6511,14 @@ ol ol li {
 
 .post-date-wrap .post-date {
   text-align: left;
-  font-size: 12px; }
+  font-size: 14px; }
   .post-date-wrap .post-date span {
     font-size: 11px;
     display: block; }
 
 .post-date-wrap .date {
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400; }
 
 .post-comments-wrap svg {
@@ -6529,7 +6528,7 @@ ol ol li {
 
 .post-comments-wrap .post-comments {
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400; }
   .post-comments-wrap .post-comments span {
     font-size: 11px;
@@ -6537,7 +6536,7 @@ ol ol li {
 
 .post-comments-wrap .comments {
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400; }
 
 .blog-post-v3 {
@@ -7236,7 +7235,7 @@ ol ol li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 12px; }
+  font-size: 14px; }
   .user-raiting-choice b {
     margin-left: 5px; }
   .user-raiting-choice a {
@@ -7305,7 +7304,7 @@ ol ol li {
 
 .user-raiting {
   margin-top: 30px;
-  font-size: 12px;
+  font-size: 14px;
   color: #515365;
   font-weight: 700; }
   .user-raiting img {
@@ -7922,7 +7921,7 @@ ol ol li {
     height: 60px;
     fill: #F8AC09; }
   .icon-demonstration pre {
-    font-size: 12px;
+    font-size: 14px;
     color: red; }
   .icon-demonstration code {
     white-space: initial;
@@ -7986,7 +7985,7 @@ ol ol li {
   float: right; }
 
 .searches-item .country {
-  font-size: 12px; }
+  font-size: 14px; }
 
 .searches-item .names-people-likes a {
   display: block; }
@@ -8011,9 +8010,9 @@ ol ol li {
   .searches-item .friend-count-item .h6 {
     margin-bottom: 0;
     line-height: 1;
-    font-size: 12px; }
+    font-size: 14px; }
   .searches-item .friend-count-item .title {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1; }
 
 .user-description {
@@ -8065,7 +8064,7 @@ ol ol li {
     margin-bottom: 0; }
   .w-search input {
     padding: 13px 15px;
-    font-size: 12px; }
+    font-size: 14px; }
   .w-search svg {
     height: 15px;
     width: 15px; }
@@ -8115,7 +8114,7 @@ ol ol li {
   margin-bottom: 15px;
   text-align: center; }
   .social-item i, .social-item svg {
-    font-size: 12px;
+    font-size: 14px;
     margin-right: 10px; }
   .social-item:hover {
     color: #dee2e6;
@@ -8129,7 +8128,7 @@ ol ol li {
   padding: 0 20px 0 0; }
   .w-select .bootstrap-select > .dropdown-toggle {
     padding: 10px 15px;
-    font-size: 12px;
+    font-size: 14px;
     height: 40px;
     margin-bottom: 0; }
   .w-select .form-group {
@@ -8238,7 +8237,7 @@ ol ol li {
   color: #38bff1; }
 
 .w-twitter .post__date {
-  font-size: 12px; }
+  font-size: 14px; }
 
 /*------------- #W-LATEST-PHOTO --------------*/
 .w-last-photo {
@@ -8379,7 +8378,7 @@ ol ol li {
       font-size: 24px;
       display: block; }
     .w--alert .content p {
-      font-size: 12px; }
+      font-size: 14px; }
 
 .author-thumb {
   display: inline-block;
@@ -8433,7 +8432,7 @@ ol ol li {
 
 .w-activity-feed .notification-event,
 .w-activity-feed .notification-friend {
-  font-size: 12px; }
+  font-size: 14px; }
 
 .w-activity-feed .notification-event {
   max-width: 85%; }
@@ -8491,7 +8490,7 @@ ol ol li {
     opacity: 0;
     transition: all .3s ease; }
   .w-last-video .title {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1; }
 
@@ -8569,7 +8568,7 @@ ol ol li {
   .w-blog-posts .post p {
     margin: 10px 0 15px 0; }
   .w-blog-posts .post__date {
-    font-size: 12px; }
+    font-size: 14px; }
   .w-blog-posts li:last-child .post {
     border-bottom: none; }
 
@@ -8659,7 +8658,7 @@ ol ol li {
     font-size: 24px;
     display: block; }
   .w-build-fav .content p {
-    font-size: 12px; }
+    font-size: 14px; }
     .w-build-fav .content p a {
       color: #dee2e6; }
 
@@ -9652,7 +9651,7 @@ select, input {
   display: block;
   width: 100%;
   padding: 1.1rem 1.1rem;
-  font-size: .875rem;
+  font-size: 1rem;
   line-height: 1.25;
   color: #464a4c;
   background-color: transparent;
@@ -9663,7 +9662,7 @@ select, input {
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
 
 p {
-  font-size: .875rem; }
+  font-size: 1rem; }
 
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #515365; }
@@ -9768,7 +9767,7 @@ p {
       display: block;
       margin-bottom: 0; }
     .photo-item .content time {
-      font-size: 12px;
+      font-size: 14px;
       color: #b6bbd7; }
   .photo-item .post-add-icon {
     fill: #dee2e6;

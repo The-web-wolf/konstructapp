@@ -1,3 +1,4 @@
+<?php $pretitle = 'Offline'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,4 +1,4 @@
-<?php $openpage = 'contact'; require 'includes/dynamic/header.php'; ?>
+<?php $openpage = 'contact'; require 'includes/dynamic/header.php'; $pretitle = 'Contact us';  ?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,4 +1,4 @@
-<?php $authpage = 'signin'; require 'includes/dynamic/header.php'; ?>
+<?php $authpage = 'signin'; require 'includes/dynamic/header.php'; $pretitle = 'Signin or create account'; ?>
 <!DOCTYPE html>
 <html lang="en">
 

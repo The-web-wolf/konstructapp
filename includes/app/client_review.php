@@ -57,9 +57,9 @@
 
 							</div>
 						</div>
-						<button class="btn btn-md-2 btn-primary btn-block" data-target='custom-function' data-_fnc='expandPortfolio' data-_param='{"id":"${portfolio._id}"}'>View Full Portfolio</button>
-						<button class="btn btn-md-2 btn-secondary btn-block" data-target='custom-function' data-_fnc='makeReview' ${canReview} data-_param='{"id":"${portfolio._id}"}'>Make Your Review as ${portfolio.client} </button>
+						<button class="btn btn-md-2 btn-primary btn-block" data-target='custom-function' data-_fnc='makeReview' ${canReview} data-_param='{"id":"${portfolio._id}"}'>Make Your Review as ${portfolio.client} </button>
 
+						<button class="btn btn-md-2 btn-secondary btn-block" data-target='custom-function' data-_fnc='expandPortfolio' data-_param='{"id":"${portfolio._id}"}'>View Full Portfolio</button>						
 					</article>
 
 					<!-- ... end Single Post -->

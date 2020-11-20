@@ -1,4 +1,4 @@
-<?php $openpage = 'about'; require 'includes/dynamic/header.php'; ?>
+<?php $openpage = 'about'; require 'includes/dynamic/header.php'; $pretitle = 'About Konstructapp';  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -388,7 +388,7 @@
 				
 						<a href="#" class="h5 teammembers-item-name">Abeshi Emmanuel</a>
 				
-						<div class="teammembers-item-prof">ENGINEERING</div>
+						<div class="teammembers-item-prof">SOFTWARE DEVELOPER</div>
 				
 						<ul class="socials socials--round">
 				

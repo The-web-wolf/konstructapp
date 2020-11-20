@@ -1,4 +1,4 @@
-<?php $openpage = 'policy'; require 'includes/dynamic/header.php'; ?>
+<?php $openpage = 'policy'; require 'includes/dynamic/header.php'; $pretitle = 'Privacy policy';  ?>
 <!DOCTYPE html>
 <html lang="en">
 

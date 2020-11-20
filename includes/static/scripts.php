@@ -131,14 +131,24 @@
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 
 <script src="assets/js/libs/swiper.jquery.js"></script>
-<script src="assets/js/main.min.js"></script>
-<script src="assets/js/app.min.js"></script>
-<!-- <script src='assets/js/index.js'></script> -->
-<script src="assets/js/libs-init/libs-init.js"></script>
+
+<!-- Versioned scripts -->
+<script src="assets/js/main.min.js?ver=<?=$__ver?>"></script>
+<script src="assets/js/app.min.js?ver=<?=$__ver?>"></script>
+<script src="assets/js/libs-init/libs-init.js?ver=3"></script>
+<!-- === Versioned scripts === -->
+
 <script defer src="assets/fonts/fontawesome-all.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
 
 <script src="assets/Bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+<script>
+	// searchform
+	$('.user-search-form').hover(function(){
+		$(this).focus()
+	})	
+</script>
 
 <!-- SVG icons loader -->
 <script src="assets/js/svg-loader.js"></script>
