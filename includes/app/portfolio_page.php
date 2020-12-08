@@ -1,7 +1,19 @@
 
 <script type="text/javascript">
-	const root = document.querySelector('#all-portfolio-container .all-portfolio')
 
+	$(document).ready(function(){
+
+		// check if portfolio is  passed in the url
+
+		let singlePortfolio = findGetParameter('id')
+
+		if(singlePortfolio){
+			let pushData = {id : singlePortfolio}
+			expandPortfolio(pushData)
+		}		
+	})
+
+	const root = document.querySelector('#all-portfolio-container .all-portfolio')
 	let page = 1;
 
 	function writeAllPortfolio(current_portfolio){
@@ -67,7 +79,7 @@
 			})
 
 			if (response_count == 0) {
-				talert('You have caught up with us')
+				talert('Caught up with the latest content')
 			}			
 
 		}).fail(function(response){

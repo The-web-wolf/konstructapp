@@ -135,7 +135,7 @@
 <!-- Versioned scripts -->
 <script src="assets/js/main.min.js?ver=<?=$__ver?>"></script>
 <script src="assets/js/app.min.js?ver=<?=$__ver?>"></script>
-<script src="assets/js/libs-init/libs-init.js?ver=3"></script>
+<script src="assets/js/libs-init/libs-init.js?<?=$__ver?>"></script>
 <!-- === Versioned scripts === -->
 
 <script defer src="assets/fonts/fontawesome-all.js"></script>
@@ -144,10 +144,15 @@
 <script src="assets/Bootstrap/dist/js/bootstrap.bundle.js"></script>
 
 <script>
-	// searchform
-	$('.user-search-form').hover(function(){
-		$(this).focus()
-	})	
+	$(function(){
+		// searchform
+		$('.user-search-form').hover(function(){
+			$(this).focus()
+		})	
+		$('#searchBox').on('hide.bs.dropdown', function () {
+			return false;
+		});		
+	})
 </script>
 
 <!-- SVG icons loader -->

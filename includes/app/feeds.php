@@ -1,5 +1,18 @@
 <script type="text/javascript">
 
+
+	$(document).ready(function(){
+
+	// check if bid is  passed in the url
+
+	let singleStatus = findGetParameter('id')
+
+	if(singleStatus){
+		let pushData = {id : singleStatus}
+		expandStatus(pushData)
+	}		
+	})
+
 	/* CORE SCRIPTS */
 	let status_page = 1;
 	let users_page 	= 1;	
@@ -136,11 +149,7 @@
 			response_data = JSON.stringify(keyArray); // convert back to json
 			response_data = JSON.parse(response_data);
 
-			response_data.map(function(currentValue){
-				
-				// if(currentValue.userPic === 'https://res.cloudinary.com/konstructapp/image/upload/v1590052164/defaultuser_ni5iiz.png'){
-				// 	return false;
-				// }				
+			response_data.map(function(currentValue){			
 				writeFeedUsers(currentValue)
 			})
 
@@ -194,7 +203,7 @@
 			})
 
 			if (response_count == 0) {
-				talert('You have caught up with us')
+				talert('Caught up with the latest content')
 				$(root).addClass('caught-up')
 			}
 			else{
@@ -233,7 +242,7 @@
 			loadStatus();				
 		}
 		else{
-			talert('You have caught up with us')
+			talert('Caught up with the latest content')
 		}
 	}
 
@@ -326,39 +335,40 @@
 
 		let $bidsOwl = $('#users-section .ui-blocks').owlCarousel({
 			margin:15,
-	    responsiveClass:true,
-	    dots : false,
-	    nav	: false,
-	    loop : false,
-	    responsive:{
-	        0:{
-	          items:2,	
-	          stagePadding : 10,            
-	        },
-	        300:{
-	        	items : 2,
-	        	stagePadding: 50,
-	        },
-	        500:{
-	        	items : 4,
-	        	stagePadding: 13,
-	        },
-	        850:{
-	            items:5,
-	            stagePadding :15
-	        },
-	        1000:{
-	        	items : 5,
-	        	stagePadding: 20
-	        },
-	        1400:{
-	            items:7,
-	            stagePadding: 50,
-	        }
-	    }
+			responsiveClass:true,
+			dots : false,
+			nav	: false,
+			loop : false,
+			responsive:{
+				0:{
+				items:2,	
+				stagePadding : 10,            
+				},
+				300:{
+					items : 2,
+					stagePadding: 50,
+				},
+				500:{
+					items : 4,
+					stagePadding: 13,
+				},
+				850:{
+					items:5,
+					stagePadding :15
+				},
+				1000:{
+					items : 5,
+					stagePadding: 20
+				},
+				1400:{
+					items:7,
+					stagePadding: 50,
+				}
+			}
 		})		
 
 		let writeContent = new Promise (function(resolve,reject){
+			let userIsVerified = current_user.userIdentityVerify ? '<span class="fa fa-check-circle text-primary">' : '';
 			let writeData = `	
 			<!-- Single post item -->
 				<ul class="widget w-last-video">
@@ -369,7 +379,7 @@
 					</li>
 					<div class="outside-content">
 						<a href="user?id=${current_user._id}">	
-							<h5 class='name'>${current_user.firstName} ${current_user.lastName}</h5>
+							<h5 class='name'>${current_user.firstName} ${current_user.lastName} ${userIsVerified} </h5> 
 							<h5 class='profession'>${current_user.occupation}</h5>
 						</a>
 					</div>
@@ -486,9 +496,22 @@
 				<li>
 					<a href="#null" data-target='custom-function' data-_fnc='deleteStatus' data-_param='{"id":"${current_status._id}"}'>Delete</a>
 				</li>
+				<li>
+					<a href="#null"  data-target='custom-function' data-_fnc='shareLink' 
+					data-_param='{"text":"${current_status.statusText}", "url" : "feed?id=${current_status._id}"}'>Share Status</a>
+				</li>
 			</ul>
-		</div>` : 
-		'';
+		</div>` 
+		: 
+		`<div class="more"><svg class="olymp-three-dots-icon"><use xlink:href="#olymp-three-dots-icon"></use></svg>
+			<ul class="more-dropdown">
+				<li>
+					<a href="#null"  data-target='custom-function' data-_fnc='shareLink' 
+					data-_param='{"text":"${current_status.statusText}", "url" : "feed?id=${current_status._id}"}'>Share Status</a>
+				</li>
+			</ul>
+		</div>`			
+		;
 
 		let likes_count = current_status.likes.length;
 

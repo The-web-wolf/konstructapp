@@ -1,6 +1,6 @@
 <!-- Window-popup tag portfolio -->
 
-<div class="modal fade" id="choose-portfolio" tabindex="-1" role="dialog" aria-labelledby="choose-portfolio" aria-hidden="true">
+<div class="modal fade" data-resource='static' id="choose-portfolio" tabindex="-1" role="dialog" aria-labelledby="choose-portfolio" aria-hidden="true">
 	<div class="modal-dialog window-popup create-event" role="document">
 		<div class="modal-content">
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -28,7 +28,7 @@
 
 <!-- Window-popup Update Status -->
 
-<div class="modal fade" id="update-status" tabindex="-1" role="dialog" aria-labelledby="update-status" aria-hidden="true">
+<div class="modal fade" data-resource='static' id="update-status" tabindex="-1" role="dialog" aria-labelledby="update-status" aria-hidden="true">
 	<div class="modal-dialog window-popup edit-widget edit-widget-profile" role="document">
 		<form class="modal-content" id="edit-status"  data-method='PUT' >
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -51,7 +51,7 @@
 
 <!-- Window-popup Status Details -->
 
-<div class="modal fade" id="detailed-status" tabindex="-1" role="dialog" aria-labelledby="detailed-status" aria-hidden="true">
+<div class="modal fade" data-resource='dynamic' id="detailed-status" tabindex="-1" role="dialog" aria-labelledby="detailed-status" aria-hidden="true">
 	<div class="modal-dialog has-widgets window-popup event-private-public private-event" role="document">
 		<div class="modal-content">
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">

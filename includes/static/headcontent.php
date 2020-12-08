@@ -1,7 +1,7 @@
 <head>
 	<title><?php echo $pretitle ? $pretitle : '' ?> | KonstructApp | Demand And Supply Start  Here</title>
-	<meta name='title' content='KonstructApp'>
-	<meta name='description' content='Quick, low-cost access to Construction Services & Project Financing anytime, anywhere.'>
+	<meta name='title' content='<?=$og_title?>'>
+	<meta name='description' content='<?=$og_description?>'>
 
 	<!-- Required meta tags always come first -->
 	<meta charset="utf-8">
@@ -9,6 +9,16 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="preconnect" href="https://api.konstructapp.com" crossorigin>
     <link rel="dns-prefetch" href="https://api.konstructapp.com/">
+	<!-- Social media -->
+    <meta property="og:image" content="<?=$og_image?>">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<?php echo("https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']); ?>"/>
+    <meta property="og:title" content="<?=$og_title?>" />
+    <meta property="og:description" content="<?=$og_description?>" />
+
 	<!-- Main Font -->
 	<script src="assets/js/libs/webfontloader.min.js"></script>
 	<script>
@@ -72,6 +82,24 @@
 	
 	}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
 	</script>
+
+	<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window,document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '643940446251253'); 
+	fbq('track', 'PageView');
+	</script>
+	<noscript>
+	<img height="1" width="1" 
+	src="https://www.facebook.com/tr?id=643940446251253&ev=PageView
+	&noscript=1"/>
+	</noscript>	
 
 </head>
 

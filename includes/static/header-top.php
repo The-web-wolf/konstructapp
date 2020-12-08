@@ -15,7 +15,7 @@
 				</button>
 			</div>
 			
-			<div class="more-dropdown more-with-triangle triangle-top-right" style='width:100vh; max-width:360px'>
+			<div class="more-dropdown more-with-triangle triangle-top-right" id='searchBox' style='width:100vh; max-width:360px'>
 			<div class='selectize-dropdown'>
 						<div class='selectize-dropdown-content search-result-content' >
 						</div>
@@ -23,11 +23,129 @@
 			</div>
 		</form>
 		
+		<?php if(isset($user_data)): ?>	
+
+			<div class='control-block'>
+				<div class="author-page author vcard inline-items more">
+					<div class="author-thumb">
+						<img alt="avatar" src="<?php echo $user_data['userPic'] ?>" class="avatar default-bg" style='width: 40px;border:1px solid rgba(225,255,255,.5)'>
+						<div class="more-dropdown more-with-triangle">
+							<div class="mCustomScrollbar" data-mcs-theme="dark">
+								<div class="ui-block-title ui-block-title-small">
+									<h6 class="title">Your Account</h6>
+								</div>
+
+								<ul class="account-settings">
+									<li>
+										<a href="settings">
+
+											<svg class="olymp-menu-icon"><use xlink:href="#olymp-menu-icon"></use></svg>
+
+											<span>Profile Settings</span>
+										</a>
+									</li>
+									<li>
+										<a href="./controllers/delssid">
+											<svg class="olymp-logout-icon"><use xlink:href="#olymp-logout-icon"></use></svg>
+
+											<span>Log Out</span>
+										</a>
+									</li>
+								</ul>
+
+
+								<div class="ui-block-title ui-block-title-small">
+									<h6 class="title">More Information</h6>
+								</div>
+
+								<ul>
+									<li>
+										<a href="./about">
+											<span>About KonstructApp</span>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<a href="user?id=<?php echo($_COOKIE['_id']) ?>" class="author-name fn">
+						<div class="author-title">
+							<?php echo $user_data['firstName'] ?> <?php echo $user_data['lastName'] ?> <svg class="olymp-dropdown-arrow-icon"><use xlink:href="#olymp-dropdown-arrow-icon"></use></svg>
+						</div>
+						<span class="author-subtitle" style="color: white"><?php echo $user_data['occupation'] ?></span>
+					</a>
+				</div>			
+			</div>
+
+		<?php endif; ?>
+
+
+		<?php if(isset($user_data)): ?>	
+
+			<div class='control-block'>
+				<div class="author-page author vcard inline-items more">
+					<div class="author-thumb">
+						<img alt="avatar" src="<?php echo $user_data['userPic'] ?>" class="avatar default-bg" style='width: 40px;border:1px solid rgba(225,255,255,.5)'>
+						<div class="more-dropdown more-with-triangle">
+							<div class="mCustomScrollbar" data-mcs-theme="dark">
+								<div class="ui-block-title ui-block-title-small">
+									<h6 class="title">Your Account</h6>
+								</div>
+
+								<ul class="account-settings">
+									<li>
+										<a href="settings">
+
+											<svg class="olymp-menu-icon"><use xlink:href="#olymp-menu-icon"></use></svg>
+
+											<span>Profile Settings</span>
+										</a>
+									</li>
+									<li>
+										<a href="./controllers/delssid">
+											<svg class="olymp-logout-icon"><use xlink:href="#olymp-logout-icon"></use></svg>
+
+											<span>Log Out</span>
+										</a>
+									</li>
+								</ul>
+
+
+								<div class="ui-block-title ui-block-title-small">
+									<h6 class="title">More Information</h6>
+								</div>
+
+								<ul>
+									<li>
+										<a href="./about">
+											<span>About KonstructApp</span>
+										</a>
+									</li>
+									
+								</ul>
+							</div>
+
+						</div>
+					</div>
+					<a href="#" class="author-name fn">
+						<div class="author-title">
+							<?php echo $user_data['firstName'] ?> <?php echo $user_data['lastName'] ?> <svg class="olymp-dropdown-arrow-icon"><use xlink:href="#olymp-dropdown-arrow-icon"></use></svg>
+						</div>
+						<span class="author-subtitle" style="color: white"><?php echo $user_data['occupation'] ?></span>
+					</a>
+				</div>			
+			</div>
+
+		<?php endif; ?>
+		
+		<?php if(!isset($user_data)): ?>	
 
 		<div class='control-block'>
 			<div class="author-page author vcard inline-items more">
 				<div class="author-thumb">
-					<img alt="avatar" src="<?php echo $user_data['userPic'] ?>" class="avatar default-bg" style='width: 40px;border:1px solid rgba(225,255,255,.5)'>
+					<img alt="avatar" src="https://res.cloudinary.com/konstructapp/image/upload/v1597157743/logo/app_muqoyt_tqzyw5.png" class="avatar default-bg" style='width: 40px;border:1px solid rgba(225,255,255,.5)'>
 					<div class="more-dropdown more-with-triangle">
 						<div class="mCustomScrollbar" data-mcs-theme="dark">
 							<div class="ui-block-title ui-block-title-small">
@@ -36,18 +154,17 @@
 
 							<ul class="account-settings">
 								<li>
-									<a href="settings">
+									<a href="signin?return_url=<?=$requested_url?>">
+										<svg class="olymp-happy-face-icon"><use xlink:href="#olymp-happy-face-icon"></use></svg>
 
-										<svg class="olymp-menu-icon"><use xlink:href="#olymp-menu-icon"></use></svg>
-
-										<span>Profile Settings</span>
+										<span>Create Account</span>
 									</a>
 								</li>
 								<li>
-									<a href="./controllers/delssid">
-										<svg class="olymp-logout-icon"><use xlink:href="#olymp-logout-icon"></use></svg>
+									<a href="signin?return_url=<?=$requested_url?>">
+										<svg class="olymp-login-icon"><use xlink:href="#olymp-login-icon"></use></svg>
 
-										<span>Log Out</span>
+										<span>Signin account</span>
 									</a>
 								</li>
 							</ul>
@@ -69,14 +186,16 @@
 
 					</div>
 				</div>
-				<a href="user?id=<?php echo($_COOKIE['_id']) ?>" class="author-name fn">
+				<a href="#" class="author-name fn">
 					<div class="author-title">
-						<?php echo $user_data['firstName'] ?> <?php echo $user_data['lastName'] ?> <svg class="olymp-dropdown-arrow-icon"><use xlink:href="#olymp-dropdown-arrow-icon"></use></svg>
+						KonstructApp <svg class="olymp-dropdown-arrow-icon"><use xlink:href="#olymp-dropdown-arrow-icon"></use></svg>
 					</div>
-					<span class="author-subtitle" style="color: white"><?php echo $user_data['occupation'] ?></span>
+					<span class="author-subtitle" style="color: white">Get started</span>
 				</a>
 			</div>			
 		</div>
+
+		<?php endif; ?>		
 
 	</div>
 
@@ -116,7 +235,7 @@
 				</form>
 
 				<div class='selectize-dropdown ' >
-					<div class='selectize-dropdown-content search-result-content' style='padding-top:65px'>
+					<div class='selectize-dropdown-content search-result-content' style='padding-top:65px;'>
 						
 					</div>
 				</div>

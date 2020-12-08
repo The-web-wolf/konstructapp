@@ -8,17 +8,37 @@ session_start();
 require_once 'functions.php';
 
 $devUrl = prodArena('live');
-$__ver = 3; // for styles and scripts
+$__ver = 5; // for styles and scripts
 
 date_default_timezone_set("Africa/Lagos");
 
 $page = isset($page_name) ? $page_name : "anonymous";
 
+// social media tag predefine 
+
+$og_image = 'https://res.cloudinary.com/konstructapp/image/upload/v1597157743/logo/app_muqoyt_tqzyw5.png'; 
+$og_title = 'KonstructApp | Demand And Supply Starts Here'; 
+$og_description = 'Quick, low-cost access to Construction Services & Project Financing anytime, anywhere.' ;
+
 $complete_profile = true;
 
+
+$requested_page = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+$requested_page = str_replace('.php', '', $requested_page);
+$requested_page = str_replace('=', '_sp_61_', $requested_page);
+$requested_page = str_replace('?', '_sp_63_', $requested_page);
+
 if(!isset($authpage) && !isset($openpage) && !isset($_COOKIE['_id'])){
-	header('location:signin'); // redirects to signin page if cookie for user does not exist
-	exit();
+
+	// allow view of some pages if not registered
+	
+	if ( (isset($page_mode) && $page_mode == 'user' && isset($_GET['id'])) || ($page_name == 'Bids' && isset($_GET['id'])) || ($page_name == 'Portfolio' && isset($_GET['id'])) ){
+		
+	}
+	else{
+		header('location:signin?return_url='.$requested_page); // redirects to signin page if cookie for user does not exist
+		exit();
+	}
 }
 
 if (isset($_COOKIE['_id']) && isset($authpage)) {
@@ -27,7 +47,6 @@ if (isset($_COOKIE['_id']) && isset($authpage)) {
 }
 
 if (isset($_COOKIE['_id']) && !isset($openpage)) { // avoid checking for user if in an open
-	save('_id', $_COOKIE['_id']); // refreshes cookie
 	$user_prf  	= $devUrl ."/api/user/" . $_COOKIE['_id'];
 		try{
 			$get_user = requestUser($user_prf);
@@ -74,7 +93,7 @@ if (isset($page_mode) && $page_mode == 'user') {
 		$requested_user = sanitizeString($_GET['id']);
 		$req_user_url 	= $devUrl ."/api/user/" . $requested_user;
 				try{
-						$req_user_data = requestUser($req_user_url);
+					$req_user_data = requestUser($req_user_url);
 					 if($req_user_data){
 						save('req_id', $requested_user); // saves the reqested_user id in cookie
 						$req_user_data = json_decode($req_user_data, true);
@@ -82,24 +101,21 @@ if (isset($page_mode) && $page_mode == 'user') {
 		
 						// Check if I'm the user
 				
-						$self_user = $requested_user == $_COOKIE['_id'] ? true : false;               
+						if(isset($user_data)){
+							$self_user = $requested_user == $_COOKIE['_id'] ? true : false;               
+						}
+						else{
+							$self_user = false;
+						}
 					 }	
 				} 
 				
 				catch(Exception $e){
-						$http_status = $e->getMessage();
-						if ($http_status == 404){
-								// user not found(wrong ID in url);
-								http_response_code(404);
-								header('location:404');
-							 exit();
-						}
-						else{
-								// server error
-								http_response_code(500);
-								header('location:500');
-								exit();
-						}
+					$http_status = $e->getMessage();
+					http_response_code(404);
+					header('location:404');
+					exit();
+			
 				}		
 
 	}

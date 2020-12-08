@@ -1,7 +1,7 @@
 
 <!-- Window-popup Portfolio Details -->
 
-<div class="modal fade fullheight" id="detailed-portfolio" tabindex="-1" role="dialog" aria-labelledby="detailed-portfolio" aria-hidden="true">
+<div class="modal fade fullheight" data-resource='dynamic' id="detailed-portfolio" tabindex="-1" role="dialog" aria-labelledby="detailed-portfolio" aria-hidden="true">
 	<div class="modal-dialog has-widgets window-popup event-private-public private-event" role="document">
 		<div class="modal-content">
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -67,7 +67,7 @@
 
 <!-- Window-popup Share for review -->
 
-<div class="modal fade " id="review-portfolio" tabindex="-1" role="dialog" aria-labelledby="review-portfolio" aria-hidden="true">
+<div class="modal fade " data-resource='static' id="review-portfolio" tabindex="-1" role="dialog" aria-labelledby="review-portfolio" aria-hidden="true">
 	<div class="modal-dialog window-popup event-private-public private-event" style="width: 470px;" role="document">
 		<div class="modal-content">
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -114,7 +114,7 @@
 
 <!-- Window-popup Create Portfolio -->
 
-<div class="modal fade" id="create-new-portfolio" tabindex="-1" role="dialog" aria-labelledby="create-new-portfolio" aria-hidden="true">
+<div class="modal fade" data-resource='static' id="create-new-portfolio" tabindex="-1" role="dialog" aria-labelledby="create-new-portfolio" aria-hidden="true">
 	<div class="modal-dialog window-popup edit-widget edit-widget-profile" role="document">
 		<form class="modal-content" id="new-portfolio" data-method='POST' data-action="<?=$devUrl?>/api/portfolio">
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -208,7 +208,7 @@
 
 <!-- Window-popup Update Portfolio -->
 
-<div class="modal fade" id="update-portfolio" tabindex="-1" role="dialog" aria-labelledby="update-portfolio" aria-hidden="true">
+<div class="modal fade" id="update-portfolio" data-resource='static' tabindex="-1" role="dialog" aria-labelledby="update-portfolio" aria-hidden="true">
 	<div class="modal-dialog window-popup edit-widget edit-widget-profile" role="document">
 		<form class="modal-content" id="edit-portfolio" data-method='PUT' >
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -232,7 +232,7 @@
 
 <!-- Popup Write Rewiev -->
 
-<div class="modal fade" id="make-review" tabindex="-1" role="dialog" aria-labelledby="make-review" aria-hidden="true">
+<div class="modal fade" id="make-review" data-resource='static' tabindex="-1" role="dialog" aria-labelledby="make-review" aria-hidden="true">
 	<div class="modal-dialog window-popup popup-write-rewiev" role="document">
 		<div class="modal-content">
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">

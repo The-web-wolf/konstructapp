@@ -1,7 +1,7 @@
 <?php 
 	$page_name = 'Portfolio';
-	 require 'includes/dynamic/header.php';
-	 $pretitle = 'Portfolio'; 
+	require 'includes/dynamic/header.php';
+	$pretitle = 'Portfolio'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">

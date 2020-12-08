@@ -251,9 +251,9 @@
 <script src="assets/js/libs/bootstrap-select.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-<script src="assets/js/main.min.js"></script>
-<script src="assets/js/app.min.js"></script>
-<script src="assets/js/libs-init/libs-init.js"></script>
+<script src="assets/js/main.min.js?ver=<?=$__ver?>"></script>
+<script src="assets/js/app.min.js?ver=<?=$__ver?>"></script>
+<script src="assets/js/libs-init/libs-init.js?ver=<?=$__ver?>"></script>
 <script defer src="assets/fonts/fontawesome-all.js"></script>
 <script src="https://apis.google.com/js/api:client.js"></script>
 

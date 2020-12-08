@@ -111,7 +111,7 @@
 
 						<?php if(!$identity_verified) : ?>
 							<div id='user_ver' class=' center-text d-block text-center'>
-								<p>Become verfied today to get the special konstructapp verified badge on your profile to increase your chance of getting a connection</p>
+								<p>Verify your identity/business and have a verify badge displayed. This gives Clients confidence to contact you.</p>
 								<a href="#" data-toggle='modal' data-target='#identity-verification' class='btn btn-transparent btn-primary btn-md btn--half-width'>Become verified <span class='fa fa-check-circle'></span></a>
 							</div>	
 						<?php endif; ?>					
@@ -170,6 +170,7 @@
 												<select class="selectpicker form-control" data-live-search="true"  name="occupation" id="occupation">
 													<option value="" disabled="" selected="" > Profession/expertise</option>
 													<option value='Architect'>Architect</option>
+
 													<option value='Civil Engineer'>Civil Engineer</option>
 													<option value='Structural Engineer'>Structural Engineer</option>
 													<option value='Electrical Engineer'>Electrical Engineer</option>
@@ -240,7 +241,10 @@
 													<option value='Bio Energy'>Bio Energy</option>
 													<option value='Inverter installation'>Inverter installation</option>
 													<option value='Solar Panels'>Solar Panels</option>			
-													
+													<option value="Art, Graffiti, Morals ">Art, Graffiti, Morals </option>
+													<option value="Ceiling">Ceiling</option>
+													<option value="Facility Management "> Facility Management  </option>
+													<option value="Tourism, Environment"> Tourism, Environment </option>													
 												</select>
 											</div>
 								

@@ -1,7 +1,7 @@
 
 <!-- Window-popup Create Bid -->
 
-<div class="modal fade" id="create-new-bid" tabindex="-1" role="dialog" aria-labelledby="create-new-bid" aria-hidden="true">
+<div class="modal fade" id="create-new-bid" data-resource='static' tabindex="-1" role="dialog" aria-labelledby="create-new-bid" aria-hidden="true">
 	<div class="modal-dialog window-popup create-event" role="document">
 		<form class="modal-content" id="new-bid" data-method='POST' data-action="<?=$devUrl?>/api/bid">
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -110,7 +110,11 @@
 						<option value='Hydro Engineering'>Hydro Engineering</option>
 						<option value='Bio Energy'>Bio Energy</option>
 						<option value='Inverter installation'>Inverter installation</option>
-						<option value='Solar Panels'>Solar Panels</option>							
+						<option value='Solar Panels'>Solar Panels</option>
+						<option value="Art, Graffiti, Morals ">Art, Graffiti, Morals </option>
+						<option value="Ceiling">Ceiling</option>
+						<option value="Facility Management "> Facility Management  </option>
+						<option value="Tourism, Environment"> Tourism, Environment </option>						
 					</select>
 				</div>				
 			</div>
@@ -153,7 +157,7 @@
 
 <!-- Window-popup Update Bid -->
 
-<div class="modal fade" id="update-bid" tabindex="-1" role="dialog" aria-labelledby="update-bid" aria-hidden="true">
+<div class="modal fade" id="update-bid" tabindex="-1" data-resource='static' role="dialog" aria-labelledby="update-bid" aria-hidden="true">
 	<div class="modal-dialog window-popup edit-widget edit-widget-profile" role="document">
 		<form class="modal-content" id="edit-bid" data-method='PUT' >
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -176,7 +180,7 @@
 
 <!-- Window-popup Bid Details -->
 
-<div class="modal fade fullheight" id="detailed-bid" tabindex="-1" role="dialog" aria-labelledby="detailed-bid" aria-hidden="true">
+<div class="modal fade fullheight" id="detailed-bid" data-resource='dynamic' tabindex="-1" role="dialog" aria-labelledby="detailed-bid" aria-hidden="true">
 	<div class="modal-dialog has-widgets window-popup event-private-public private-event" role="document">
 		<div class="modal-content">
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">

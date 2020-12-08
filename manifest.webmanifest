@@ -83,7 +83,29 @@
          "sizes": "32x32"
       }               
       ]
-   }
+   },
+   {
+    "name": "Bids",
+    "description": "View and create portfolio",
+    "url": "./bids",
+    "icons": [
+       {
+          "src": "./assets/svg-icons/portfolio96.svg",
+          "type": "image/svg+xml",
+          "sizes": "96x96"
+       },
+       {
+         "src": "./assets/svg-icons/portfolio48.svg",
+         "type": "image/svg+xml",
+         "sizes": "48x48"
+      },
+      {
+       "src": "./assets/svg-icons/portfolio32.svg",
+       "type": "image/svg+xml",
+       "sizes": "32x32"
+    }               
+    ]
+ }
  ],
  
  "gcm_sender_id": "103953800507",

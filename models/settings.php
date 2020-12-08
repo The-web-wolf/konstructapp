@@ -236,8 +236,8 @@
 
 		function payWithPaystack(currency,chargeAmount) {			
 			var handler = PaystackPop.setup({
-				//key: 'pk_live_18ea49b37d7eb167bfd335fe33d92b69d0ed78b4',
-				key : 'pk_test_9c76f32e6fc03682bee18402810a1c8d77e42e44',
+				key: 'pk_live_18ea49b37d7eb167bfd335fe33d92b69d0ed78b4',
+				//key : 'pk_test_9c76f32e6fc03682bee18402810a1c8d77e42e44',
 				email: localStorage.getItem('email'),
 				amount: chargeAmount * 100, 
 				currency: currency, 
@@ -246,24 +246,22 @@
 				callback: function(response) {
 					
 					// call for the verification,  first call a preloader
-
 					$('#requestpreloader').fadeIn()
 
 					// submitData
-
 					let form 	= $('#verify-identity-form');
 					let reqData = $(form).serialize();
 					let method 	= $(form).data('method');
 					let action 	= $(form).data('action');
 
-
 					$.ajax({
 						url : action,
 						type : method,
 						data : reqData,
-						headers: { 'Authorization': `Bearer ${authtk}` },
+						headers: { 'Authorization': `Bearer ${Cookies.get('token')}` }
 						
 					}).done(function(response){
+						console.log(response)
 						$("#user_ver").slideUp();
 						resetBtn(form);
 						$('#requestpreloader').fadeOut()
@@ -275,6 +273,7 @@
 						swal('Verification successful', 'You have earned the new verified user badge', 'success');
 					})
 					.fail(function(jqXHR){	
+						console.log(jqXHR)
 						$('#requestpreloader').fadeOut()
 						resetBtn(form);
 						
@@ -293,7 +292,8 @@
 							talert('Uncaught Error.\n' + jqXHR.statusText);
 						}	
 						 
-					})					
+					})	
+									
 				},
 				onClose: function() {
 					swal('Verification cancelled','Payment was not completed', 'info');

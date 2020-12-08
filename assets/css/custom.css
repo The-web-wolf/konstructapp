@@ -224,6 +224,11 @@ img.custom-bg {
   color: #F8AE02 !important;
 }
 
+
+.private-event-head .more{
+  position: absolute;
+  right:10px
+}
 /* PORTFOLIO PAGE */
 
 .add-image {

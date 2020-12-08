@@ -107,26 +107,32 @@ $(function(){
 /* MAke back key close modal and routing based on active modal **/
 
 $(document).ready(function(){
-  $('div.modal').on('show.bs.modal', function() {
-    var modal = this;
-    var hash = modal.id;
-    window.location.hash = hash;
-    window.onhashchange = function() {
-      if (!location.hash){
-		$('.modal').modal('hide');
-	  }
-	  else{
-		  if(location.hash !== $('.modal.show').attr('id')){
-			  $('.modal').modal('hide')
-		  }
-	  }
-    }
-  });
+
+	$('div.modal').on('show.bs.modal', function() {
+		var modal = this;
+		var hash = modal.id;
+		window.location.hash = hash;
+		window.onhashchange = function() {
+			if (!location.hash){
+			$('.modal').modal('hide');
+			}
+			else{
+				if(location.hash !== $('.modal.show').attr('id')){
+					$('.modal').modal('hide')
+				}
+			}
+		}
+	});
   
   $('div.modal').on('hidden.bs.modal', function() {
-	var hash = this.id;
-	var url  = window.location.pathname + window.location.search
-    history.replaceState('', document.title, url);
+	  if( $(this).data('resource') === 'dynamic'){
+		window.history.back()		  
+	  }
+	  else{
+		var hash = this.id;
+		var url  = window.location.pathname + window.location.search
+		history.replaceState('', document.title, url);		  
+	  }
   });
   
   // when close button clicked simulate back
@@ -159,6 +165,14 @@ function isEmpty(obj) {
     }
     return true;
 }
+
+function handleErrors(response) {
+	if (response.message !== 'success') {
+		throw new Error(response.statusText);
+	}
+	return response;
+}
+
 
 function isStandalone () {
     return !!navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
@@ -270,6 +284,20 @@ let hideModals = () => {
 	$('.modal').modal('hide')
 }
 
+function findGetParameter(parameterName) {
+	var result = null,
+		tmp = [];
+	location.search
+		.substr(1)
+		.split("&")
+		.forEach(function (item) {
+		tmp = item.split("=");
+		if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+		});
+	return result;
+}
+
+
 /*Function for each call*/
 function userFx (response){
 	let userToken 	= response.token;
@@ -286,8 +314,16 @@ function userFx (response){
     	url : "controllers/createssid",
     	data : {token : userToken, user : userId},
   	}).done(function(callback){
-    	talert('Redirecting...');
-    	location.replace('./?newlogin')
+		let return_url = findGetParameter('return_url');
+		// decode url hash
+		talert('Redirecting...');
+		if(return_url){
+			return_url = return_url.replace('_sp_61_', '=');
+			return_url = return_url.replace('_sp_63_', '?');			
+			location.assign(return_url)
+		}else{
+			location.assign('.?newlogin')
+		}
   	})
 }
 
@@ -654,6 +690,7 @@ function searchUser(text){
 				else{
 					$(root).html('');
 					response.data.map(function(current_user){
+						let userIsVerified = current_user.userIdentityVerify ? '<span class="fa fa-check-circle text-primary">' : '';
 						$(root).append(`
 							<div class="inline-items">
 								<div class="author-thumb">
@@ -665,12 +702,18 @@ function searchUser(text){
 									<a href='user?id=${current_user.id}'>
 										<span class="h6 notification-friend"> ${current_user.firstName} ${current_user.lastName} </span>
 									</a>
-									<a href='user?id=${current_user.id}'>
-										<span class="chat-message-item">${current_user.occupation}</span>
+									<a href='user?id=${current_user.id}' >
+										<span class="chat-message-item">${current_user.occupation}			
+											<span style='color:#888da8;font-size:12.5px'> 
+												<i class='fa fa-location-circle'></i> ${current_user.state} 
+											</span>										
+										</span>
 									</a>
 								</div>
 								<a href='user?id=${current_user.id}' style='float:right'>
-									<span class="notification-icon"><svg class="olymp-happy-face-icon"><use xlink:href="#olymp-happy-face-icon"></use></svg></span>
+									<span class="notification-icon">
+									${userIsVerified}
+									</span>
 								</a>
 							</div>
 						`)
@@ -683,11 +726,17 @@ function searchUser(text){
 
 // search field
 
-$('.user-search').on('input', function(e){
+$('.user-search').on('search', function(e){
 	e.preventDefault();
 	let currentInput = $(this).val();
 	searchUser(currentInput);
 
+})
+
+$('.user-search').on('input', function(){
+	if($(this).val().length == 0 ){
+		$('.search-result-content').html(' '); // clear input field if input is empty
+	}
 })
 
 // searchform
@@ -696,3 +745,45 @@ $('.user-search-form').on('submit', function(e){
 	let currentInput = $(this).find('[type=search]').val();
 	searchUser(currentInput);
 })
+
+function copyToClipboard(text) {
+    if (window.clipboardData && window.clipboardData.setData) {
+        // Internet Explorer-specific code path to prevent textarea being shown while dialog is visible.
+        return clipboardData.setData("Text", text);
+
+    }
+    else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var textarea = document.createElement("textarea");
+        textarea.textContent = text;
+        textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in Microsoft Edge.
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+			copy =  document.execCommand("copy");  // Security exception may be thrown by some browsers.			
+			return talert('Link copied to clipboard')			
+        }
+        catch (ex) {
+            talert("Copy link to clipboard failed.", ex);
+            return false;
+        }
+        finally {
+            document.body.removeChild(textarea);
+        }
+    }
+}
+
+function shareLink(shareData){
+	let shareUrl = "https://app.konstructapp.com/" + shareData.url
+	if (navigator.share) {
+		navigator.share({
+			title: 'KonstructApp',
+			text: shareData.text,
+			url: shareUrl,
+		})
+		.then(() => talert('Successful share'))
+		.catch((error) => talert('Error sharing', error));
+	}	
+	else{
+		copyToClipboard(shareUrl);
+	}
+}

@@ -1,7 +1,7 @@
 
 <!-- Window-popup Add work-->
 
-<div class="modal fullheight fade" id="add-new-work" tabindex="-1" role="dialog" aria-labelledby="add-new-work" aria-hidden="true">
+<div class="modal fullheight fade" data-resource='static' id="add-new-work" tabindex="-1" role="dialog" aria-labelledby="add-new-work" aria-hidden="true">
 	<div class="modal-dialog window-popup create-event" role="document">
 		<form class="modal-content" id="new-work-history" action="#" data-action="<?php echo $devUrl ?>/api/employment" data-method='POST'>
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -75,7 +75,7 @@
 
 <!-- Window-popup Add certificate-->
 
-<div class="modal fullheight fade modal-md" id="add-new-certificate" tabindex="-1" role="dialog" aria-labelledby="add-new-certificate" aria-hidden="true">
+<div class="modal fullheight fade modal-md" id="add-new-certificate" tabindex="-1" role="dialog" aria-labelledby="add-new-certificate" aria-hidden="true" data-resource='static'>
 	<div class="modal-dialog window-popup create-event" role="document">
 		<form class="modal-content" id="new-certificate" action="#" data-action="<?php echo $devUrl ?>/api/education" data-method='POST'>
 			<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
@@ -153,7 +153,7 @@
 
 <?php if(!$identity_verified) : ?>
 
-	<div class="modal fullheight fade modal-md" id="identity-verification" tabindex="-1" role="dialog" aria-labelledby="identity-verification" aria-hidden="true">
+	<div class="modal fullheight fade modal-md" id="identity-verification" tabindex="-1" role="dialog" aria-labelledby="identity-verification" aria-hidden="true" data-resource='static'>
 		<div class="modal-dialog window-popup create-event" role="document">
 			
 		<form class="modal-content" id="verify-identity-form" action="#" data-action="<?php echo $devUrl ?>/api/verifyuser" data-method='POST'>

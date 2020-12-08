@@ -1,4 +1,18 @@
 <script type="text/javascript">
+
+
+	$(document).ready(function(){
+
+		// check if bid is  passed in the url
+
+		let singleBid = findGetParameter('id')
+
+		if(singleBid){
+			let pushData = {id : singleBid}
+			expandBid(pushData)
+		}		
+	})
+
 	const root 	= document.querySelector('#all-bid-container,#featured-bid-container');
 	let page 		= 1;
 
@@ -87,7 +101,7 @@
 				writeAllBids(currentValue, response)
 			})
 			if (response_count == 0) {
-				talert('You have caught up with us')
+				talert('Caught up with the latest content')
 			}			
 
 		}).fail(function(response){

@@ -14,7 +14,7 @@
 				contentType : false,
 			}).done(function(response){
 				let portfolio	= response.data;
-				$('title').html(`${portfolio.title} Review | KonstructApp`);
+				document.title = `${portfolio.title} Review | KonstructApp`;
 				let canReview = portfolio.starRating ? "disabled='disabled'" : '';
 				resolve(portfolio.user._id)
 				$(p_root).html(`
@@ -222,19 +222,6 @@
 		  	})
 		})
 		
-	}
-
-	function findGetParameter(parameterName) {
-		var result = null,
-			tmp = [];
-		location.search
-			.substr(1)
-			.split("&")
-			.forEach(function (item) {
-			tmp = item.split("=");
-			if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-			});
-		return result;
 	}
 
 	// lose the page if there's no linked portfolio

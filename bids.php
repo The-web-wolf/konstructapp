@@ -1,5 +1,5 @@
 <?php 
-	$page_name = 'Portfolio';
+	$page_name = 'Bids';
 	 require 'includes/dynamic/header.php';
 	 $pretitle = 'Bids'; 
 ?>
