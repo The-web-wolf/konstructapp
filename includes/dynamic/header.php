@@ -7,8 +7,8 @@ session_start();
 //inherits all from functions.php where all my functions lies
 require_once 'functions.php';
 
-$devUrl = prodArena('test');
-$__ver = 5; // for styles and scripts
+$devUrl = prodArena('live');
+$__ver = 6; // for styles and scripts
 
 date_default_timezone_set("Africa/Lagos");
 
