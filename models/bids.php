@@ -232,13 +232,11 @@
 
 				<div class="control-block-button post-control-button">
 
-					<a href="#" class="btn btn-control likeBtn ${bid._id}" data-target='custom-function' data-_fnc="likeBid"	data-_param='{"id":"${bid._id}"}'>
-						<svg class="olymp-like-post-icon"><use xlink:href="#olymp-like-post-icon"></use></svg>
+
+					<a href="#" class=" btn btn-control close icon-close" data-dismiss="modal" aria-label="Close">
+						<svg class="olymp-close-icon"><use xlink:href="#olymp-close-icon"></use></svg>
 					</a>
 
-					<a href="#" class="btn btn-control commentBtn">
-						<svg class="olymp-comments-post-icon"><use xlink:href="#olymp-comments-post-icon"></use></svg>
-					</a>
 
 				</div>				
 				`;
