@@ -2,9 +2,9 @@ $(window).ready(function(){
 	$('#hellopreloader').fadeOut('slow'); // remove preloader when page is ready
 });
 
-//let devUrl = 'https://konstructapps.herokuapp.com'; // test 
+let devUrl = 'https://konstructapps.herokuapp.com'; // test 
 
-let devUrl = 'https://api.konstructapp.com'; // live
+//let devUrl = 'https://api.konstructapp.com'; // live
 
 triggerBtns();
 
@@ -49,6 +49,7 @@ const progressiveF = async () => {
     check();
     const swRegistration = await registerServiceWorker();
     const permission =  await requestNotificationPermission();
+		
 }
 
 progressiveF();
@@ -447,7 +448,7 @@ let submitForm = (formID, successFunction) => {
 
 	// get token
 
-	let authtk  = Cookies.get('token')
+	let authtk  = Cookies.get('_token')
 
 	// Make button disabled
 
@@ -500,7 +501,7 @@ let submitForm = (formID, successFunction) => {
 
 let submitData = (data, method, action, callback) => {
 
-	let authtk  = Cookies.get('token')
+	let authtk  = Cookies.get('_token')
 
 	// Submit Data
 
@@ -621,7 +622,7 @@ function profilePictures() {
 			}).toBlob((blob) => {
 			  	const formData = new FormData();
 			  	let formUrl = $(targetForm).data('action')
-				let authtk  = Cookies.get('token')
+				let authtk  = Cookies.get('_token')
 
 			  	// Pass the image file name as the third parameter if necessary.
 			  	formData.append(pictureUploadName, blob/*, 'example.png' */);
@@ -781,9 +782,10 @@ function shareLink(shareData){
 			url: shareUrl,
 		})
 		.then(() => talert('Successful share'))
-		.catch((error) => talert('Error sharing', error));
+		.catch((error) => talert(`Error sharing ${error}`));
 	}	
 	else{
 		copyToClipboard(shareUrl);
+		talert('Copied Link to clipboard')
 	}
 }

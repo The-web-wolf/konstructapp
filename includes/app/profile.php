@@ -210,7 +210,7 @@
 
 		// get token
 
-		let authtk  = Cookies.get('token')
+		let authtk  = Cookies.get('_token')
 
 		let self_user = uid == _id ? true : false; // returns true if the user profile in view is that of the browsing user
 

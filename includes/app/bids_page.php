@@ -14,7 +14,7 @@
 	})
 
 	const root 	= document.querySelector('#all-bid-container,#featured-bid-container');
-	let page 		= 1;
+	let page 	= 1;
 
 	function writeAllBids(current_bid, all_data){
 		let relative_date	= moment(current_bid.createdAt);

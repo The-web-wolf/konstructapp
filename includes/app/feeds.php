@@ -181,7 +181,7 @@
 
 		// get token
 
-		let authtk  = Cookies.get('token')
+		let authtk  = Cookies.get('_token')
 
 		/* Load Bids */  
 

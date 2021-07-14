@@ -55,11 +55,11 @@ function to_json($array){
 function killSession(){
 	if(isset($_SESSION['_id'])){
 		unset($_SESSION['_id']);
-		unset($_SESSION['token']);
+		unset($_SESSION['_token']);
 		session_start();
 		session_destroy();
 		setcookie('_id', '', time() - 900, "/");
-		setcookie('token', '', time() - 900, "/");	
+		setcookie('_token', '', time() - 900, "/");	
 
 		header('location:./signin');
 

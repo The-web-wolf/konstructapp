@@ -16,17 +16,17 @@
 					$('#create-new-portfolio').modal('show');
 				}
 				else{
-					portfolio.data.map(function(portfolio){
-						$(container).html(`
-							<option title="None" value='' data-content='<div class="inline-items">
-								<div class="author-thumb">
-									<img src="assets/img/none.png" alt="None">
-								</div>
-									<div class="h6 author-title">None</div>
+					$(container).html(`
+						<option title="None" value='' data-content='<div class="inline-items">
+							<div class="author-thumb">
+								<img src="assets/img/none.png" alt="None">
+							</div>
+								<div class="h6 author-title">None</div>
 
-								</div>'>None
-							</option>
-						`)
+							</div>'>None
+						</option>
+					`)
+					portfolio.data.map(function(portfolio){						
 						$(container).append(`
 							<option title="${portfolio.title}" value='${portfolio._id}' data-content='<div class="inline-items">
 								<div class="author-thumb">
@@ -213,7 +213,7 @@
 		$(comment_list).html('')
 		$(modal).modal('show')
 
-		let authtk  = Cookies.get('token')		
+		let authtk  = Cookies.get('_token')		
 
 		let status_details = fetch(`${devUrl}/api/status/${params.id}`, {
 			headers : {

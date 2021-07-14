@@ -4,8 +4,8 @@
 	require 'includes/dynamic/header.php';
 	$pretitle = $req_user_data['firstName']. $req_user_data['lastName'];
 	
-	$og_title = $pretitle . 'On konstructApp';
-	$og_description = $req_user_data['occupation'] . '-' . $req_user_data['bio'];
+	$og_title = $pretitle . ' On konstructApp';
+	$og_description = $req_user_data['occupation'] . ' - ' . $req_user_data['bio'];
 	$og_image = $req_user_data['userPic'];
 ?>
 <!DOCTYPE html>

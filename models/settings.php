@@ -258,7 +258,7 @@
 						url : action,
 						type : method,
 						data : reqData,
-						headers: { 'Authorization': `Bearer ${Cookies.get('token')}` }
+						headers: { 'Authorization': `Bearer ${Cookies.get('_token')}` }
 						
 					}).done(function(response){
 						console.log(response)
